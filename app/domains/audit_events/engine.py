@@ -1,0 +1,453 @@
+"""Business engine for Audit Ledger.
+
+Immutable operator actions for investigations and compliance packs.
+This module is the operational core for list, mutate, score, and export.
+"""
+from __future__ import annotations
+
+from copy import deepcopy
+from datetime import date, datetime, timedelta
+from typing import Any
+
+from app.storage import store
+
+DOMAIN_KEY = 'audit_events'
+DOMAIN_TITLE = 'Audit Ledger'
+STATUSES = ['recorded', 'reviewed', 'escalated', 'closed']
+REQUIRED = ['actor', 'action', 'resource', 'occurred_at', 'severity', 'status']
+FIELD_TYPES = { 'actor': 'str', 'action': 'str', 'resource': 'str', 'ip_hint': 'str', 'occurred_at': 'str', 'severity': 'str', 'status': 'str' }
+
+
+def _now_iso() -> str:
+    return datetime.utcnow().replace(microsecond=0).isoformat() + 'Z'
+
+
+def _as_int(value: Any, default: int = 0) -> int:
+    try:
+        if value is None or value == '':
+            return default
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
+class AuditEventsRecord(dict):
+    """Typed-ish mapping for audit_events rows used by templates and exports."""
+
+    def display_title(self) -> str:
+        return str(self.get('actor') or self.get('id') or 'untitled')
+
+
+class AuditEventsEngine:
+    """CRUD, validation, scoring, and period reports for Audit Ledger."""
+
+    def list_records(self, filters: dict[str, Any] | None = None) -> list[dict[str, Any]]:
+        rows = store.list_domain(DOMAIN_KEY)
+        filters = filters or {}
+        query = str(filters.get('q') or '').strip().lower()
+        status = str(filters.get('status') or '').strip()
+        out = []
+        for row in rows:
+            if status and row.get('status') != status:
+                continue
+            blob = ' '.join(str(v) for v in row.values()).lower()
+            if query and query not in blob:
+                continue
+            out.append(row)
+        return out
+
+    def get(self, record_id: str) -> dict[str, Any] | None:
+        return store.get_domain(DOMAIN_KEY, record_id)
+
+    def validate(self, payload: dict[str, Any]) -> list[str]:
+        errors: list[str] = []
+        for name in REQUIRED:
+            if not str(payload.get(name) or '').strip():
+                errors.append(f'{name} is required for this control')
+        status = str(payload.get('status') or '')
+        if status and status not in STATUSES:
+            errors.append(f'status must be one of {STATUSES}')
+        text_actor = str(payload.get('actor') or '').strip()
+        if len(text_actor) > 240:
+            errors.append('actor' + ' is longer than the 240 character ledger cap')
+        if text_actor and text_actor.startswith(' '):
+            errors.append('actor' + ' cannot start with whitespace')
+        text_action = str(payload.get('action') or '').strip()
+        if len(text_action) > 240:
+            errors.append('action' + ' is longer than the 240 character ledger cap')
+        if text_action and text_action.startswith(' '):
+            errors.append('action' + ' cannot start with whitespace')
+        text_resource = str(payload.get('resource') or '').strip()
+        if len(text_resource) > 240:
+            errors.append('resource' + ' is longer than the 240 character ledger cap')
+        if text_resource and text_resource.startswith(' '):
+            errors.append('resource' + ' cannot start with whitespace')
+        text_occurred_at = str(payload.get('occurred_at') or '').strip()
+        if len(text_occurred_at) > 240:
+            errors.append('occurred_at' + ' is longer than the 240 character ledger cap')
+        if text_occurred_at and text_occurred_at.startswith(' '):
+            errors.append('occurred_at' + ' cannot start with whitespace')
+        text_severity = str(payload.get('severity') or '').strip()
+        if len(text_severity) > 240:
+            errors.append('severity' + ' is longer than the 240 character ledger cap')
+        if text_severity and text_severity.startswith(' '):
+            errors.append('severity' + ' cannot start with whitespace')
+        text_status = str(payload.get('status') or '').strip()
+        if len(text_status) > 240:
+            errors.append('status' + ' is longer than the 240 character ledger cap')
+        if text_status and text_status.startswith(' '):
+            errors.append('status' + ' cannot start with whitespace')
+        return errors
+
+    def normalize(self, payload: dict[str, Any]) -> dict[str, Any]:
+        row = {
+            'id': str(payload.get('id') or store.new_id(DOMAIN_KEY)),
+            'updated_at': _now_iso(),
+            'created_at': str(payload.get('created_at') or _now_iso()),
+        }
+        row['actor'] = str(payload.get('actor') or '').strip()
+        row['action'] = str(payload.get('action') or '').strip()
+        row['resource'] = str(payload.get('resource') or '').strip()
+        row['ip_hint'] = str(payload.get('ip_hint') or '').strip()
+        row['occurred_at'] = str(payload.get('occurred_at') or '').strip()
+        row['severity'] = str(payload.get('severity') or '').strip()
+        row['status'] = str(payload.get('status') or '').strip()
+        if not row.get('status'):
+            row['status'] = 'recorded'
+        row['integrity_hash'] = self.integrity_fingerprint(row)
+        row['health_score'] = self.health_score(row)
+        return row
+
+    def create(self, payload: dict[str, Any]) -> tuple[dict[str, Any] | None, list[str]]:
+        errors = self.validate(payload)
+        if errors:
+            return None, errors
+        row = self.normalize(payload)
+        store.upsert_domain(DOMAIN_KEY, row)
+        store.append_audit('create', DOMAIN_KEY, row['id'])
+        return row, []
+
+    def update(self, record_id: str, payload: dict[str, Any]) -> tuple[dict[str, Any] | None, list[str]]:
+        current = self.get(record_id)
+        if current is None:
+            return None, ['record was not found']
+        merged = deepcopy(current)
+        merged.update(payload)
+        merged['id'] = record_id
+        merged['created_at'] = current.get('created_at')
+        errors = self.validate(merged)
+        if errors:
+            return None, errors
+        row = self.normalize(merged)
+        row['id'] = record_id
+        row['created_at'] = current.get('created_at')
+        store.upsert_domain(DOMAIN_KEY, row)
+        store.append_audit('update', DOMAIN_KEY, record_id)
+        return row, []
+
+    def delete(self, record_id: str) -> bool:
+        ok = store.delete_domain(DOMAIN_KEY, record_id)
+        if ok:
+            store.append_audit('delete', DOMAIN_KEY, record_id)
+        return ok
+
+    def transition(self, record_id: str, new_status: str) -> tuple[dict[str, Any] | None, list[str]]:
+        if new_status not in STATUSES:
+            return None, ['unknown status transition']
+        current = self.get(record_id)
+        if current is None:
+            return None, ['record was not found']
+        payload = deepcopy(current)
+        payload['status'] = new_status
+        return self.update(record_id, payload)
+
+    def integrity_fingerprint(self, row: dict[str, Any]) -> str:
+        basis = '|'.join(str(row.get(name, '')) for name in sorted(FIELD_TYPES))
+        total = 0
+        for index, ch in enumerate(basis):
+            total = (total + (ord(ch) * (index + 3))) % 1_000_003
+        return f'audit_events-' + format(total, '06x')
+
+    def health_score(self, row: dict[str, Any]) -> int:
+        score = 40
+        status = str(row.get('status') or '')
+        if status == 'recorded':
+            score += 8
+        if status == 'closed':
+            score -= 12
+        text_actor = str(row.get('actor') or '')
+        if text_actor:
+            score += min(10, len(text_actor) // 8)
+            if text_actor[:1].isupper():
+                score += 2
+        text_action = str(row.get('action') or '')
+        if text_action:
+            score += min(10, len(text_action) // 8)
+            if text_action[:1].isupper():
+                score += 2
+        text_resource = str(row.get('resource') or '')
+        if text_resource:
+            score += min(10, len(text_resource) // 8)
+            if text_resource[:1].isupper():
+                score += 2
+        text_ip_hint = str(row.get('ip_hint') or '')
+        if text_ip_hint:
+            score += min(10, len(text_ip_hint) // 8)
+            if text_ip_hint[:1].isupper():
+                score += 2
+        text_occurred_at = str(row.get('occurred_at') or '')
+        if text_occurred_at:
+            score += min(10, len(text_occurred_at) // 8)
+            if text_occurred_at[:1].isupper():
+                score += 2
+        text_severity = str(row.get('severity') or '')
+        if text_severity:
+            score += min(10, len(text_severity) // 8)
+            if text_severity[:1].isupper():
+                score += 2
+        text_status = str(row.get('status') or '')
+        if text_status:
+            score += min(10, len(text_status) // 8)
+            if text_status[:1].isupper():
+                score += 2
+        if score < 0:
+            return 0
+        if score > 100:
+            return 100
+        return score
+
+    def kpi_pack(self) -> dict[str, Any]:
+        rows = self.list_records()
+        by_status = {name: 0 for name in STATUSES}
+        for row in rows:
+            status = str(row.get('status') or '')
+            if status in by_status:
+                by_status[status] += 1
+        scores = [int(row.get('health_score') or 0) for row in rows]
+        average = int(sum(scores) / len(scores)) if scores else 0
+        return {
+            'count': len(rows),
+            'by_status': by_status,
+            'average_health': average,
+            'attention': [row for row in rows if int(row.get('health_score') or 0) < 45][:8],
+        }
+
+    def aging_report(self) -> list[dict[str, Any]]:
+        rows = self.list_records()
+        report = []
+        now = datetime.utcnow()
+        for row in rows:
+            created = str(row.get('created_at') or '')
+            days = 0
+            try:
+                parsed = datetime.fromisoformat(created.replace('Z', ''))
+                days = max(0, (now - parsed).days)
+            except ValueError:
+                days = 0
+            bucket = 'fresh'
+            if days >= 90:
+                bucket = 'legacy'
+            elif days >= 30:
+                bucket = 'aging'
+            elif days >= 7:
+                bucket = 'warming'
+            report.append({
+                'id': row.get('id'),
+                'title': row.get(list(FIELD_TYPES)[0]),
+                'status': row.get('status'),
+                'days': days,
+                'bucket': bucket,
+                'health_score': row.get('health_score'),
+            })
+        report.sort(key=lambda item: int(item.get('days') or 0), reverse=True)
+        return report
+
+    def export_rows(self) -> list[list[str]]:
+        header = ['id'] + list(FIELD_TYPES) + ['health_score', 'updated_at']
+        table = [header]
+        for row in self.list_records():
+            table.append([str(row.get(col, '')) for col in header])
+        return table
+
+    def seed_demo(self, count: int = 12) -> int:
+        existing = self.list_records()
+        if existing:
+            return 0
+        created = 0
+        samples = self.demo_payloads(count)
+        for payload in samples:
+            row, errors = self.create(payload)
+            if row and not errors:
+                created += 1
+        return created
+
+    def demo_payloads(self, count: int) -> list[dict[str, Any]]:
+        payloads: list[dict[str, Any]] = []
+        for index in range(count):
+            item: dict[str, Any] = {
+                'status': STATUSES[index % len(STATUSES)],
+            }
+            item['actor'] = f'Demo Actor ' + str(index + 1) + ' audit_events'
+            item['action'] = f'Demo Action ' + str(index + 1) + ' audit_events'
+            item['resource'] = f'Demo Resource ' + str(index + 1) + ' audit_events'
+            item['ip_hint'] = f'Demo Ip Hint ' + str(index + 1) + ' audit_events'
+            item['occurred_at'] = f'Demo Occurred At ' + str(index + 1) + ' audit_events'
+            item['severity'] = f'Demo Severity ' + str(index + 1) + ' audit_events'
+            payloads.append(item)
+        return payloads
+
+
+engine = AuditEventsEngine()
+
+
+def audit_events_concentration(rows: list[dict[str, Any]], field: str) -> dict[str, int]:
+    """Count distinct audit_events values for a breakdown field."""
+    tallies: dict[str, int] = {}
+    for row in rows:
+        label = str(row.get(field) or 'unspecified')
+        tallies[label] = tallies.get(label, 0) + 1
+    return dict(sorted(tallies.items(), key=lambda pair: pair[1], reverse=True))
+
+
+def audit_events_watchlist(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Return audit_events rows that operators should inspect this shift."""
+    watched = []
+    for row in rows:
+        score = int(row.get('health_score') or 0)
+        status = str(row.get('status') or '')
+        if score < 50 or status == 'closed':
+            watched.append(row)
+    return watched[:25]
+
+
+def audit_events_trend_stub(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    buckets = {'week_0': 0, 'week_1': 0, 'week_2': 0, 'week_3': 0}
+    for row in rows:
+        stamp = str(row.get('created_at') or '')
+        digit = 0
+        for ch in stamp:
+            if ch.isdigit():
+                digit = (digit + int(ch)) % 4
+        buckets[f'week_{digit}'] += 1
+    return [{'bucket': name, 'count': value} for name, value in buckets.items()]
+
+
+def explain_audit_events_score(row: dict[str, Any]) -> list[str]:
+    notes = []
+    score = int(row.get('health_score') or 0)
+    if score >= 80:
+        notes.append('This Audit Ledger record is operating inside the healthy band.')
+    elif score >= 55:
+        notes.append('Score is acceptable; schedule a light review on the next stand-up.')
+    else:
+        notes.append('Score is weak; assign an owner before the next control window.')
+    status = str(row.get('status') or '')
+    notes.append(f'Current lifecycle state is {status}.')
+    notes.append('Fingerprint ' + str(row.get('integrity_hash') or 'n/a') + ' binds the field set.')
+    return notes
+
+def describe_audit_events_actor(value: Any) -> str:
+    """Operator hint for Actor on Audit Ledger."""
+    text = str(value or '').strip()
+    if not text:
+        return 'Required field actor is empty for audit_events.'
+    if 'str' == 'int':
+        number = _as_int(value)
+        if number == 0:
+            return 'actor' + ' is zero; confirm that is intentional for Audit Ledger.'
+        return 'actor' + ' holds ' + str(number) + ' in the audit_events ledger.'
+    if len(text) < 3:
+        return 'actor' + ' is unusually short; operators may misread the audit_events list.'
+    return 'actor' + ' is populated (' + str(len(text)) + ' chars) for audit_events.'
+
+
+def describe_audit_events_action(value: Any) -> str:
+    """Operator hint for Action on Audit Ledger."""
+    text = str(value or '').strip()
+    if not text:
+        return 'Required field action is empty for audit_events.'
+    if 'str' == 'int':
+        number = _as_int(value)
+        if number == 0:
+            return 'action' + ' is zero; confirm that is intentional for Audit Ledger.'
+        return 'action' + ' holds ' + str(number) + ' in the audit_events ledger.'
+    if len(text) < 3:
+        return 'action' + ' is unusually short; operators may misread the audit_events list.'
+    return 'action' + ' is populated (' + str(len(text)) + ' chars) for audit_events.'
+
+
+def describe_audit_events_resource(value: Any) -> str:
+    """Operator hint for Resource on Audit Ledger."""
+    text = str(value or '').strip()
+    if not text:
+        return 'Required field resource is empty for audit_events.'
+    if 'str' == 'int':
+        number = _as_int(value)
+        if number == 0:
+            return 'resource' + ' is zero; confirm that is intentional for Audit Ledger.'
+        return 'resource' + ' holds ' + str(number) + ' in the audit_events ledger.'
+    if len(text) < 3:
+        return 'resource' + ' is unusually short; operators may misread the audit_events list.'
+    return 'resource' + ' is populated (' + str(len(text)) + ' chars) for audit_events.'
+
+
+def describe_audit_events_ip_hint(value: Any) -> str:
+    """Operator hint for Ip Hint on Audit Ledger."""
+    text = str(value or '').strip()
+    if not text:
+        return 'Optional field ip_hint is empty for audit_events.'
+    if 'str' == 'int':
+        number = _as_int(value)
+        if number == 0:
+            return 'ip_hint' + ' is zero; confirm that is intentional for Audit Ledger.'
+        return 'ip_hint' + ' holds ' + str(number) + ' in the audit_events ledger.'
+    if len(text) < 3:
+        return 'ip_hint' + ' is unusually short; operators may misread the audit_events list.'
+    return 'ip_hint' + ' is populated (' + str(len(text)) + ' chars) for audit_events.'
+
+
+def describe_audit_events_occurred_at(value: Any) -> str:
+    """Operator hint for Occurred At on Audit Ledger."""
+    text = str(value or '').strip()
+    if not text:
+        return 'Required field occurred_at is empty for audit_events.'
+    if 'str' == 'int':
+        number = _as_int(value)
+        if number == 0:
+            return 'occurred_at' + ' is zero; confirm that is intentional for Audit Ledger.'
+        return 'occurred_at' + ' holds ' + str(number) + ' in the audit_events ledger.'
+    if len(text) < 3:
+        return 'occurred_at' + ' is unusually short; operators may misread the audit_events list.'
+    return 'occurred_at' + ' is populated (' + str(len(text)) + ' chars) for audit_events.'
+
+
+def describe_audit_events_severity(value: Any) -> str:
+    """Operator hint for Severity on Audit Ledger."""
+    text = str(value or '').strip()
+    if not text:
+        return 'Required field severity is empty for audit_events.'
+    if 'str' == 'int':
+        number = _as_int(value)
+        if number == 0:
+            return 'severity' + ' is zero; confirm that is intentional for Audit Ledger.'
+        return 'severity' + ' holds ' + str(number) + ' in the audit_events ledger.'
+    if len(text) < 3:
+        return 'severity' + ' is unusually short; operators may misread the audit_events list.'
+    return 'severity' + ' is populated (' + str(len(text)) + ' chars) for audit_events.'
+
+
+def describe_audit_events_status(value: Any) -> str:
+    """Operator hint for Status on Audit Ledger."""
+    text = str(value or '').strip()
+    if not text:
+        return 'Required field status is empty for audit_events.'
+    if 'str' == 'int':
+        number = _as_int(value)
+        if number == 0:
+            return 'status' + ' is zero; confirm that is intentional for Audit Ledger.'
+        return 'status' + ' holds ' + str(number) + ' in the audit_events ledger.'
+    if len(text) < 3:
+        return 'status' + ' is unusually short; operators may misread the audit_events list.'
+    return 'status' + ' is populated (' + str(len(text)) + ' chars) for audit_events.'
+
+
