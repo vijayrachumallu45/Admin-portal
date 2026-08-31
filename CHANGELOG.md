@@ -10,3 +10,6 @@ All notable changes to the NexusOps Admin Portal are documented in this file.
 
 ## Operational ledgers
 - Tenants, billing, inventory, HR, ITSM, CRM domains
+
+## Reporting and exports
+- CSV export, aging reports, and status workflows
