@@ -1,0 +1,35 @@
+{% extends "shell.html" %}
+{% block title %}Global search{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div>
+    <p class="eyebrow">Search</p>
+    <h1>Global search</h1>
+    <p class="lede">Find records across the local control plane in one place.</p>
+  </div>
+</section>
+<section class="glass-card">
+  <form method="get" action="{{ url_for('search') }}">
+    <label for="q">Search terms</label>
+    <input id="q" name="q" value="{{ query }}" placeholder="Type a record, domain, or customer name" />
+    <button class="btn primary" type="submit">Search</button>
+  </form>
+</section>
+<section class="glass-card">
+  <h2>{{ total_results }} results</h2>
+  {% if not query %}
+    <p>Use the search box above to find matching records.</p>
+  {% elif not results %}
+    <p>No records match “{{ query }}”.</p>
+  {% else %}
+    <ul class="plain-list">
+      {% for row in results %}
+      <li>
+        <strong>{{ row.domain }}</strong> · {{ row.record_id }}
+        <div>{{ row.summary }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</section>
+{% endblock %}

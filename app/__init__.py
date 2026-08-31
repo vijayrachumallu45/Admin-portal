@@ -99,6 +99,37 @@ def register_pages(app: Flask) -> None:
             session_email=session.get("email"),
         )
 
+    @app.get("/search")
+    @login_required
+    def search():
+        query = request.args.get("q", "").strip()
+        results = []
+        if query:
+            for item in CATALOG:
+                domain = item["key"]
+                rows = store.list_domain(domain)
+                for row in rows:
+                    haystack = " ".join(str(value) for value in row.values()).lower()
+                    if query.lower() in haystack:
+                        results.append(
+                            {
+                                "domain": item["title"],
+                                "key": domain,
+                                "record_id": row.get("id", "unknown"),
+                                "summary": " ".join(
+                                    f"{key}={value}"
+                                    for key, value in row.items()
+                                    if key != "id" and value not in (None, "")
+                                )[:140],
+                            }
+                        )
+        return render_template(
+            "search.html",
+            query=query,
+            results=results,
+            total_results=len(results),
+        )
+
     @app.get("/profile")
     @login_required
     def profile():
