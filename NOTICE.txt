@@ -1,0 +1,10 @@
+PROPRIETARY NOTICE
+
+Copyright (c) 2026 NexusOps Admin Portal authors. All rights reserved.
+
+This source tree is proprietary software. It is not licensed as open source.
+It is not distributed under the GNU General Public License, the Apache License,
+the MIT License, or any other OSI-approved license.
+
+No grant of patent, trademark, or copyright license is made by the presence of
+this file. Redistribution requires a separate written agreement.
