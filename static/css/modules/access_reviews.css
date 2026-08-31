@@ -1,0 +1,350 @@
+/* Module skin for Access Reviews */
+.access_reviews-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #fdba7455, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #fdba7433;
+  box-shadow: 0 24px 80px #fdba7422;
+}
+.access_reviews-table tbody tr:hover {
+  background: #fdba7414;
+}
+.access_reviews-form .field span {
+  color: #fdba74;
+}
+.access_reviews-hero h1 {
+  text-shadow: 0 0 24px #fdba7466;
+}
+.module-hero.access_reviews-hero .lede {
+  max-width: 46rem;
+}
+.access_reviews-badge {
+  color: #fdba74;
+  border-color: #fdba7466;
+}
+.access_reviews-panel {
+  outline: 1px solid #fdba7422;
+}
+.access_reviews-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #fdba74, transparent);
+}
+.access_reviews-form input:focus,
+.access_reviews-form select:focus {
+  border-color: #fdba74;
+  box-shadow: 0 0 0 3px #fdba7433;
+}
+.access_reviews-table th {
+  color: #fdba74;
+}
+.access_reviews-cta {
+  background: #fdba74;
+  color: #061018;
+}
+.access_reviews-ghost {
+  border-color: #fdba7455;
+}
+.access_reviews-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #fdba7422,
+    #fdba7422 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.access_reviews-footnote {
+  color: #fdba74cc;
+  font-size: 0.82rem;
+}
+.access_reviews-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #fdba7455;
+}
+.access_reviews-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #fdba74, transparent);
+  margin: 1.25rem 0;
+}
+.access_reviews-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fdba74;
+}
+.access_reviews-grid-overlay {
+  background-image: linear-gradient(#fdba7411 1px, transparent 1px),
+    linear-gradient(90deg, #fdba7411 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.access_reviews-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fdba74;
+  box-shadow: 0 0 12px #fdba74;
+}
+.access_reviews-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.access_reviews-danger-hint {
+  color: #fecaca;
+}
+.access_reviews-ok-hint {
+  color: #fdba74;
+}
+.access_reviews-sidebar-mark {
+  border-left: 3px solid #fdba74;
+  padding-left: 0.75rem;
+}
+.access_reviews-hero {
+  position: relative;
+  overflow: hidden;
+}
+.access_reviews-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #fdba7422;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Access Reviews — access_reviews */
+.access_reviews-tone-1 {
+  --tone: #fdba74;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.access_reviews-tone-2 {
+  --tone: #fdba74;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.access_reviews-tone-3 {
+  --tone: #fdba74;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.access_reviews-tone-4 {
+  --tone: #fdba74;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.access_reviews-tone-5 {
+  --tone: #fdba74;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.access_reviews-tone-6 {
+  --tone: #fdba74;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.access_reviews-tone-7 {
+  --tone: #fdba74;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.access_reviews-tone-8 {
+  --tone: #fdba74;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.access_reviews-tone-9 {
+  --tone: #fdba74;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.access_reviews-tone-10 {
+  --tone: #fdba74;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.access_reviews-tone-11 {
+  --tone: #fdba74;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.access_reviews-tone-12 {
+  --tone: #fdba74;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.access_reviews-tone-13 {
+  --tone: #fdba74;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.access_reviews-tone-14 {
+  --tone: #fdba74;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.access_reviews-tone-15 {
+  --tone: #fdba74;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.access_reviews-tone-16 {
+  --tone: #fdba74;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.access_reviews-tone-17 {
+  --tone: #fdba74;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.access_reviews-tone-18 {
+  --tone: #fdba74;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.access_reviews-tone-19 {
+  --tone: #fdba74;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.access_reviews-tone-20 {
+  --tone: #fdba74;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.access_reviews-tone-21 {
+  --tone: #fdba74;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.access_reviews-tone-22 {
+  --tone: #fdba74;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.access_reviews-tone-23 {
+  --tone: #fdba74;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.access_reviews-tone-24 {
+  --tone: #fdba74;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.access_reviews-tone-25 {
+  --tone: #fdba74;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.access_reviews-tone-26 {
+  --tone: #fdba74;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.access_reviews-tone-27 {
+  --tone: #fdba74;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.access_reviews-canvas {
+  background:
+    radial-gradient(circle at 24% 34%, #fdba7440, transparent 42%),
+    radial-gradient(circle at 84% 66%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.access_reviews-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #fdba74, transparent);
+}
+.access_reviews-pill {
+  border: 1px solid #fdba7466;
+  color: #fdba74;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.access_reviews-stat {
+  font-variant-numeric: tabular-nums;
+  color: #fdba74;
+}
+.access_reviews-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.access_reviews-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.access_reviews-empty strong {
+  display: block;
+  color: #fdba74;
+  margin-bottom: 0.35rem;
+}
+.access_reviews-timeline li {
+  border-left: 2px solid #fdba7455;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.access_reviews-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #fdba74;
+}
+.access_reviews-form .field input,
+.access_reviews-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.access_reviews-hero.is-ready {
+  animation: access_reviews-rise 640ms ease both;
+}
+@keyframes access_reviews-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.access_reviews-table.is-hot,
+.access_reviews-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #fdba74;
+}
+.access_reviews-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fdba7455;
+}

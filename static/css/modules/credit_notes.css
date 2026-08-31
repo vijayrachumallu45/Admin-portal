@@ -1,0 +1,350 @@
+/* Module skin for Credit Notes */
+.credit_notes-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #f472b655, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #f472b633;
+  box-shadow: 0 24px 80px #f472b622;
+}
+.credit_notes-table tbody tr:hover {
+  background: #f472b614;
+}
+.credit_notes-form .field span {
+  color: #f472b6;
+}
+.credit_notes-hero h1 {
+  text-shadow: 0 0 24px #f472b666;
+}
+.module-hero.credit_notes-hero .lede {
+  max-width: 46rem;
+}
+.credit_notes-badge {
+  color: #f472b6;
+  border-color: #f472b666;
+}
+.credit_notes-panel {
+  outline: 1px solid #f472b622;
+}
+.credit_notes-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f472b6, transparent);
+}
+.credit_notes-form input:focus,
+.credit_notes-form select:focus {
+  border-color: #f472b6;
+  box-shadow: 0 0 0 3px #f472b633;
+}
+.credit_notes-table th {
+  color: #f472b6;
+}
+.credit_notes-cta {
+  background: #f472b6;
+  color: #061018;
+}
+.credit_notes-ghost {
+  border-color: #f472b655;
+}
+.credit_notes-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #f472b622,
+    #f472b622 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.credit_notes-footnote {
+  color: #f472b6cc;
+  font-size: 0.82rem;
+}
+.credit_notes-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #f472b655;
+}
+.credit_notes-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #f472b6, transparent);
+  margin: 1.25rem 0;
+}
+.credit_notes-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f472b6;
+}
+.credit_notes-grid-overlay {
+  background-image: linear-gradient(#f472b611 1px, transparent 1px),
+    linear-gradient(90deg, #f472b611 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.credit_notes-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f472b6;
+  box-shadow: 0 0 12px #f472b6;
+}
+.credit_notes-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.credit_notes-danger-hint {
+  color: #fecaca;
+}
+.credit_notes-ok-hint {
+  color: #f472b6;
+}
+.credit_notes-sidebar-mark {
+  border-left: 3px solid #f472b6;
+  padding-left: 0.75rem;
+}
+.credit_notes-hero {
+  position: relative;
+  overflow: hidden;
+}
+.credit_notes-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #f472b622;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Credit Notes — credit_notes */
+.credit_notes-tone-1 {
+  --tone: #f472b6;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.credit_notes-tone-2 {
+  --tone: #f472b6;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.credit_notes-tone-3 {
+  --tone: #f472b6;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.credit_notes-tone-4 {
+  --tone: #f472b6;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.credit_notes-tone-5 {
+  --tone: #f472b6;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.credit_notes-tone-6 {
+  --tone: #f472b6;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.credit_notes-tone-7 {
+  --tone: #f472b6;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.credit_notes-tone-8 {
+  --tone: #f472b6;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.credit_notes-tone-9 {
+  --tone: #f472b6;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.credit_notes-tone-10 {
+  --tone: #f472b6;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.credit_notes-tone-11 {
+  --tone: #f472b6;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.credit_notes-tone-12 {
+  --tone: #f472b6;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.credit_notes-tone-13 {
+  --tone: #f472b6;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.credit_notes-tone-14 {
+  --tone: #f472b6;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.credit_notes-tone-15 {
+  --tone: #f472b6;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.credit_notes-tone-16 {
+  --tone: #f472b6;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.credit_notes-tone-17 {
+  --tone: #f472b6;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.credit_notes-tone-18 {
+  --tone: #f472b6;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.credit_notes-tone-19 {
+  --tone: #f472b6;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.credit_notes-tone-20 {
+  --tone: #f472b6;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.credit_notes-tone-21 {
+  --tone: #f472b6;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.credit_notes-tone-22 {
+  --tone: #f472b6;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.credit_notes-tone-23 {
+  --tone: #f472b6;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.credit_notes-tone-24 {
+  --tone: #f472b6;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.credit_notes-tone-25 {
+  --tone: #f472b6;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.credit_notes-tone-26 {
+  --tone: #f472b6;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.credit_notes-tone-27 {
+  --tone: #f472b6;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.credit_notes-canvas {
+  background:
+    radial-gradient(circle at 22% 32%, #f472b640, transparent 42%),
+    radial-gradient(circle at 82% 68%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.credit_notes-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #f472b6, transparent);
+}
+.credit_notes-pill {
+  border: 1px solid #f472b666;
+  color: #f472b6;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.credit_notes-stat {
+  font-variant-numeric: tabular-nums;
+  color: #f472b6;
+}
+.credit_notes-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.credit_notes-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.credit_notes-empty strong {
+  display: block;
+  color: #f472b6;
+  margin-bottom: 0.35rem;
+}
+.credit_notes-timeline li {
+  border-left: 2px solid #f472b655;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.credit_notes-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #f472b6;
+}
+.credit_notes-form .field input,
+.credit_notes-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.credit_notes-hero.is-ready {
+  animation: credit_notes-rise 640ms ease both;
+}
+@keyframes credit_notes-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.credit_notes-table.is-hot,
+.credit_notes-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #f472b6;
+}
+.credit_notes-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f472b655;
+}

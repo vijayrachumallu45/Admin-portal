@@ -1,0 +1,350 @@
+/* Module skin for Meeting Rooms */
+.meeting_rooms-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #d4d4d855, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #d4d4d833;
+  box-shadow: 0 24px 80px #d4d4d822;
+}
+.meeting_rooms-table tbody tr:hover {
+  background: #d4d4d814;
+}
+.meeting_rooms-form .field span {
+  color: #d4d4d8;
+}
+.meeting_rooms-hero h1 {
+  text-shadow: 0 0 24px #d4d4d866;
+}
+.module-hero.meeting_rooms-hero .lede {
+  max-width: 46rem;
+}
+.meeting_rooms-badge {
+  color: #d4d4d8;
+  border-color: #d4d4d866;
+}
+.meeting_rooms-panel {
+  outline: 1px solid #d4d4d822;
+}
+.meeting_rooms-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d4d4d8, transparent);
+}
+.meeting_rooms-form input:focus,
+.meeting_rooms-form select:focus {
+  border-color: #d4d4d8;
+  box-shadow: 0 0 0 3px #d4d4d833;
+}
+.meeting_rooms-table th {
+  color: #d4d4d8;
+}
+.meeting_rooms-cta {
+  background: #d4d4d8;
+  color: #061018;
+}
+.meeting_rooms-ghost {
+  border-color: #d4d4d855;
+}
+.meeting_rooms-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #d4d4d822,
+    #d4d4d822 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.meeting_rooms-footnote {
+  color: #d4d4d8cc;
+  font-size: 0.82rem;
+}
+.meeting_rooms-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #d4d4d855;
+}
+.meeting_rooms-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #d4d4d8, transparent);
+  margin: 1.25rem 0;
+}
+.meeting_rooms-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d4d4d8;
+}
+.meeting_rooms-grid-overlay {
+  background-image: linear-gradient(#d4d4d811 1px, transparent 1px),
+    linear-gradient(90deg, #d4d4d811 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.meeting_rooms-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d4d4d8;
+  box-shadow: 0 0 12px #d4d4d8;
+}
+.meeting_rooms-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.meeting_rooms-danger-hint {
+  color: #fecaca;
+}
+.meeting_rooms-ok-hint {
+  color: #d4d4d8;
+}
+.meeting_rooms-sidebar-mark {
+  border-left: 3px solid #d4d4d8;
+  padding-left: 0.75rem;
+}
+.meeting_rooms-hero {
+  position: relative;
+  overflow: hidden;
+}
+.meeting_rooms-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #d4d4d822;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Meeting Rooms — meeting_rooms */
+.meeting_rooms-tone-1 {
+  --tone: #d4d4d8;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.meeting_rooms-tone-2 {
+  --tone: #d4d4d8;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.meeting_rooms-tone-3 {
+  --tone: #d4d4d8;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.meeting_rooms-tone-4 {
+  --tone: #d4d4d8;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.meeting_rooms-tone-5 {
+  --tone: #d4d4d8;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.meeting_rooms-tone-6 {
+  --tone: #d4d4d8;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.meeting_rooms-tone-7 {
+  --tone: #d4d4d8;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.meeting_rooms-tone-8 {
+  --tone: #d4d4d8;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.meeting_rooms-tone-9 {
+  --tone: #d4d4d8;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.meeting_rooms-tone-10 {
+  --tone: #d4d4d8;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.meeting_rooms-tone-11 {
+  --tone: #d4d4d8;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.meeting_rooms-tone-12 {
+  --tone: #d4d4d8;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.meeting_rooms-tone-13 {
+  --tone: #d4d4d8;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.meeting_rooms-tone-14 {
+  --tone: #d4d4d8;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.meeting_rooms-tone-15 {
+  --tone: #d4d4d8;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.meeting_rooms-tone-16 {
+  --tone: #d4d4d8;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.meeting_rooms-tone-17 {
+  --tone: #d4d4d8;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.meeting_rooms-tone-18 {
+  --tone: #d4d4d8;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.meeting_rooms-tone-19 {
+  --tone: #d4d4d8;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.meeting_rooms-tone-20 {
+  --tone: #d4d4d8;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.meeting_rooms-tone-21 {
+  --tone: #d4d4d8;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.meeting_rooms-tone-22 {
+  --tone: #d4d4d8;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.meeting_rooms-tone-23 {
+  --tone: #d4d4d8;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.meeting_rooms-tone-24 {
+  --tone: #d4d4d8;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.meeting_rooms-tone-25 {
+  --tone: #d4d4d8;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.meeting_rooms-tone-26 {
+  --tone: #d4d4d8;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.meeting_rooms-tone-27 {
+  --tone: #d4d4d8;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.meeting_rooms-canvas {
+  background:
+    radial-gradient(circle at 23% 33%, #d4d4d840, transparent 42%),
+    radial-gradient(circle at 83% 67%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.meeting_rooms-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #d4d4d8, transparent);
+}
+.meeting_rooms-pill {
+  border: 1px solid #d4d4d866;
+  color: #d4d4d8;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.meeting_rooms-stat {
+  font-variant-numeric: tabular-nums;
+  color: #d4d4d8;
+}
+.meeting_rooms-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.meeting_rooms-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.meeting_rooms-empty strong {
+  display: block;
+  color: #d4d4d8;
+  margin-bottom: 0.35rem;
+}
+.meeting_rooms-timeline li {
+  border-left: 2px solid #d4d4d855;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.meeting_rooms-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #d4d4d8;
+}
+.meeting_rooms-form .field input,
+.meeting_rooms-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.meeting_rooms-hero.is-ready {
+  animation: meeting_rooms-rise 640ms ease both;
+}
+@keyframes meeting_rooms-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.meeting_rooms-table.is-hot,
+.meeting_rooms-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #d4d4d8;
+}
+.meeting_rooms-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d4d4d855;
+}

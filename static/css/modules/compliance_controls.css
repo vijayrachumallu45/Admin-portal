@@ -1,0 +1,350 @@
+/* Module skin for Compliance Controls */
+.compliance_controls-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #e2e8f055, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #e2e8f033;
+  box-shadow: 0 24px 80px #e2e8f022;
+}
+.compliance_controls-table tbody tr:hover {
+  background: #e2e8f014;
+}
+.compliance_controls-form .field span {
+  color: #e2e8f0;
+}
+.compliance_controls-hero h1 {
+  text-shadow: 0 0 24px #e2e8f066;
+}
+.module-hero.compliance_controls-hero .lede {
+  max-width: 46rem;
+}
+.compliance_controls-badge {
+  color: #e2e8f0;
+  border-color: #e2e8f066;
+}
+.compliance_controls-panel {
+  outline: 1px solid #e2e8f022;
+}
+.compliance_controls-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #e2e8f0, transparent);
+}
+.compliance_controls-form input:focus,
+.compliance_controls-form select:focus {
+  border-color: #e2e8f0;
+  box-shadow: 0 0 0 3px #e2e8f033;
+}
+.compliance_controls-table th {
+  color: #e2e8f0;
+}
+.compliance_controls-cta {
+  background: #e2e8f0;
+  color: #061018;
+}
+.compliance_controls-ghost {
+  border-color: #e2e8f055;
+}
+.compliance_controls-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #e2e8f022,
+    #e2e8f022 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.compliance_controls-footnote {
+  color: #e2e8f0cc;
+  font-size: 0.82rem;
+}
+.compliance_controls-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #e2e8f055;
+}
+.compliance_controls-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #e2e8f0, transparent);
+  margin: 1.25rem 0;
+}
+.compliance_controls-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #e2e8f0;
+}
+.compliance_controls-grid-overlay {
+  background-image: linear-gradient(#e2e8f011 1px, transparent 1px),
+    linear-gradient(90deg, #e2e8f011 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.compliance_controls-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  box-shadow: 0 0 12px #e2e8f0;
+}
+.compliance_controls-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.compliance_controls-danger-hint {
+  color: #fecaca;
+}
+.compliance_controls-ok-hint {
+  color: #e2e8f0;
+}
+.compliance_controls-sidebar-mark {
+  border-left: 3px solid #e2e8f0;
+  padding-left: 0.75rem;
+}
+.compliance_controls-hero {
+  position: relative;
+  overflow: hidden;
+}
+.compliance_controls-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #e2e8f022;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Compliance Controls — compliance_controls */
+.compliance_controls-tone-1 {
+  --tone: #e2e8f0;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.compliance_controls-tone-2 {
+  --tone: #e2e8f0;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.compliance_controls-tone-3 {
+  --tone: #e2e8f0;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.compliance_controls-tone-4 {
+  --tone: #e2e8f0;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.compliance_controls-tone-5 {
+  --tone: #e2e8f0;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.compliance_controls-tone-6 {
+  --tone: #e2e8f0;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.compliance_controls-tone-7 {
+  --tone: #e2e8f0;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.compliance_controls-tone-8 {
+  --tone: #e2e8f0;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.compliance_controls-tone-9 {
+  --tone: #e2e8f0;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.compliance_controls-tone-10 {
+  --tone: #e2e8f0;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.compliance_controls-tone-11 {
+  --tone: #e2e8f0;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.compliance_controls-tone-12 {
+  --tone: #e2e8f0;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.compliance_controls-tone-13 {
+  --tone: #e2e8f0;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.compliance_controls-tone-14 {
+  --tone: #e2e8f0;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.compliance_controls-tone-15 {
+  --tone: #e2e8f0;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.compliance_controls-tone-16 {
+  --tone: #e2e8f0;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.compliance_controls-tone-17 {
+  --tone: #e2e8f0;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.compliance_controls-tone-18 {
+  --tone: #e2e8f0;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.compliance_controls-tone-19 {
+  --tone: #e2e8f0;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.compliance_controls-tone-20 {
+  --tone: #e2e8f0;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.compliance_controls-tone-21 {
+  --tone: #e2e8f0;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.compliance_controls-tone-22 {
+  --tone: #e2e8f0;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.compliance_controls-tone-23 {
+  --tone: #e2e8f0;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.compliance_controls-tone-24 {
+  --tone: #e2e8f0;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.compliance_controls-tone-25 {
+  --tone: #e2e8f0;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.compliance_controls-tone-26 {
+  --tone: #e2e8f0;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.compliance_controls-tone-27 {
+  --tone: #e2e8f0;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.compliance_controls-canvas {
+  background:
+    radial-gradient(circle at 29% 39%, #e2e8f040, transparent 42%),
+    radial-gradient(circle at 89% 61%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.compliance_controls-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}
+.compliance_controls-pill {
+  border: 1px solid #e2e8f066;
+  color: #e2e8f0;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.compliance_controls-stat {
+  font-variant-numeric: tabular-nums;
+  color: #e2e8f0;
+}
+.compliance_controls-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.compliance_controls-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.compliance_controls-empty strong {
+  display: block;
+  color: #e2e8f0;
+  margin-bottom: 0.35rem;
+}
+.compliance_controls-timeline li {
+  border-left: 2px solid #e2e8f055;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.compliance_controls-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #e2e8f0;
+}
+.compliance_controls-form .field input,
+.compliance_controls-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.compliance_controls-hero.is-ready {
+  animation: compliance_controls-rise 640ms ease both;
+}
+@keyframes compliance_controls-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.compliance_controls-table.is-hot,
+.compliance_controls-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #e2e8f0;
+}
+.compliance_controls-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e2e8f055;
+}

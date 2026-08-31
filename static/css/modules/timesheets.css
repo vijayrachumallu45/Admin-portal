@@ -1,0 +1,350 @@
+/* Module skin for Timesheets */
+.timesheets-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #facc1555, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #facc1533;
+  box-shadow: 0 24px 80px #facc1522;
+}
+.timesheets-table tbody tr:hover {
+  background: #facc1514;
+}
+.timesheets-form .field span {
+  color: #facc15;
+}
+.timesheets-hero h1 {
+  text-shadow: 0 0 24px #facc1566;
+}
+.module-hero.timesheets-hero .lede {
+  max-width: 46rem;
+}
+.timesheets-badge {
+  color: #facc15;
+  border-color: #facc1566;
+}
+.timesheets-panel {
+  outline: 1px solid #facc1522;
+}
+.timesheets-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #facc15, transparent);
+}
+.timesheets-form input:focus,
+.timesheets-form select:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 0 3px #facc1533;
+}
+.timesheets-table th {
+  color: #facc15;
+}
+.timesheets-cta {
+  background: #facc15;
+  color: #061018;
+}
+.timesheets-ghost {
+  border-color: #facc1555;
+}
+.timesheets-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #facc1522,
+    #facc1522 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.timesheets-footnote {
+  color: #facc15cc;
+  font-size: 0.82rem;
+}
+.timesheets-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #facc1555;
+}
+.timesheets-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #facc15, transparent);
+  margin: 1.25rem 0;
+}
+.timesheets-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #facc15;
+}
+.timesheets-grid-overlay {
+  background-image: linear-gradient(#facc1511 1px, transparent 1px),
+    linear-gradient(90deg, #facc1511 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.timesheets-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #facc15;
+  box-shadow: 0 0 12px #facc15;
+}
+.timesheets-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.timesheets-danger-hint {
+  color: #fecaca;
+}
+.timesheets-ok-hint {
+  color: #facc15;
+}
+.timesheets-sidebar-mark {
+  border-left: 3px solid #facc15;
+  padding-left: 0.75rem;
+}
+.timesheets-hero {
+  position: relative;
+  overflow: hidden;
+}
+.timesheets-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #facc1522;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Timesheets — timesheets */
+.timesheets-tone-1 {
+  --tone: #facc15;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.timesheets-tone-2 {
+  --tone: #facc15;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.timesheets-tone-3 {
+  --tone: #facc15;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.timesheets-tone-4 {
+  --tone: #facc15;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.timesheets-tone-5 {
+  --tone: #facc15;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.timesheets-tone-6 {
+  --tone: #facc15;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.timesheets-tone-7 {
+  --tone: #facc15;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.timesheets-tone-8 {
+  --tone: #facc15;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.timesheets-tone-9 {
+  --tone: #facc15;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.timesheets-tone-10 {
+  --tone: #facc15;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.timesheets-tone-11 {
+  --tone: #facc15;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.timesheets-tone-12 {
+  --tone: #facc15;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.timesheets-tone-13 {
+  --tone: #facc15;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.timesheets-tone-14 {
+  --tone: #facc15;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.timesheets-tone-15 {
+  --tone: #facc15;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.timesheets-tone-16 {
+  --tone: #facc15;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.timesheets-tone-17 {
+  --tone: #facc15;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.timesheets-tone-18 {
+  --tone: #facc15;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.timesheets-tone-19 {
+  --tone: #facc15;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.timesheets-tone-20 {
+  --tone: #facc15;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.timesheets-tone-21 {
+  --tone: #facc15;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.timesheets-tone-22 {
+  --tone: #facc15;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.timesheets-tone-23 {
+  --tone: #facc15;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.timesheets-tone-24 {
+  --tone: #facc15;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.timesheets-tone-25 {
+  --tone: #facc15;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.timesheets-tone-26 {
+  --tone: #facc15;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.timesheets-tone-27 {
+  --tone: #facc15;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.timesheets-canvas {
+  background:
+    radial-gradient(circle at 20% 30%, #facc1540, transparent 42%),
+    radial-gradient(circle at 80% 70%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.timesheets-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #facc15, transparent);
+}
+.timesheets-pill {
+  border: 1px solid #facc1566;
+  color: #facc15;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.timesheets-stat {
+  font-variant-numeric: tabular-nums;
+  color: #facc15;
+}
+.timesheets-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.timesheets-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.timesheets-empty strong {
+  display: block;
+  color: #facc15;
+  margin-bottom: 0.35rem;
+}
+.timesheets-timeline li {
+  border-left: 2px solid #facc1555;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.timesheets-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #facc15;
+}
+.timesheets-form .field input,
+.timesheets-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.timesheets-hero.is-ready {
+  animation: timesheets-rise 640ms ease both;
+}
+@keyframes timesheets-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.timesheets-table.is-hot,
+.timesheets-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #facc15;
+}
+.timesheets-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #facc1555;
+}

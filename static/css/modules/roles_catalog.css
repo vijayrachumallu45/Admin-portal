@@ -1,0 +1,350 @@
+/* Module skin for Role Catalog */
+.roles_catalog-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #c9a22755, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #c9a22733;
+  box-shadow: 0 24px 80px #c9a22722;
+}
+.roles_catalog-table tbody tr:hover {
+  background: #c9a22714;
+}
+.roles_catalog-form .field span {
+  color: #c9a227;
+}
+.roles_catalog-hero h1 {
+  text-shadow: 0 0 24px #c9a22766;
+}
+.module-hero.roles_catalog-hero .lede {
+  max-width: 46rem;
+}
+.roles_catalog-badge {
+  color: #c9a227;
+  border-color: #c9a22766;
+}
+.roles_catalog-panel {
+  outline: 1px solid #c9a22722;
+}
+.roles_catalog-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c9a227, transparent);
+}
+.roles_catalog-form input:focus,
+.roles_catalog-form select:focus {
+  border-color: #c9a227;
+  box-shadow: 0 0 0 3px #c9a22733;
+}
+.roles_catalog-table th {
+  color: #c9a227;
+}
+.roles_catalog-cta {
+  background: #c9a227;
+  color: #061018;
+}
+.roles_catalog-ghost {
+  border-color: #c9a22755;
+}
+.roles_catalog-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #c9a22722,
+    #c9a22722 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.roles_catalog-footnote {
+  color: #c9a227cc;
+  font-size: 0.82rem;
+}
+.roles_catalog-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #c9a22755;
+}
+.roles_catalog-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #c9a227, transparent);
+  margin: 1.25rem 0;
+}
+.roles_catalog-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c9a227;
+}
+.roles_catalog-grid-overlay {
+  background-image: linear-gradient(#c9a22711 1px, transparent 1px),
+    linear-gradient(90deg, #c9a22711 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.roles_catalog-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c9a227;
+  box-shadow: 0 0 12px #c9a227;
+}
+.roles_catalog-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.roles_catalog-danger-hint {
+  color: #fecaca;
+}
+.roles_catalog-ok-hint {
+  color: #c9a227;
+}
+.roles_catalog-sidebar-mark {
+  border-left: 3px solid #c9a227;
+  padding-left: 0.75rem;
+}
+.roles_catalog-hero {
+  position: relative;
+  overflow: hidden;
+}
+.roles_catalog-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #c9a22722;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Role Catalog — roles_catalog */
+.roles_catalog-tone-1 {
+  --tone: #c9a227;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.roles_catalog-tone-2 {
+  --tone: #c9a227;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.roles_catalog-tone-3 {
+  --tone: #c9a227;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.roles_catalog-tone-4 {
+  --tone: #c9a227;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.roles_catalog-tone-5 {
+  --tone: #c9a227;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.roles_catalog-tone-6 {
+  --tone: #c9a227;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.roles_catalog-tone-7 {
+  --tone: #c9a227;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.roles_catalog-tone-8 {
+  --tone: #c9a227;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.roles_catalog-tone-9 {
+  --tone: #c9a227;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.roles_catalog-tone-10 {
+  --tone: #c9a227;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.roles_catalog-tone-11 {
+  --tone: #c9a227;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.roles_catalog-tone-12 {
+  --tone: #c9a227;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.roles_catalog-tone-13 {
+  --tone: #c9a227;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.roles_catalog-tone-14 {
+  --tone: #c9a227;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.roles_catalog-tone-15 {
+  --tone: #c9a227;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.roles_catalog-tone-16 {
+  --tone: #c9a227;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.roles_catalog-tone-17 {
+  --tone: #c9a227;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.roles_catalog-tone-18 {
+  --tone: #c9a227;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.roles_catalog-tone-19 {
+  --tone: #c9a227;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.roles_catalog-tone-20 {
+  --tone: #c9a227;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.roles_catalog-tone-21 {
+  --tone: #c9a227;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.roles_catalog-tone-22 {
+  --tone: #c9a227;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.roles_catalog-tone-23 {
+  --tone: #c9a227;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.roles_catalog-tone-24 {
+  --tone: #c9a227;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.roles_catalog-tone-25 {
+  --tone: #c9a227;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.roles_catalog-tone-26 {
+  --tone: #c9a227;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.roles_catalog-tone-27 {
+  --tone: #c9a227;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.roles_catalog-canvas {
+  background:
+    radial-gradient(circle at 23% 32%, #c9a22740, transparent 42%),
+    radial-gradient(circle at 83% 68%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.roles_catalog-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #c9a227, transparent);
+}
+.roles_catalog-pill {
+  border: 1px solid #c9a22766;
+  color: #c9a227;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.roles_catalog-stat {
+  font-variant-numeric: tabular-nums;
+  color: #c9a227;
+}
+.roles_catalog-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.roles_catalog-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.roles_catalog-empty strong {
+  display: block;
+  color: #c9a227;
+  margin-bottom: 0.35rem;
+}
+.roles_catalog-timeline li {
+  border-left: 2px solid #c9a22755;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.roles_catalog-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #c9a227;
+}
+.roles_catalog-form .field input,
+.roles_catalog-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.roles_catalog-hero.is-ready {
+  animation: roles_catalog-rise 640ms ease both;
+}
+@keyframes roles_catalog-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.roles_catalog-table.is-hot,
+.roles_catalog-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #c9a227;
+}
+.roles_catalog-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c9a22755;
+}

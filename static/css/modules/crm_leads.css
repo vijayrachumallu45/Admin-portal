@@ -1,0 +1,350 @@
+/* Module skin for Lead Inbox */
+.crm_leads-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #fb718555, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #fb718533;
+  box-shadow: 0 24px 80px #fb718522;
+}
+.crm_leads-table tbody tr:hover {
+  background: #fb718514;
+}
+.crm_leads-form .field span {
+  color: #fb7185;
+}
+.crm_leads-hero h1 {
+  text-shadow: 0 0 24px #fb718566;
+}
+.module-hero.crm_leads-hero .lede {
+  max-width: 46rem;
+}
+.crm_leads-badge {
+  color: #fb7185;
+  border-color: #fb718566;
+}
+.crm_leads-panel {
+  outline: 1px solid #fb718522;
+}
+.crm_leads-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #fb7185, transparent);
+}
+.crm_leads-form input:focus,
+.crm_leads-form select:focus {
+  border-color: #fb7185;
+  box-shadow: 0 0 0 3px #fb718533;
+}
+.crm_leads-table th {
+  color: #fb7185;
+}
+.crm_leads-cta {
+  background: #fb7185;
+  color: #061018;
+}
+.crm_leads-ghost {
+  border-color: #fb718555;
+}
+.crm_leads-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #fb718522,
+    #fb718522 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.crm_leads-footnote {
+  color: #fb7185cc;
+  font-size: 0.82rem;
+}
+.crm_leads-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #fb718555;
+}
+.crm_leads-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #fb7185, transparent);
+  margin: 1.25rem 0;
+}
+.crm_leads-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fb7185;
+}
+.crm_leads-grid-overlay {
+  background-image: linear-gradient(#fb718511 1px, transparent 1px),
+    linear-gradient(90deg, #fb718511 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.crm_leads-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fb7185;
+  box-shadow: 0 0 12px #fb7185;
+}
+.crm_leads-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.crm_leads-danger-hint {
+  color: #fecaca;
+}
+.crm_leads-ok-hint {
+  color: #fb7185;
+}
+.crm_leads-sidebar-mark {
+  border-left: 3px solid #fb7185;
+  padding-left: 0.75rem;
+}
+.crm_leads-hero {
+  position: relative;
+  overflow: hidden;
+}
+.crm_leads-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #fb718522;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Lead Inbox — crm_leads */
+.crm_leads-tone-1 {
+  --tone: #fb7185;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.crm_leads-tone-2 {
+  --tone: #fb7185;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.crm_leads-tone-3 {
+  --tone: #fb7185;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.crm_leads-tone-4 {
+  --tone: #fb7185;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.crm_leads-tone-5 {
+  --tone: #fb7185;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.crm_leads-tone-6 {
+  --tone: #fb7185;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.crm_leads-tone-7 {
+  --tone: #fb7185;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.crm_leads-tone-8 {
+  --tone: #fb7185;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.crm_leads-tone-9 {
+  --tone: #fb7185;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.crm_leads-tone-10 {
+  --tone: #fb7185;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.crm_leads-tone-11 {
+  --tone: #fb7185;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.crm_leads-tone-12 {
+  --tone: #fb7185;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.crm_leads-tone-13 {
+  --tone: #fb7185;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.crm_leads-tone-14 {
+  --tone: #fb7185;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.crm_leads-tone-15 {
+  --tone: #fb7185;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.crm_leads-tone-16 {
+  --tone: #fb7185;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.crm_leads-tone-17 {
+  --tone: #fb7185;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.crm_leads-tone-18 {
+  --tone: #fb7185;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.crm_leads-tone-19 {
+  --tone: #fb7185;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.crm_leads-tone-20 {
+  --tone: #fb7185;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.crm_leads-tone-21 {
+  --tone: #fb7185;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.crm_leads-tone-22 {
+  --tone: #fb7185;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.crm_leads-tone-23 {
+  --tone: #fb7185;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.crm_leads-tone-24 {
+  --tone: #fb7185;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.crm_leads-tone-25 {
+  --tone: #fb7185;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.crm_leads-tone-26 {
+  --tone: #fb7185;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.crm_leads-tone-27 {
+  --tone: #fb7185;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.crm_leads-canvas {
+  background:
+    radial-gradient(circle at 19% 30%, #fb718540, transparent 42%),
+    radial-gradient(circle at 79% 70%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.crm_leads-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #fb7185, transparent);
+}
+.crm_leads-pill {
+  border: 1px solid #fb718566;
+  color: #fb7185;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.crm_leads-stat {
+  font-variant-numeric: tabular-nums;
+  color: #fb7185;
+}
+.crm_leads-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.crm_leads-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.crm_leads-empty strong {
+  display: block;
+  color: #fb7185;
+  margin-bottom: 0.35rem;
+}
+.crm_leads-timeline li {
+  border-left: 2px solid #fb718555;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.crm_leads-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #fb7185;
+}
+.crm_leads-form .field input,
+.crm_leads-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.crm_leads-hero.is-ready {
+  animation: crm_leads-rise 640ms ease both;
+}
+@keyframes crm_leads-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.crm_leads-table.is-hot,
+.crm_leads-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #fb7185;
+}
+.crm_leads-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fb718555;
+}

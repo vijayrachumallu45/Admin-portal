@@ -1,0 +1,350 @@
+/* Module skin for Contract Vault */
+.contracts-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #d4d4d855, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #d4d4d833;
+  box-shadow: 0 24px 80px #d4d4d822;
+}
+.contracts-table tbody tr:hover {
+  background: #d4d4d814;
+}
+.contracts-form .field span {
+  color: #d4d4d8;
+}
+.contracts-hero h1 {
+  text-shadow: 0 0 24px #d4d4d866;
+}
+.module-hero.contracts-hero .lede {
+  max-width: 46rem;
+}
+.contracts-badge {
+  color: #d4d4d8;
+  border-color: #d4d4d866;
+}
+.contracts-panel {
+  outline: 1px solid #d4d4d822;
+}
+.contracts-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d4d4d8, transparent);
+}
+.contracts-form input:focus,
+.contracts-form select:focus {
+  border-color: #d4d4d8;
+  box-shadow: 0 0 0 3px #d4d4d833;
+}
+.contracts-table th {
+  color: #d4d4d8;
+}
+.contracts-cta {
+  background: #d4d4d8;
+  color: #061018;
+}
+.contracts-ghost {
+  border-color: #d4d4d855;
+}
+.contracts-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #d4d4d822,
+    #d4d4d822 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.contracts-footnote {
+  color: #d4d4d8cc;
+  font-size: 0.82rem;
+}
+.contracts-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #d4d4d855;
+}
+.contracts-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #d4d4d8, transparent);
+  margin: 1.25rem 0;
+}
+.contracts-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d4d4d8;
+}
+.contracts-grid-overlay {
+  background-image: linear-gradient(#d4d4d811 1px, transparent 1px),
+    linear-gradient(90deg, #d4d4d811 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.contracts-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d4d4d8;
+  box-shadow: 0 0 12px #d4d4d8;
+}
+.contracts-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.contracts-danger-hint {
+  color: #fecaca;
+}
+.contracts-ok-hint {
+  color: #d4d4d8;
+}
+.contracts-sidebar-mark {
+  border-left: 3px solid #d4d4d8;
+  padding-left: 0.75rem;
+}
+.contracts-hero {
+  position: relative;
+  overflow: hidden;
+}
+.contracts-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #d4d4d822;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Contract Vault — contracts */
+.contracts-tone-1 {
+  --tone: #d4d4d8;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.contracts-tone-2 {
+  --tone: #d4d4d8;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.contracts-tone-3 {
+  --tone: #d4d4d8;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.contracts-tone-4 {
+  --tone: #d4d4d8;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.contracts-tone-5 {
+  --tone: #d4d4d8;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.contracts-tone-6 {
+  --tone: #d4d4d8;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.contracts-tone-7 {
+  --tone: #d4d4d8;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.contracts-tone-8 {
+  --tone: #d4d4d8;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.contracts-tone-9 {
+  --tone: #d4d4d8;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.contracts-tone-10 {
+  --tone: #d4d4d8;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.contracts-tone-11 {
+  --tone: #d4d4d8;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.contracts-tone-12 {
+  --tone: #d4d4d8;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.contracts-tone-13 {
+  --tone: #d4d4d8;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.contracts-tone-14 {
+  --tone: #d4d4d8;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.contracts-tone-15 {
+  --tone: #d4d4d8;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.contracts-tone-16 {
+  --tone: #d4d4d8;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.contracts-tone-17 {
+  --tone: #d4d4d8;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.contracts-tone-18 {
+  --tone: #d4d4d8;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.contracts-tone-19 {
+  --tone: #d4d4d8;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.contracts-tone-20 {
+  --tone: #d4d4d8;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.contracts-tone-21 {
+  --tone: #d4d4d8;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.contracts-tone-22 {
+  --tone: #d4d4d8;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.contracts-tone-23 {
+  --tone: #d4d4d8;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.contracts-tone-24 {
+  --tone: #d4d4d8;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.contracts-tone-25 {
+  --tone: #d4d4d8;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.contracts-tone-26 {
+  --tone: #d4d4d8;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.contracts-tone-27 {
+  --tone: #d4d4d8;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.contracts-canvas {
+  background:
+    radial-gradient(circle at 19% 34%, #d4d4d840, transparent 42%),
+    radial-gradient(circle at 79% 66%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.contracts-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #d4d4d8, transparent);
+}
+.contracts-pill {
+  border: 1px solid #d4d4d866;
+  color: #d4d4d8;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.contracts-stat {
+  font-variant-numeric: tabular-nums;
+  color: #d4d4d8;
+}
+.contracts-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.contracts-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.contracts-empty strong {
+  display: block;
+  color: #d4d4d8;
+  margin-bottom: 0.35rem;
+}
+.contracts-timeline li {
+  border-left: 2px solid #d4d4d855;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.contracts-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #d4d4d8;
+}
+.contracts-form .field input,
+.contracts-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.contracts-hero.is-ready {
+  animation: contracts-rise 640ms ease both;
+}
+@keyframes contracts-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.contracts-table.is-hot,
+.contracts-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #d4d4d8;
+}
+.contracts-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d4d4d855;
+}

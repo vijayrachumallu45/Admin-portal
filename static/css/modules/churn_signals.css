@@ -1,0 +1,350 @@
+/* Module skin for Churn Signals */
+.churn_signals-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #f8717155, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #f8717133;
+  box-shadow: 0 24px 80px #f8717122;
+}
+.churn_signals-table tbody tr:hover {
+  background: #f8717114;
+}
+.churn_signals-form .field span {
+  color: #f87171;
+}
+.churn_signals-hero h1 {
+  text-shadow: 0 0 24px #f8717166;
+}
+.module-hero.churn_signals-hero .lede {
+  max-width: 46rem;
+}
+.churn_signals-badge {
+  color: #f87171;
+  border-color: #f8717166;
+}
+.churn_signals-panel {
+  outline: 1px solid #f8717122;
+}
+.churn_signals-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f87171, transparent);
+}
+.churn_signals-form input:focus,
+.churn_signals-form select:focus {
+  border-color: #f87171;
+  box-shadow: 0 0 0 3px #f8717133;
+}
+.churn_signals-table th {
+  color: #f87171;
+}
+.churn_signals-cta {
+  background: #f87171;
+  color: #061018;
+}
+.churn_signals-ghost {
+  border-color: #f8717155;
+}
+.churn_signals-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #f8717122,
+    #f8717122 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.churn_signals-footnote {
+  color: #f87171cc;
+  font-size: 0.82rem;
+}
+.churn_signals-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #f8717155;
+}
+.churn_signals-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #f87171, transparent);
+  margin: 1.25rem 0;
+}
+.churn_signals-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f87171;
+}
+.churn_signals-grid-overlay {
+  background-image: linear-gradient(#f8717111 1px, transparent 1px),
+    linear-gradient(90deg, #f8717111 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.churn_signals-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f87171;
+  box-shadow: 0 0 12px #f87171;
+}
+.churn_signals-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.churn_signals-danger-hint {
+  color: #fecaca;
+}
+.churn_signals-ok-hint {
+  color: #f87171;
+}
+.churn_signals-sidebar-mark {
+  border-left: 3px solid #f87171;
+  padding-left: 0.75rem;
+}
+.churn_signals-hero {
+  position: relative;
+  overflow: hidden;
+}
+.churn_signals-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #f8717122;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Churn Signals — churn_signals */
+.churn_signals-tone-1 {
+  --tone: #f87171;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.churn_signals-tone-2 {
+  --tone: #f87171;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.churn_signals-tone-3 {
+  --tone: #f87171;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.churn_signals-tone-4 {
+  --tone: #f87171;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.churn_signals-tone-5 {
+  --tone: #f87171;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.churn_signals-tone-6 {
+  --tone: #f87171;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.churn_signals-tone-7 {
+  --tone: #f87171;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.churn_signals-tone-8 {
+  --tone: #f87171;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.churn_signals-tone-9 {
+  --tone: #f87171;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.churn_signals-tone-10 {
+  --tone: #f87171;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.churn_signals-tone-11 {
+  --tone: #f87171;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.churn_signals-tone-12 {
+  --tone: #f87171;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.churn_signals-tone-13 {
+  --tone: #f87171;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.churn_signals-tone-14 {
+  --tone: #f87171;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.churn_signals-tone-15 {
+  --tone: #f87171;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.churn_signals-tone-16 {
+  --tone: #f87171;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.churn_signals-tone-17 {
+  --tone: #f87171;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.churn_signals-tone-18 {
+  --tone: #f87171;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.churn_signals-tone-19 {
+  --tone: #f87171;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.churn_signals-tone-20 {
+  --tone: #f87171;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.churn_signals-tone-21 {
+  --tone: #f87171;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.churn_signals-tone-22 {
+  --tone: #f87171;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.churn_signals-tone-23 {
+  --tone: #f87171;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.churn_signals-tone-24 {
+  --tone: #f87171;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.churn_signals-tone-25 {
+  --tone: #f87171;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.churn_signals-tone-26 {
+  --tone: #f87171;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.churn_signals-tone-27 {
+  --tone: #f87171;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.churn_signals-canvas {
+  background:
+    radial-gradient(circle at 23% 33%, #f8717140, transparent 42%),
+    radial-gradient(circle at 83% 67%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.churn_signals-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #f87171, transparent);
+}
+.churn_signals-pill {
+  border: 1px solid #f8717166;
+  color: #f87171;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.churn_signals-stat {
+  font-variant-numeric: tabular-nums;
+  color: #f87171;
+}
+.churn_signals-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.churn_signals-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.churn_signals-empty strong {
+  display: block;
+  color: #f87171;
+  margin-bottom: 0.35rem;
+}
+.churn_signals-timeline li {
+  border-left: 2px solid #f8717155;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.churn_signals-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #f87171;
+}
+.churn_signals-form .field input,
+.churn_signals-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.churn_signals-hero.is-ready {
+  animation: churn_signals-rise 640ms ease both;
+}
+@keyframes churn_signals-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.churn_signals-table.is-hot,
+.churn_signals-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #f87171;
+}
+.churn_signals-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f8717155;
+}

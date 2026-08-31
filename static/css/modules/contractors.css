@@ -1,0 +1,350 @@
+/* Module skin for Contractor Bench */
+.contractors-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #c4b5fd55, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #c4b5fd33;
+  box-shadow: 0 24px 80px #c4b5fd22;
+}
+.contractors-table tbody tr:hover {
+  background: #c4b5fd14;
+}
+.contractors-form .field span {
+  color: #c4b5fd;
+}
+.contractors-hero h1 {
+  text-shadow: 0 0 24px #c4b5fd66;
+}
+.module-hero.contractors-hero .lede {
+  max-width: 46rem;
+}
+.contractors-badge {
+  color: #c4b5fd;
+  border-color: #c4b5fd66;
+}
+.contractors-panel {
+  outline: 1px solid #c4b5fd22;
+}
+.contractors-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c4b5fd, transparent);
+}
+.contractors-form input:focus,
+.contractors-form select:focus {
+  border-color: #c4b5fd;
+  box-shadow: 0 0 0 3px #c4b5fd33;
+}
+.contractors-table th {
+  color: #c4b5fd;
+}
+.contractors-cta {
+  background: #c4b5fd;
+  color: #061018;
+}
+.contractors-ghost {
+  border-color: #c4b5fd55;
+}
+.contractors-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #c4b5fd22,
+    #c4b5fd22 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.contractors-footnote {
+  color: #c4b5fdcc;
+  font-size: 0.82rem;
+}
+.contractors-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #c4b5fd55;
+}
+.contractors-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #c4b5fd, transparent);
+  margin: 1.25rem 0;
+}
+.contractors-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c4b5fd;
+}
+.contractors-grid-overlay {
+  background-image: linear-gradient(#c4b5fd11 1px, transparent 1px),
+    linear-gradient(90deg, #c4b5fd11 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.contractors-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c4b5fd;
+  box-shadow: 0 0 12px #c4b5fd;
+}
+.contractors-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.contractors-danger-hint {
+  color: #fecaca;
+}
+.contractors-ok-hint {
+  color: #c4b5fd;
+}
+.contractors-sidebar-mark {
+  border-left: 3px solid #c4b5fd;
+  padding-left: 0.75rem;
+}
+.contractors-hero {
+  position: relative;
+  overflow: hidden;
+}
+.contractors-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #c4b5fd22;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Contractor Bench — contractors */
+.contractors-tone-1 {
+  --tone: #c4b5fd;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.contractors-tone-2 {
+  --tone: #c4b5fd;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.contractors-tone-3 {
+  --tone: #c4b5fd;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.contractors-tone-4 {
+  --tone: #c4b5fd;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.contractors-tone-5 {
+  --tone: #c4b5fd;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.contractors-tone-6 {
+  --tone: #c4b5fd;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.contractors-tone-7 {
+  --tone: #c4b5fd;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.contractors-tone-8 {
+  --tone: #c4b5fd;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.contractors-tone-9 {
+  --tone: #c4b5fd;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.contractors-tone-10 {
+  --tone: #c4b5fd;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.contractors-tone-11 {
+  --tone: #c4b5fd;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.contractors-tone-12 {
+  --tone: #c4b5fd;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.contractors-tone-13 {
+  --tone: #c4b5fd;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.contractors-tone-14 {
+  --tone: #c4b5fd;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.contractors-tone-15 {
+  --tone: #c4b5fd;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.contractors-tone-16 {
+  --tone: #c4b5fd;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.contractors-tone-17 {
+  --tone: #c4b5fd;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.contractors-tone-18 {
+  --tone: #c4b5fd;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.contractors-tone-19 {
+  --tone: #c4b5fd;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.contractors-tone-20 {
+  --tone: #c4b5fd;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.contractors-tone-21 {
+  --tone: #c4b5fd;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.contractors-tone-22 {
+  --tone: #c4b5fd;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.contractors-tone-23 {
+  --tone: #c4b5fd;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.contractors-tone-24 {
+  --tone: #c4b5fd;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.contractors-tone-25 {
+  --tone: #c4b5fd;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.contractors-tone-26 {
+  --tone: #c4b5fd;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.contractors-tone-27 {
+  --tone: #c4b5fd;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.contractors-canvas {
+  background:
+    radial-gradient(circle at 21% 36%, #c4b5fd40, transparent 42%),
+    radial-gradient(circle at 81% 64%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.contractors-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #c4b5fd, transparent);
+}
+.contractors-pill {
+  border: 1px solid #c4b5fd66;
+  color: #c4b5fd;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.contractors-stat {
+  font-variant-numeric: tabular-nums;
+  color: #c4b5fd;
+}
+.contractors-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.contractors-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.contractors-empty strong {
+  display: block;
+  color: #c4b5fd;
+  margin-bottom: 0.35rem;
+}
+.contractors-timeline li {
+  border-left: 2px solid #c4b5fd55;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.contractors-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #c4b5fd;
+}
+.contractors-form .field input,
+.contractors-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.contractors-hero.is-ready {
+  animation: contractors-rise 640ms ease both;
+}
+@keyframes contractors-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.contractors-table.is-hot,
+.contractors-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #c4b5fd;
+}
+.contractors-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c4b5fd55;
+}

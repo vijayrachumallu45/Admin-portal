@@ -1,0 +1,350 @@
+/* Module skin for Product Catalog */
+.catalog_products-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #86efac55, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #86efac33;
+  box-shadow: 0 24px 80px #86efac22;
+}
+.catalog_products-table tbody tr:hover {
+  background: #86efac14;
+}
+.catalog_products-form .field span {
+  color: #86efac;
+}
+.catalog_products-hero h1 {
+  text-shadow: 0 0 24px #86efac66;
+}
+.module-hero.catalog_products-hero .lede {
+  max-width: 46rem;
+}
+.catalog_products-badge {
+  color: #86efac;
+  border-color: #86efac66;
+}
+.catalog_products-panel {
+  outline: 1px solid #86efac22;
+}
+.catalog_products-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #86efac, transparent);
+}
+.catalog_products-form input:focus,
+.catalog_products-form select:focus {
+  border-color: #86efac;
+  box-shadow: 0 0 0 3px #86efac33;
+}
+.catalog_products-table th {
+  color: #86efac;
+}
+.catalog_products-cta {
+  background: #86efac;
+  color: #061018;
+}
+.catalog_products-ghost {
+  border-color: #86efac55;
+}
+.catalog_products-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #86efac22,
+    #86efac22 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.catalog_products-footnote {
+  color: #86efaccc;
+  font-size: 0.82rem;
+}
+.catalog_products-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #86efac55;
+}
+.catalog_products-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #86efac, transparent);
+  margin: 1.25rem 0;
+}
+.catalog_products-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #86efac;
+}
+.catalog_products-grid-overlay {
+  background-image: linear-gradient(#86efac11 1px, transparent 1px),
+    linear-gradient(90deg, #86efac11 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.catalog_products-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #86efac;
+  box-shadow: 0 0 12px #86efac;
+}
+.catalog_products-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.catalog_products-danger-hint {
+  color: #fecaca;
+}
+.catalog_products-ok-hint {
+  color: #86efac;
+}
+.catalog_products-sidebar-mark {
+  border-left: 3px solid #86efac;
+  padding-left: 0.75rem;
+}
+.catalog_products-hero {
+  position: relative;
+  overflow: hidden;
+}
+.catalog_products-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #86efac22;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Product Catalog — catalog_products */
+.catalog_products-tone-1 {
+  --tone: #86efac;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.catalog_products-tone-2 {
+  --tone: #86efac;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.catalog_products-tone-3 {
+  --tone: #86efac;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.catalog_products-tone-4 {
+  --tone: #86efac;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.catalog_products-tone-5 {
+  --tone: #86efac;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.catalog_products-tone-6 {
+  --tone: #86efac;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.catalog_products-tone-7 {
+  --tone: #86efac;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.catalog_products-tone-8 {
+  --tone: #86efac;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.catalog_products-tone-9 {
+  --tone: #86efac;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.catalog_products-tone-10 {
+  --tone: #86efac;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.catalog_products-tone-11 {
+  --tone: #86efac;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.catalog_products-tone-12 {
+  --tone: #86efac;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.catalog_products-tone-13 {
+  --tone: #86efac;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.catalog_products-tone-14 {
+  --tone: #86efac;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.catalog_products-tone-15 {
+  --tone: #86efac;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.catalog_products-tone-16 {
+  --tone: #86efac;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.catalog_products-tone-17 {
+  --tone: #86efac;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.catalog_products-tone-18 {
+  --tone: #86efac;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.catalog_products-tone-19 {
+  --tone: #86efac;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.catalog_products-tone-20 {
+  --tone: #86efac;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.catalog_products-tone-21 {
+  --tone: #86efac;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.catalog_products-tone-22 {
+  --tone: #86efac;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.catalog_products-tone-23 {
+  --tone: #86efac;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.catalog_products-tone-24 {
+  --tone: #86efac;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.catalog_products-tone-25 {
+  --tone: #86efac;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.catalog_products-tone-26 {
+  --tone: #86efac;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.catalog_products-tone-27 {
+  --tone: #86efac;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.catalog_products-canvas {
+  background:
+    radial-gradient(circle at 26% 35%, #86efac40, transparent 42%),
+    radial-gradient(circle at 86% 65%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.catalog_products-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #86efac, transparent);
+}
+.catalog_products-pill {
+  border: 1px solid #86efac66;
+  color: #86efac;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.catalog_products-stat {
+  font-variant-numeric: tabular-nums;
+  color: #86efac;
+}
+.catalog_products-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.catalog_products-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.catalog_products-empty strong {
+  display: block;
+  color: #86efac;
+  margin-bottom: 0.35rem;
+}
+.catalog_products-timeline li {
+  border-left: 2px solid #86efac55;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.catalog_products-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #86efac;
+}
+.catalog_products-form .field input,
+.catalog_products-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.catalog_products-hero.is-ready {
+  animation: catalog_products-rise 640ms ease both;
+}
+@keyframes catalog_products-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.catalog_products-table.is-hot,
+.catalog_products-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #86efac;
+}
+.catalog_products-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #86efac55;
+}

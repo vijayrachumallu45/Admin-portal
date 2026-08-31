@@ -1,0 +1,350 @@
+/* Module skin for Invoice Desk */
+.invoices-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #4ade8055, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #4ade8033;
+  box-shadow: 0 24px 80px #4ade8022;
+}
+.invoices-table tbody tr:hover {
+  background: #4ade8014;
+}
+.invoices-form .field span {
+  color: #4ade80;
+}
+.invoices-hero h1 {
+  text-shadow: 0 0 24px #4ade8066;
+}
+.module-hero.invoices-hero .lede {
+  max-width: 46rem;
+}
+.invoices-badge {
+  color: #4ade80;
+  border-color: #4ade8066;
+}
+.invoices-panel {
+  outline: 1px solid #4ade8022;
+}
+.invoices-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4ade80, transparent);
+}
+.invoices-form input:focus,
+.invoices-form select:focus {
+  border-color: #4ade80;
+  box-shadow: 0 0 0 3px #4ade8033;
+}
+.invoices-table th {
+  color: #4ade80;
+}
+.invoices-cta {
+  background: #4ade80;
+  color: #061018;
+}
+.invoices-ghost {
+  border-color: #4ade8055;
+}
+.invoices-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #4ade8022,
+    #4ade8022 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.invoices-footnote {
+  color: #4ade80cc;
+  font-size: 0.82rem;
+}
+.invoices-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #4ade8055;
+}
+.invoices-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #4ade80, transparent);
+  margin: 1.25rem 0;
+}
+.invoices-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #4ade80;
+}
+.invoices-grid-overlay {
+  background-image: linear-gradient(#4ade8011 1px, transparent 1px),
+    linear-gradient(90deg, #4ade8011 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.invoices-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 12px #4ade80;
+}
+.invoices-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.invoices-danger-hint {
+  color: #fecaca;
+}
+.invoices-ok-hint {
+  color: #4ade80;
+}
+.invoices-sidebar-mark {
+  border-left: 3px solid #4ade80;
+  padding-left: 0.75rem;
+}
+.invoices-hero {
+  position: relative;
+  overflow: hidden;
+}
+.invoices-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #4ade8022;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Invoice Desk — invoices */
+.invoices-tone-1 {
+  --tone: #4ade80;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.invoices-tone-2 {
+  --tone: #4ade80;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.invoices-tone-3 {
+  --tone: #4ade80;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.invoices-tone-4 {
+  --tone: #4ade80;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.invoices-tone-5 {
+  --tone: #4ade80;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.invoices-tone-6 {
+  --tone: #4ade80;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.invoices-tone-7 {
+  --tone: #4ade80;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.invoices-tone-8 {
+  --tone: #4ade80;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.invoices-tone-9 {
+  --tone: #4ade80;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.invoices-tone-10 {
+  --tone: #4ade80;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.invoices-tone-11 {
+  --tone: #4ade80;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.invoices-tone-12 {
+  --tone: #4ade80;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.invoices-tone-13 {
+  --tone: #4ade80;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.invoices-tone-14 {
+  --tone: #4ade80;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.invoices-tone-15 {
+  --tone: #4ade80;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.invoices-tone-16 {
+  --tone: #4ade80;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.invoices-tone-17 {
+  --tone: #4ade80;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.invoices-tone-18 {
+  --tone: #4ade80;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.invoices-tone-19 {
+  --tone: #4ade80;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.invoices-tone-20 {
+  --tone: #4ade80;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.invoices-tone-21 {
+  --tone: #4ade80;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.invoices-tone-22 {
+  --tone: #4ade80;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.invoices-tone-23 {
+  --tone: #4ade80;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.invoices-tone-24 {
+  --tone: #4ade80;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.invoices-tone-25 {
+  --tone: #4ade80;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.invoices-tone-26 {
+  --tone: #4ade80;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.invoices-tone-27 {
+  --tone: #4ade80;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.invoices-canvas {
+  background:
+    radial-gradient(circle at 18% 32%, #4ade8040, transparent 42%),
+    radial-gradient(circle at 78% 68%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.invoices-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #4ade80, transparent);
+}
+.invoices-pill {
+  border: 1px solid #4ade8066;
+  color: #4ade80;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.invoices-stat {
+  font-variant-numeric: tabular-nums;
+  color: #4ade80;
+}
+.invoices-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.invoices-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.invoices-empty strong {
+  display: block;
+  color: #4ade80;
+  margin-bottom: 0.35rem;
+}
+.invoices-timeline li {
+  border-left: 2px solid #4ade8055;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.invoices-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #4ade80;
+}
+.invoices-form .field input,
+.invoices-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.invoices-hero.is-ready {
+  animation: invoices-rise 640ms ease both;
+}
+@keyframes invoices-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.invoices-table.is-hot,
+.invoices-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #4ade80;
+}
+.invoices-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #4ade8055;
+}

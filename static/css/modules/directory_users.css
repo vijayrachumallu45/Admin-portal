@@ -1,0 +1,350 @@
+/* Module skin for People Directory */
+.directory_users-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #7aa2ff55, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #7aa2ff33;
+  box-shadow: 0 24px 80px #7aa2ff22;
+}
+.directory_users-table tbody tr:hover {
+  background: #7aa2ff14;
+}
+.directory_users-form .field span {
+  color: #7aa2ff;
+}
+.directory_users-hero h1 {
+  text-shadow: 0 0 24px #7aa2ff66;
+}
+.module-hero.directory_users-hero .lede {
+  max-width: 46rem;
+}
+.directory_users-badge {
+  color: #7aa2ff;
+  border-color: #7aa2ff66;
+}
+.directory_users-panel {
+  outline: 1px solid #7aa2ff22;
+}
+.directory_users-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7aa2ff, transparent);
+}
+.directory_users-form input:focus,
+.directory_users-form select:focus {
+  border-color: #7aa2ff;
+  box-shadow: 0 0 0 3px #7aa2ff33;
+}
+.directory_users-table th {
+  color: #7aa2ff;
+}
+.directory_users-cta {
+  background: #7aa2ff;
+  color: #061018;
+}
+.directory_users-ghost {
+  border-color: #7aa2ff55;
+}
+.directory_users-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #7aa2ff22,
+    #7aa2ff22 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.directory_users-footnote {
+  color: #7aa2ffcc;
+  font-size: 0.82rem;
+}
+.directory_users-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #7aa2ff55;
+}
+.directory_users-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #7aa2ff, transparent);
+  margin: 1.25rem 0;
+}
+.directory_users-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7aa2ff;
+}
+.directory_users-grid-overlay {
+  background-image: linear-gradient(#7aa2ff11 1px, transparent 1px),
+    linear-gradient(90deg, #7aa2ff11 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.directory_users-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #7aa2ff;
+  box-shadow: 0 0 12px #7aa2ff;
+}
+.directory_users-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.directory_users-danger-hint {
+  color: #fecaca;
+}
+.directory_users-ok-hint {
+  color: #7aa2ff;
+}
+.directory_users-sidebar-mark {
+  border-left: 3px solid #7aa2ff;
+  padding-left: 0.75rem;
+}
+.directory_users-hero {
+  position: relative;
+  overflow: hidden;
+}
+.directory_users-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #7aa2ff22;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for People Directory — directory_users */
+.directory_users-tone-1 {
+  --tone: #7aa2ff;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.directory_users-tone-2 {
+  --tone: #7aa2ff;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.directory_users-tone-3 {
+  --tone: #7aa2ff;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.directory_users-tone-4 {
+  --tone: #7aa2ff;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.directory_users-tone-5 {
+  --tone: #7aa2ff;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.directory_users-tone-6 {
+  --tone: #7aa2ff;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.directory_users-tone-7 {
+  --tone: #7aa2ff;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.directory_users-tone-8 {
+  --tone: #7aa2ff;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.directory_users-tone-9 {
+  --tone: #7aa2ff;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.directory_users-tone-10 {
+  --tone: #7aa2ff;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.directory_users-tone-11 {
+  --tone: #7aa2ff;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.directory_users-tone-12 {
+  --tone: #7aa2ff;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.directory_users-tone-13 {
+  --tone: #7aa2ff;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.directory_users-tone-14 {
+  --tone: #7aa2ff;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.directory_users-tone-15 {
+  --tone: #7aa2ff;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.directory_users-tone-16 {
+  --tone: #7aa2ff;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.directory_users-tone-17 {
+  --tone: #7aa2ff;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.directory_users-tone-18 {
+  --tone: #7aa2ff;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.directory_users-tone-19 {
+  --tone: #7aa2ff;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.directory_users-tone-20 {
+  --tone: #7aa2ff;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.directory_users-tone-21 {
+  --tone: #7aa2ff;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.directory_users-tone-22 {
+  --tone: #7aa2ff;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.directory_users-tone-23 {
+  --tone: #7aa2ff;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.directory_users-tone-24 {
+  --tone: #7aa2ff;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.directory_users-tone-25 {
+  --tone: #7aa2ff;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.directory_users-tone-26 {
+  --tone: #7aa2ff;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.directory_users-tone-27 {
+  --tone: #7aa2ff;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.directory_users-canvas {
+  background:
+    radial-gradient(circle at 25% 36%, #7aa2ff40, transparent 42%),
+    radial-gradient(circle at 85% 64%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.directory_users-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #7aa2ff, transparent);
+}
+.directory_users-pill {
+  border: 1px solid #7aa2ff66;
+  color: #7aa2ff;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.directory_users-stat {
+  font-variant-numeric: tabular-nums;
+  color: #7aa2ff;
+}
+.directory_users-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.directory_users-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.directory_users-empty strong {
+  display: block;
+  color: #7aa2ff;
+  margin-bottom: 0.35rem;
+}
+.directory_users-timeline li {
+  border-left: 2px solid #7aa2ff55;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.directory_users-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #7aa2ff;
+}
+.directory_users-form .field input,
+.directory_users-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.directory_users-hero.is-ready {
+  animation: directory_users-rise 640ms ease both;
+}
+@keyframes directory_users-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.directory_users-table.is-hot,
+.directory_users-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #7aa2ff;
+}
+.directory_users-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7aa2ff55;
+}

@@ -1,0 +1,350 @@
+/* Module skin for Sales Territories */
+.territories-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #6ee7b755, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #6ee7b733;
+  box-shadow: 0 24px 80px #6ee7b722;
+}
+.territories-table tbody tr:hover {
+  background: #6ee7b714;
+}
+.territories-form .field span {
+  color: #6ee7b7;
+}
+.territories-hero h1 {
+  text-shadow: 0 0 24px #6ee7b766;
+}
+.module-hero.territories-hero .lede {
+  max-width: 46rem;
+}
+.territories-badge {
+  color: #6ee7b7;
+  border-color: #6ee7b766;
+}
+.territories-panel {
+  outline: 1px solid #6ee7b722;
+}
+.territories-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6ee7b7, transparent);
+}
+.territories-form input:focus,
+.territories-form select:focus {
+  border-color: #6ee7b7;
+  box-shadow: 0 0 0 3px #6ee7b733;
+}
+.territories-table th {
+  color: #6ee7b7;
+}
+.territories-cta {
+  background: #6ee7b7;
+  color: #061018;
+}
+.territories-ghost {
+  border-color: #6ee7b755;
+}
+.territories-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #6ee7b722,
+    #6ee7b722 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.territories-footnote {
+  color: #6ee7b7cc;
+  font-size: 0.82rem;
+}
+.territories-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #6ee7b755;
+}
+.territories-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #6ee7b7, transparent);
+  margin: 1.25rem 0;
+}
+.territories-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6ee7b7;
+}
+.territories-grid-overlay {
+  background-image: linear-gradient(#6ee7b711 1px, transparent 1px),
+    linear-gradient(90deg, #6ee7b711 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.territories-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #6ee7b7;
+  box-shadow: 0 0 12px #6ee7b7;
+}
+.territories-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.territories-danger-hint {
+  color: #fecaca;
+}
+.territories-ok-hint {
+  color: #6ee7b7;
+}
+.territories-sidebar-mark {
+  border-left: 3px solid #6ee7b7;
+  padding-left: 0.75rem;
+}
+.territories-hero {
+  position: relative;
+  overflow: hidden;
+}
+.territories-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #6ee7b722;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Sales Territories — territories */
+.territories-tone-1 {
+  --tone: #6ee7b7;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.territories-tone-2 {
+  --tone: #6ee7b7;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.territories-tone-3 {
+  --tone: #6ee7b7;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.territories-tone-4 {
+  --tone: #6ee7b7;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.territories-tone-5 {
+  --tone: #6ee7b7;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.territories-tone-6 {
+  --tone: #6ee7b7;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.territories-tone-7 {
+  --tone: #6ee7b7;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.territories-tone-8 {
+  --tone: #6ee7b7;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.territories-tone-9 {
+  --tone: #6ee7b7;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.territories-tone-10 {
+  --tone: #6ee7b7;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.territories-tone-11 {
+  --tone: #6ee7b7;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.territories-tone-12 {
+  --tone: #6ee7b7;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.territories-tone-13 {
+  --tone: #6ee7b7;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.territories-tone-14 {
+  --tone: #6ee7b7;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.territories-tone-15 {
+  --tone: #6ee7b7;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.territories-tone-16 {
+  --tone: #6ee7b7;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.territories-tone-17 {
+  --tone: #6ee7b7;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.territories-tone-18 {
+  --tone: #6ee7b7;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.territories-tone-19 {
+  --tone: #6ee7b7;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.territories-tone-20 {
+  --tone: #6ee7b7;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.territories-tone-21 {
+  --tone: #6ee7b7;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.territories-tone-22 {
+  --tone: #6ee7b7;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.territories-tone-23 {
+  --tone: #6ee7b7;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.territories-tone-24 {
+  --tone: #6ee7b7;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.territories-tone-25 {
+  --tone: #6ee7b7;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.territories-tone-26 {
+  --tone: #6ee7b7;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.territories-tone-27 {
+  --tone: #6ee7b7;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.territories-canvas {
+  background:
+    radial-gradient(circle at 21% 37%, #6ee7b740, transparent 42%),
+    radial-gradient(circle at 81% 63%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.territories-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #6ee7b7, transparent);
+}
+.territories-pill {
+  border: 1px solid #6ee7b766;
+  color: #6ee7b7;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.territories-stat {
+  font-variant-numeric: tabular-nums;
+  color: #6ee7b7;
+}
+.territories-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.territories-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.territories-empty strong {
+  display: block;
+  color: #6ee7b7;
+  margin-bottom: 0.35rem;
+}
+.territories-timeline li {
+  border-left: 2px solid #6ee7b755;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.territories-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #6ee7b7;
+}
+.territories-form .field input,
+.territories-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.territories-hero.is-ready {
+  animation: territories-rise 640ms ease both;
+}
+@keyframes territories-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.territories-table.is-hot,
+.territories-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #6ee7b7;
+}
+.territories-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6ee7b755;
+}

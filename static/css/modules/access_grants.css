@@ -1,0 +1,350 @@
+/* Module skin for Access Grants */
+.access_grants-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #ff8a6555, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #ff8a6533;
+  box-shadow: 0 24px 80px #ff8a6522;
+}
+.access_grants-table tbody tr:hover {
+  background: #ff8a6514;
+}
+.access_grants-form .field span {
+  color: #ff8a65;
+}
+.access_grants-hero h1 {
+  text-shadow: 0 0 24px #ff8a6566;
+}
+.module-hero.access_grants-hero .lede {
+  max-width: 46rem;
+}
+.access_grants-badge {
+  color: #ff8a65;
+  border-color: #ff8a6566;
+}
+.access_grants-panel {
+  outline: 1px solid #ff8a6522;
+}
+.access_grants-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff8a65, transparent);
+}
+.access_grants-form input:focus,
+.access_grants-form select:focus {
+  border-color: #ff8a65;
+  box-shadow: 0 0 0 3px #ff8a6533;
+}
+.access_grants-table th {
+  color: #ff8a65;
+}
+.access_grants-cta {
+  background: #ff8a65;
+  color: #061018;
+}
+.access_grants-ghost {
+  border-color: #ff8a6555;
+}
+.access_grants-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ff8a6522,
+    #ff8a6522 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.access_grants-footnote {
+  color: #ff8a65cc;
+  font-size: 0.82rem;
+}
+.access_grants-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #ff8a6555;
+}
+.access_grants-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #ff8a65, transparent);
+  margin: 1.25rem 0;
+}
+.access_grants-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ff8a65;
+}
+.access_grants-grid-overlay {
+  background-image: linear-gradient(#ff8a6511 1px, transparent 1px),
+    linear-gradient(90deg, #ff8a6511 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.access_grants-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff8a65;
+  box-shadow: 0 0 12px #ff8a65;
+}
+.access_grants-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.access_grants-danger-hint {
+  color: #fecaca;
+}
+.access_grants-ok-hint {
+  color: #ff8a65;
+}
+.access_grants-sidebar-mark {
+  border-left: 3px solid #ff8a65;
+  padding-left: 0.75rem;
+}
+.access_grants-hero {
+  position: relative;
+  overflow: hidden;
+}
+.access_grants-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #ff8a6522;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Access Grants — access_grants */
+.access_grants-tone-1 {
+  --tone: #ff8a65;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.access_grants-tone-2 {
+  --tone: #ff8a65;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.access_grants-tone-3 {
+  --tone: #ff8a65;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.access_grants-tone-4 {
+  --tone: #ff8a65;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.access_grants-tone-5 {
+  --tone: #ff8a65;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.access_grants-tone-6 {
+  --tone: #ff8a65;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.access_grants-tone-7 {
+  --tone: #ff8a65;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.access_grants-tone-8 {
+  --tone: #ff8a65;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.access_grants-tone-9 {
+  --tone: #ff8a65;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.access_grants-tone-10 {
+  --tone: #ff8a65;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.access_grants-tone-11 {
+  --tone: #ff8a65;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.access_grants-tone-12 {
+  --tone: #ff8a65;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.access_grants-tone-13 {
+  --tone: #ff8a65;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.access_grants-tone-14 {
+  --tone: #ff8a65;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.access_grants-tone-15 {
+  --tone: #ff8a65;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.access_grants-tone-16 {
+  --tone: #ff8a65;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.access_grants-tone-17 {
+  --tone: #ff8a65;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.access_grants-tone-18 {
+  --tone: #ff8a65;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.access_grants-tone-19 {
+  --tone: #ff8a65;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.access_grants-tone-20 {
+  --tone: #ff8a65;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.access_grants-tone-21 {
+  --tone: #ff8a65;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.access_grants-tone-22 {
+  --tone: #ff8a65;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.access_grants-tone-23 {
+  --tone: #ff8a65;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.access_grants-tone-24 {
+  --tone: #ff8a65;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.access_grants-tone-25 {
+  --tone: #ff8a65;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.access_grants-tone-26 {
+  --tone: #ff8a65;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.access_grants-tone-27 {
+  --tone: #ff8a65;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.access_grants-canvas {
+  background:
+    radial-gradient(circle at 23% 33%, #ff8a6540, transparent 42%),
+    radial-gradient(circle at 83% 67%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.access_grants-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ff8a65, transparent);
+}
+.access_grants-pill {
+  border: 1px solid #ff8a6566;
+  color: #ff8a65;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.access_grants-stat {
+  font-variant-numeric: tabular-nums;
+  color: #ff8a65;
+}
+.access_grants-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.access_grants-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.access_grants-empty strong {
+  display: block;
+  color: #ff8a65;
+  margin-bottom: 0.35rem;
+}
+.access_grants-timeline li {
+  border-left: 2px solid #ff8a6555;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.access_grants-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #ff8a65;
+}
+.access_grants-form .field input,
+.access_grants-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.access_grants-hero.is-ready {
+  animation: access_grants-rise 640ms ease both;
+}
+@keyframes access_grants-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.access_grants-table.is-hot,
+.access_grants-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #ff8a65;
+}
+.access_grants-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ff8a6555;
+}

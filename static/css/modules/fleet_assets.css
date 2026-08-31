@@ -1,0 +1,350 @@
+/* Module skin for Fleet Assets */
+.fleet_assets-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #94a3b855, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #94a3b833;
+  box-shadow: 0 24px 80px #94a3b822;
+}
+.fleet_assets-table tbody tr:hover {
+  background: #94a3b814;
+}
+.fleet_assets-form .field span {
+  color: #94a3b8;
+}
+.fleet_assets-hero h1 {
+  text-shadow: 0 0 24px #94a3b866;
+}
+.module-hero.fleet_assets-hero .lede {
+  max-width: 46rem;
+}
+.fleet_assets-badge {
+  color: #94a3b8;
+  border-color: #94a3b866;
+}
+.fleet_assets-panel {
+  outline: 1px solid #94a3b822;
+}
+.fleet_assets-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #94a3b8, transparent);
+}
+.fleet_assets-form input:focus,
+.fleet_assets-form select:focus {
+  border-color: #94a3b8;
+  box-shadow: 0 0 0 3px #94a3b833;
+}
+.fleet_assets-table th {
+  color: #94a3b8;
+}
+.fleet_assets-cta {
+  background: #94a3b8;
+  color: #061018;
+}
+.fleet_assets-ghost {
+  border-color: #94a3b855;
+}
+.fleet_assets-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #94a3b822,
+    #94a3b822 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.fleet_assets-footnote {
+  color: #94a3b8cc;
+  font-size: 0.82rem;
+}
+.fleet_assets-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #94a3b855;
+}
+.fleet_assets-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #94a3b8, transparent);
+  margin: 1.25rem 0;
+}
+.fleet_assets-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+.fleet_assets-grid-overlay {
+  background-image: linear-gradient(#94a3b811 1px, transparent 1px),
+    linear-gradient(90deg, #94a3b811 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.fleet_assets-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #94a3b8;
+  box-shadow: 0 0 12px #94a3b8;
+}
+.fleet_assets-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.fleet_assets-danger-hint {
+  color: #fecaca;
+}
+.fleet_assets-ok-hint {
+  color: #94a3b8;
+}
+.fleet_assets-sidebar-mark {
+  border-left: 3px solid #94a3b8;
+  padding-left: 0.75rem;
+}
+.fleet_assets-hero {
+  position: relative;
+  overflow: hidden;
+}
+.fleet_assets-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #94a3b822;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Fleet Assets — fleet_assets */
+.fleet_assets-tone-1 {
+  --tone: #94a3b8;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.fleet_assets-tone-2 {
+  --tone: #94a3b8;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.fleet_assets-tone-3 {
+  --tone: #94a3b8;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.fleet_assets-tone-4 {
+  --tone: #94a3b8;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.fleet_assets-tone-5 {
+  --tone: #94a3b8;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.fleet_assets-tone-6 {
+  --tone: #94a3b8;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.fleet_assets-tone-7 {
+  --tone: #94a3b8;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.fleet_assets-tone-8 {
+  --tone: #94a3b8;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.fleet_assets-tone-9 {
+  --tone: #94a3b8;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.fleet_assets-tone-10 {
+  --tone: #94a3b8;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.fleet_assets-tone-11 {
+  --tone: #94a3b8;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.fleet_assets-tone-12 {
+  --tone: #94a3b8;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.fleet_assets-tone-13 {
+  --tone: #94a3b8;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.fleet_assets-tone-14 {
+  --tone: #94a3b8;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.fleet_assets-tone-15 {
+  --tone: #94a3b8;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.fleet_assets-tone-16 {
+  --tone: #94a3b8;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.fleet_assets-tone-17 {
+  --tone: #94a3b8;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.fleet_assets-tone-18 {
+  --tone: #94a3b8;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.fleet_assets-tone-19 {
+  --tone: #94a3b8;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.fleet_assets-tone-20 {
+  --tone: #94a3b8;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.fleet_assets-tone-21 {
+  --tone: #94a3b8;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.fleet_assets-tone-22 {
+  --tone: #94a3b8;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.fleet_assets-tone-23 {
+  --tone: #94a3b8;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.fleet_assets-tone-24 {
+  --tone: #94a3b8;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.fleet_assets-tone-25 {
+  --tone: #94a3b8;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.fleet_assets-tone-26 {
+  --tone: #94a3b8;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.fleet_assets-tone-27 {
+  --tone: #94a3b8;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.fleet_assets-canvas {
+  background:
+    radial-gradient(circle at 22% 32%, #94a3b840, transparent 42%),
+    radial-gradient(circle at 82% 68%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.fleet_assets-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #94a3b8, transparent);
+}
+.fleet_assets-pill {
+  border: 1px solid #94a3b866;
+  color: #94a3b8;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.fleet_assets-stat {
+  font-variant-numeric: tabular-nums;
+  color: #94a3b8;
+}
+.fleet_assets-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.fleet_assets-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.fleet_assets-empty strong {
+  display: block;
+  color: #94a3b8;
+  margin-bottom: 0.35rem;
+}
+.fleet_assets-timeline li {
+  border-left: 2px solid #94a3b855;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.fleet_assets-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+.fleet_assets-form .field input,
+.fleet_assets-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.fleet_assets-hero.is-ready {
+  animation: fleet_assets-rise 640ms ease both;
+}
+@keyframes fleet_assets-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.fleet_assets-table.is-hot,
+.fleet_assets-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #94a3b8;
+}
+.fleet_assets-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #94a3b855;
+}

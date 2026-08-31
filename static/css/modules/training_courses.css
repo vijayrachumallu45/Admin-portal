@@ -1,0 +1,350 @@
+/* Module skin for Training Catalog */
+.training_courses-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #f0abfc55, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #f0abfc33;
+  box-shadow: 0 24px 80px #f0abfc22;
+}
+.training_courses-table tbody tr:hover {
+  background: #f0abfc14;
+}
+.training_courses-form .field span {
+  color: #f0abfc;
+}
+.training_courses-hero h1 {
+  text-shadow: 0 0 24px #f0abfc66;
+}
+.module-hero.training_courses-hero .lede {
+  max-width: 46rem;
+}
+.training_courses-badge {
+  color: #f0abfc;
+  border-color: #f0abfc66;
+}
+.training_courses-panel {
+  outline: 1px solid #f0abfc22;
+}
+.training_courses-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f0abfc, transparent);
+}
+.training_courses-form input:focus,
+.training_courses-form select:focus {
+  border-color: #f0abfc;
+  box-shadow: 0 0 0 3px #f0abfc33;
+}
+.training_courses-table th {
+  color: #f0abfc;
+}
+.training_courses-cta {
+  background: #f0abfc;
+  color: #061018;
+}
+.training_courses-ghost {
+  border-color: #f0abfc55;
+}
+.training_courses-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #f0abfc22,
+    #f0abfc22 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.training_courses-footnote {
+  color: #f0abfccc;
+  font-size: 0.82rem;
+}
+.training_courses-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #f0abfc55;
+}
+.training_courses-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #f0abfc, transparent);
+  margin: 1.25rem 0;
+}
+.training_courses-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f0abfc;
+}
+.training_courses-grid-overlay {
+  background-image: linear-gradient(#f0abfc11 1px, transparent 1px),
+    linear-gradient(90deg, #f0abfc11 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.training_courses-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f0abfc;
+  box-shadow: 0 0 12px #f0abfc;
+}
+.training_courses-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.training_courses-danger-hint {
+  color: #fecaca;
+}
+.training_courses-ok-hint {
+  color: #f0abfc;
+}
+.training_courses-sidebar-mark {
+  border-left: 3px solid #f0abfc;
+  padding-left: 0.75rem;
+}
+.training_courses-hero {
+  position: relative;
+  overflow: hidden;
+}
+.training_courses-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #f0abfc22;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Training Catalog — training_courses */
+.training_courses-tone-1 {
+  --tone: #f0abfc;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.training_courses-tone-2 {
+  --tone: #f0abfc;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.training_courses-tone-3 {
+  --tone: #f0abfc;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.training_courses-tone-4 {
+  --tone: #f0abfc;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.training_courses-tone-5 {
+  --tone: #f0abfc;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.training_courses-tone-6 {
+  --tone: #f0abfc;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.training_courses-tone-7 {
+  --tone: #f0abfc;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.training_courses-tone-8 {
+  --tone: #f0abfc;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.training_courses-tone-9 {
+  --tone: #f0abfc;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.training_courses-tone-10 {
+  --tone: #f0abfc;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.training_courses-tone-11 {
+  --tone: #f0abfc;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.training_courses-tone-12 {
+  --tone: #f0abfc;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.training_courses-tone-13 {
+  --tone: #f0abfc;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.training_courses-tone-14 {
+  --tone: #f0abfc;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.training_courses-tone-15 {
+  --tone: #f0abfc;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.training_courses-tone-16 {
+  --tone: #f0abfc;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.training_courses-tone-17 {
+  --tone: #f0abfc;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.training_courses-tone-18 {
+  --tone: #f0abfc;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.training_courses-tone-19 {
+  --tone: #f0abfc;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.training_courses-tone-20 {
+  --tone: #f0abfc;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.training_courses-tone-21 {
+  --tone: #f0abfc;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.training_courses-tone-22 {
+  --tone: #f0abfc;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.training_courses-tone-23 {
+  --tone: #f0abfc;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.training_courses-tone-24 {
+  --tone: #f0abfc;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.training_courses-tone-25 {
+  --tone: #f0abfc;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.training_courses-tone-26 {
+  --tone: #f0abfc;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.training_courses-tone-27 {
+  --tone: #f0abfc;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.training_courses-canvas {
+  background:
+    radial-gradient(circle at 26% 36%, #f0abfc40, transparent 42%),
+    radial-gradient(circle at 86% 64%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.training_courses-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #f0abfc, transparent);
+}
+.training_courses-pill {
+  border: 1px solid #f0abfc66;
+  color: #f0abfc;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.training_courses-stat {
+  font-variant-numeric: tabular-nums;
+  color: #f0abfc;
+}
+.training_courses-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.training_courses-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.training_courses-empty strong {
+  display: block;
+  color: #f0abfc;
+  margin-bottom: 0.35rem;
+}
+.training_courses-timeline li {
+  border-left: 2px solid #f0abfc55;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.training_courses-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #f0abfc;
+}
+.training_courses-form .field input,
+.training_courses-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.training_courses-hero.is-ready {
+  animation: training_courses-rise 640ms ease both;
+}
+@keyframes training_courses-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.training_courses-table.is-hot,
+.training_courses-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #f0abfc;
+}
+.training_courses-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f0abfc55;
+}

@@ -1,0 +1,350 @@
+/* Module skin for Expense Reports */
+.expense_reports-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #f59e0b55, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #f59e0b33;
+  box-shadow: 0 24px 80px #f59e0b22;
+}
+.expense_reports-table tbody tr:hover {
+  background: #f59e0b14;
+}
+.expense_reports-form .field span {
+  color: #f59e0b;
+}
+.expense_reports-hero h1 {
+  text-shadow: 0 0 24px #f59e0b66;
+}
+.module-hero.expense_reports-hero .lede {
+  max-width: 46rem;
+}
+.expense_reports-badge {
+  color: #f59e0b;
+  border-color: #f59e0b66;
+}
+.expense_reports-panel {
+  outline: 1px solid #f59e0b22;
+}
+.expense_reports-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f59e0b, transparent);
+}
+.expense_reports-form input:focus,
+.expense_reports-form select:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px #f59e0b33;
+}
+.expense_reports-table th {
+  color: #f59e0b;
+}
+.expense_reports-cta {
+  background: #f59e0b;
+  color: #061018;
+}
+.expense_reports-ghost {
+  border-color: #f59e0b55;
+}
+.expense_reports-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #f59e0b22,
+    #f59e0b22 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.expense_reports-footnote {
+  color: #f59e0bcc;
+  font-size: 0.82rem;
+}
+.expense_reports-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #f59e0b55;
+}
+.expense_reports-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #f59e0b, transparent);
+  margin: 1.25rem 0;
+}
+.expense_reports-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f59e0b;
+}
+.expense_reports-grid-overlay {
+  background-image: linear-gradient(#f59e0b11 1px, transparent 1px),
+    linear-gradient(90deg, #f59e0b11 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.expense_reports-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 12px #f59e0b;
+}
+.expense_reports-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.expense_reports-danger-hint {
+  color: #fecaca;
+}
+.expense_reports-ok-hint {
+  color: #f59e0b;
+}
+.expense_reports-sidebar-mark {
+  border-left: 3px solid #f59e0b;
+  padding-left: 0.75rem;
+}
+.expense_reports-hero {
+  position: relative;
+  overflow: hidden;
+}
+.expense_reports-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #f59e0b22;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Expense Reports — expense_reports */
+.expense_reports-tone-1 {
+  --tone: #f59e0b;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.expense_reports-tone-2 {
+  --tone: #f59e0b;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.expense_reports-tone-3 {
+  --tone: #f59e0b;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.expense_reports-tone-4 {
+  --tone: #f59e0b;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.expense_reports-tone-5 {
+  --tone: #f59e0b;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.expense_reports-tone-6 {
+  --tone: #f59e0b;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.expense_reports-tone-7 {
+  --tone: #f59e0b;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.expense_reports-tone-8 {
+  --tone: #f59e0b;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.expense_reports-tone-9 {
+  --tone: #f59e0b;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.expense_reports-tone-10 {
+  --tone: #f59e0b;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.expense_reports-tone-11 {
+  --tone: #f59e0b;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.expense_reports-tone-12 {
+  --tone: #f59e0b;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.expense_reports-tone-13 {
+  --tone: #f59e0b;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.expense_reports-tone-14 {
+  --tone: #f59e0b;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.expense_reports-tone-15 {
+  --tone: #f59e0b;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.expense_reports-tone-16 {
+  --tone: #f59e0b;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.expense_reports-tone-17 {
+  --tone: #f59e0b;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.expense_reports-tone-18 {
+  --tone: #f59e0b;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.expense_reports-tone-19 {
+  --tone: #f59e0b;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.expense_reports-tone-20 {
+  --tone: #f59e0b;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.expense_reports-tone-21 {
+  --tone: #f59e0b;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.expense_reports-tone-22 {
+  --tone: #f59e0b;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.expense_reports-tone-23 {
+  --tone: #f59e0b;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.expense_reports-tone-24 {
+  --tone: #f59e0b;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.expense_reports-tone-25 {
+  --tone: #f59e0b;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.expense_reports-tone-26 {
+  --tone: #f59e0b;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.expense_reports-tone-27 {
+  --tone: #f59e0b;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.expense_reports-canvas {
+  background:
+    radial-gradient(circle at 25% 35%, #f59e0b40, transparent 42%),
+    radial-gradient(circle at 85% 65%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.expense_reports-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+}
+.expense_reports-pill {
+  border: 1px solid #f59e0b66;
+  color: #f59e0b;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.expense_reports-stat {
+  font-variant-numeric: tabular-nums;
+  color: #f59e0b;
+}
+.expense_reports-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.expense_reports-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.expense_reports-empty strong {
+  display: block;
+  color: #f59e0b;
+  margin-bottom: 0.35rem;
+}
+.expense_reports-timeline li {
+  border-left: 2px solid #f59e0b55;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.expense_reports-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #f59e0b;
+}
+.expense_reports-form .field input,
+.expense_reports-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.expense_reports-hero.is-ready {
+  animation: expense_reports-rise 640ms ease both;
+}
+@keyframes expense_reports-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.expense_reports-table.is-hot,
+.expense_reports-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #f59e0b;
+}
+.expense_reports-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f59e0b55;
+}

@@ -1,0 +1,350 @@
+/* Module skin for Outbound Payments */
+.payments_out-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #34d39955, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #34d39933;
+  box-shadow: 0 24px 80px #34d39922;
+}
+.payments_out-table tbody tr:hover {
+  background: #34d39914;
+}
+.payments_out-form .field span {
+  color: #34d399;
+}
+.payments_out-hero h1 {
+  text-shadow: 0 0 24px #34d39966;
+}
+.module-hero.payments_out-hero .lede {
+  max-width: 46rem;
+}
+.payments_out-badge {
+  color: #34d399;
+  border-color: #34d39966;
+}
+.payments_out-panel {
+  outline: 1px solid #34d39922;
+}
+.payments_out-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #34d399, transparent);
+}
+.payments_out-form input:focus,
+.payments_out-form select:focus {
+  border-color: #34d399;
+  box-shadow: 0 0 0 3px #34d39933;
+}
+.payments_out-table th {
+  color: #34d399;
+}
+.payments_out-cta {
+  background: #34d399;
+  color: #061018;
+}
+.payments_out-ghost {
+  border-color: #34d39955;
+}
+.payments_out-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #34d39922,
+    #34d39922 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.payments_out-footnote {
+  color: #34d399cc;
+  font-size: 0.82rem;
+}
+.payments_out-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #34d39955;
+}
+.payments_out-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #34d399, transparent);
+  margin: 1.25rem 0;
+}
+.payments_out-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #34d399;
+}
+.payments_out-grid-overlay {
+  background-image: linear-gradient(#34d39911 1px, transparent 1px),
+    linear-gradient(90deg, #34d39911 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.payments_out-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 12px #34d399;
+}
+.payments_out-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.payments_out-danger-hint {
+  color: #fecaca;
+}
+.payments_out-ok-hint {
+  color: #34d399;
+}
+.payments_out-sidebar-mark {
+  border-left: 3px solid #34d399;
+  padding-left: 0.75rem;
+}
+.payments_out-hero {
+  position: relative;
+  overflow: hidden;
+}
+.payments_out-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #34d39922;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Outbound Payments — payments_out */
+.payments_out-tone-1 {
+  --tone: #34d399;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.payments_out-tone-2 {
+  --tone: #34d399;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.payments_out-tone-3 {
+  --tone: #34d399;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.payments_out-tone-4 {
+  --tone: #34d399;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.payments_out-tone-5 {
+  --tone: #34d399;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.payments_out-tone-6 {
+  --tone: #34d399;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.payments_out-tone-7 {
+  --tone: #34d399;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.payments_out-tone-8 {
+  --tone: #34d399;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.payments_out-tone-9 {
+  --tone: #34d399;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.payments_out-tone-10 {
+  --tone: #34d399;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.payments_out-tone-11 {
+  --tone: #34d399;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.payments_out-tone-12 {
+  --tone: #34d399;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.payments_out-tone-13 {
+  --tone: #34d399;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.payments_out-tone-14 {
+  --tone: #34d399;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.payments_out-tone-15 {
+  --tone: #34d399;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.payments_out-tone-16 {
+  --tone: #34d399;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.payments_out-tone-17 {
+  --tone: #34d399;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.payments_out-tone-18 {
+  --tone: #34d399;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.payments_out-tone-19 {
+  --tone: #34d399;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.payments_out-tone-20 {
+  --tone: #34d399;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.payments_out-tone-21 {
+  --tone: #34d399;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.payments_out-tone-22 {
+  --tone: #34d399;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.payments_out-tone-23 {
+  --tone: #34d399;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.payments_out-tone-24 {
+  --tone: #34d399;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.payments_out-tone-25 {
+  --tone: #34d399;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.payments_out-tone-26 {
+  --tone: #34d399;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.payments_out-tone-27 {
+  --tone: #34d399;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.payments_out-canvas {
+  background:
+    radial-gradient(circle at 22% 37%, #34d39940, transparent 42%),
+    radial-gradient(circle at 82% 63%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.payments_out-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #34d399, transparent);
+}
+.payments_out-pill {
+  border: 1px solid #34d39966;
+  color: #34d399;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.payments_out-stat {
+  font-variant-numeric: tabular-nums;
+  color: #34d399;
+}
+.payments_out-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.payments_out-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.payments_out-empty strong {
+  display: block;
+  color: #34d399;
+  margin-bottom: 0.35rem;
+}
+.payments_out-timeline li {
+  border-left: 2px solid #34d39955;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.payments_out-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #34d399;
+}
+.payments_out-form .field input,
+.payments_out-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.payments_out-hero.is-ready {
+  animation: payments_out-rise 640ms ease both;
+}
+@keyframes payments_out-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.payments_out-table.is-hot,
+.payments_out-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #34d399;
+}
+.payments_out-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #34d39955;
+}

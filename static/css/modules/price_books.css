@@ -1,0 +1,350 @@
+/* Module skin for Price Books */
+.price_books-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #fde04755, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #fde04733;
+  box-shadow: 0 24px 80px #fde04722;
+}
+.price_books-table tbody tr:hover {
+  background: #fde04714;
+}
+.price_books-form .field span {
+  color: #fde047;
+}
+.price_books-hero h1 {
+  text-shadow: 0 0 24px #fde04766;
+}
+.module-hero.price_books-hero .lede {
+  max-width: 46rem;
+}
+.price_books-badge {
+  color: #fde047;
+  border-color: #fde04766;
+}
+.price_books-panel {
+  outline: 1px solid #fde04722;
+}
+.price_books-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #fde047, transparent);
+}
+.price_books-form input:focus,
+.price_books-form select:focus {
+  border-color: #fde047;
+  box-shadow: 0 0 0 3px #fde04733;
+}
+.price_books-table th {
+  color: #fde047;
+}
+.price_books-cta {
+  background: #fde047;
+  color: #061018;
+}
+.price_books-ghost {
+  border-color: #fde04755;
+}
+.price_books-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #fde04722,
+    #fde04722 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.price_books-footnote {
+  color: #fde047cc;
+  font-size: 0.82rem;
+}
+.price_books-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #fde04755;
+}
+.price_books-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #fde047, transparent);
+  margin: 1.25rem 0;
+}
+.price_books-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fde047;
+}
+.price_books-grid-overlay {
+  background-image: linear-gradient(#fde04711 1px, transparent 1px),
+    linear-gradient(90deg, #fde04711 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.price_books-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fde047;
+  box-shadow: 0 0 12px #fde047;
+}
+.price_books-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.price_books-danger-hint {
+  color: #fecaca;
+}
+.price_books-ok-hint {
+  color: #fde047;
+}
+.price_books-sidebar-mark {
+  border-left: 3px solid #fde047;
+  padding-left: 0.75rem;
+}
+.price_books-hero {
+  position: relative;
+  overflow: hidden;
+}
+.price_books-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #fde04722;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Price Books — price_books */
+.price_books-tone-1 {
+  --tone: #fde047;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.price_books-tone-2 {
+  --tone: #fde047;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.price_books-tone-3 {
+  --tone: #fde047;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.price_books-tone-4 {
+  --tone: #fde047;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.price_books-tone-5 {
+  --tone: #fde047;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.price_books-tone-6 {
+  --tone: #fde047;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.price_books-tone-7 {
+  --tone: #fde047;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.price_books-tone-8 {
+  --tone: #fde047;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.price_books-tone-9 {
+  --tone: #fde047;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.price_books-tone-10 {
+  --tone: #fde047;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.price_books-tone-11 {
+  --tone: #fde047;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.price_books-tone-12 {
+  --tone: #fde047;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.price_books-tone-13 {
+  --tone: #fde047;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.price_books-tone-14 {
+  --tone: #fde047;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.price_books-tone-15 {
+  --tone: #fde047;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.price_books-tone-16 {
+  --tone: #fde047;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.price_books-tone-17 {
+  --tone: #fde047;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.price_books-tone-18 {
+  --tone: #fde047;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.price_books-tone-19 {
+  --tone: #fde047;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.price_books-tone-20 {
+  --tone: #fde047;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.price_books-tone-21 {
+  --tone: #fde047;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.price_books-tone-22 {
+  --tone: #fde047;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.price_books-tone-23 {
+  --tone: #fde047;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.price_books-tone-24 {
+  --tone: #fde047;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.price_books-tone-25 {
+  --tone: #fde047;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.price_books-tone-26 {
+  --tone: #fde047;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.price_books-tone-27 {
+  --tone: #fde047;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.price_books-canvas {
+  background:
+    radial-gradient(circle at 21% 31%, #fde04740, transparent 42%),
+    radial-gradient(circle at 81% 69%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.price_books-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #fde047, transparent);
+}
+.price_books-pill {
+  border: 1px solid #fde04766;
+  color: #fde047;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.price_books-stat {
+  font-variant-numeric: tabular-nums;
+  color: #fde047;
+}
+.price_books-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.price_books-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.price_books-empty strong {
+  display: block;
+  color: #fde047;
+  margin-bottom: 0.35rem;
+}
+.price_books-timeline li {
+  border-left: 2px solid #fde04755;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.price_books-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #fde047;
+}
+.price_books-form .field input,
+.price_books-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.price_books-hero.is-ready {
+  animation: price_books-rise 640ms ease both;
+}
+@keyframes price_books-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.price_books-table.is-hot,
+.price_books-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #fde047;
+}
+.price_books-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fde04755;
+}

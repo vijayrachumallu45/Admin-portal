@@ -1,0 +1,350 @@
+/* Module skin for Quote Workshop */
+.quotes-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #fcd34d55, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #fcd34d33;
+  box-shadow: 0 24px 80px #fcd34d22;
+}
+.quotes-table tbody tr:hover {
+  background: #fcd34d14;
+}
+.quotes-form .field span {
+  color: #fcd34d;
+}
+.quotes-hero h1 {
+  text-shadow: 0 0 24px #fcd34d66;
+}
+.module-hero.quotes-hero .lede {
+  max-width: 46rem;
+}
+.quotes-badge {
+  color: #fcd34d;
+  border-color: #fcd34d66;
+}
+.quotes-panel {
+  outline: 1px solid #fcd34d22;
+}
+.quotes-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #fcd34d, transparent);
+}
+.quotes-form input:focus,
+.quotes-form select:focus {
+  border-color: #fcd34d;
+  box-shadow: 0 0 0 3px #fcd34d33;
+}
+.quotes-table th {
+  color: #fcd34d;
+}
+.quotes-cta {
+  background: #fcd34d;
+  color: #061018;
+}
+.quotes-ghost {
+  border-color: #fcd34d55;
+}
+.quotes-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #fcd34d22,
+    #fcd34d22 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.quotes-footnote {
+  color: #fcd34dcc;
+  font-size: 0.82rem;
+}
+.quotes-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #fcd34d55;
+}
+.quotes-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #fcd34d, transparent);
+  margin: 1.25rem 0;
+}
+.quotes-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fcd34d;
+}
+.quotes-grid-overlay {
+  background-image: linear-gradient(#fcd34d11 1px, transparent 1px),
+    linear-gradient(90deg, #fcd34d11 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.quotes-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fcd34d;
+  box-shadow: 0 0 12px #fcd34d;
+}
+.quotes-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.quotes-danger-hint {
+  color: #fecaca;
+}
+.quotes-ok-hint {
+  color: #fcd34d;
+}
+.quotes-sidebar-mark {
+  border-left: 3px solid #fcd34d;
+  padding-left: 0.75rem;
+}
+.quotes-hero {
+  position: relative;
+  overflow: hidden;
+}
+.quotes-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #fcd34d22;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Quote Workshop — quotes */
+.quotes-tone-1 {
+  --tone: #fcd34d;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.quotes-tone-2 {
+  --tone: #fcd34d;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.quotes-tone-3 {
+  --tone: #fcd34d;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.quotes-tone-4 {
+  --tone: #fcd34d;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.quotes-tone-5 {
+  --tone: #fcd34d;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.quotes-tone-6 {
+  --tone: #fcd34d;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.quotes-tone-7 {
+  --tone: #fcd34d;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.quotes-tone-8 {
+  --tone: #fcd34d;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.quotes-tone-9 {
+  --tone: #fcd34d;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.quotes-tone-10 {
+  --tone: #fcd34d;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.quotes-tone-11 {
+  --tone: #fcd34d;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.quotes-tone-12 {
+  --tone: #fcd34d;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.quotes-tone-13 {
+  --tone: #fcd34d;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.quotes-tone-14 {
+  --tone: #fcd34d;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.quotes-tone-15 {
+  --tone: #fcd34d;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.quotes-tone-16 {
+  --tone: #fcd34d;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.quotes-tone-17 {
+  --tone: #fcd34d;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.quotes-tone-18 {
+  --tone: #fcd34d;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.quotes-tone-19 {
+  --tone: #fcd34d;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.quotes-tone-20 {
+  --tone: #fcd34d;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.quotes-tone-21 {
+  --tone: #fcd34d;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.quotes-tone-22 {
+  --tone: #fcd34d;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.quotes-tone-23 {
+  --tone: #fcd34d;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.quotes-tone-24 {
+  --tone: #fcd34d;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.quotes-tone-25 {
+  --tone: #fcd34d;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.quotes-tone-26 {
+  --tone: #fcd34d;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.quotes-tone-27 {
+  --tone: #fcd34d;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.quotes-canvas {
+  background:
+    radial-gradient(circle at 16% 34%, #fcd34d40, transparent 42%),
+    radial-gradient(circle at 76% 66%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.quotes-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #fcd34d, transparent);
+}
+.quotes-pill {
+  border: 1px solid #fcd34d66;
+  color: #fcd34d;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.quotes-stat {
+  font-variant-numeric: tabular-nums;
+  color: #fcd34d;
+}
+.quotes-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.quotes-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.quotes-empty strong {
+  display: block;
+  color: #fcd34d;
+  margin-bottom: 0.35rem;
+}
+.quotes-timeline li {
+  border-left: 2px solid #fcd34d55;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.quotes-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #fcd34d;
+}
+.quotes-form .field input,
+.quotes-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.quotes-hero.is-ready {
+  animation: quotes-rise 640ms ease both;
+}
+@keyframes quotes-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.quotes-table.is-hot,
+.quotes-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #fcd34d;
+}
+.quotes-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fcd34d55;
+}

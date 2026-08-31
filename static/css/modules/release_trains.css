@@ -1,0 +1,350 @@
+/* Module skin for Release Trains */
+.release_trains-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #93c5fd55, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #93c5fd33;
+  box-shadow: 0 24px 80px #93c5fd22;
+}
+.release_trains-table tbody tr:hover {
+  background: #93c5fd14;
+}
+.release_trains-form .field span {
+  color: #93c5fd;
+}
+.release_trains-hero h1 {
+  text-shadow: 0 0 24px #93c5fd66;
+}
+.module-hero.release_trains-hero .lede {
+  max-width: 46rem;
+}
+.release_trains-badge {
+  color: #93c5fd;
+  border-color: #93c5fd66;
+}
+.release_trains-panel {
+  outline: 1px solid #93c5fd22;
+}
+.release_trains-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #93c5fd, transparent);
+}
+.release_trains-form input:focus,
+.release_trains-form select:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px #93c5fd33;
+}
+.release_trains-table th {
+  color: #93c5fd;
+}
+.release_trains-cta {
+  background: #93c5fd;
+  color: #061018;
+}
+.release_trains-ghost {
+  border-color: #93c5fd55;
+}
+.release_trains-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #93c5fd22,
+    #93c5fd22 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.release_trains-footnote {
+  color: #93c5fdcc;
+  font-size: 0.82rem;
+}
+.release_trains-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #93c5fd55;
+}
+.release_trains-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #93c5fd, transparent);
+  margin: 1.25rem 0;
+}
+.release_trains-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #93c5fd;
+}
+.release_trains-grid-overlay {
+  background-image: linear-gradient(#93c5fd11 1px, transparent 1px),
+    linear-gradient(90deg, #93c5fd11 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.release_trains-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #93c5fd;
+  box-shadow: 0 0 12px #93c5fd;
+}
+.release_trains-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.release_trains-danger-hint {
+  color: #fecaca;
+}
+.release_trains-ok-hint {
+  color: #93c5fd;
+}
+.release_trains-sidebar-mark {
+  border-left: 3px solid #93c5fd;
+  padding-left: 0.75rem;
+}
+.release_trains-hero {
+  position: relative;
+  overflow: hidden;
+}
+.release_trains-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #93c5fd22;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Release Trains — release_trains */
+.release_trains-tone-1 {
+  --tone: #93c5fd;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.release_trains-tone-2 {
+  --tone: #93c5fd;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.release_trains-tone-3 {
+  --tone: #93c5fd;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.release_trains-tone-4 {
+  --tone: #93c5fd;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.release_trains-tone-5 {
+  --tone: #93c5fd;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.release_trains-tone-6 {
+  --tone: #93c5fd;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.release_trains-tone-7 {
+  --tone: #93c5fd;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.release_trains-tone-8 {
+  --tone: #93c5fd;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.release_trains-tone-9 {
+  --tone: #93c5fd;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.release_trains-tone-10 {
+  --tone: #93c5fd;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.release_trains-tone-11 {
+  --tone: #93c5fd;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.release_trains-tone-12 {
+  --tone: #93c5fd;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.release_trains-tone-13 {
+  --tone: #93c5fd;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.release_trains-tone-14 {
+  --tone: #93c5fd;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.release_trains-tone-15 {
+  --tone: #93c5fd;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.release_trains-tone-16 {
+  --tone: #93c5fd;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.release_trains-tone-17 {
+  --tone: #93c5fd;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.release_trains-tone-18 {
+  --tone: #93c5fd;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.release_trains-tone-19 {
+  --tone: #93c5fd;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.release_trains-tone-20 {
+  --tone: #93c5fd;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.release_trains-tone-21 {
+  --tone: #93c5fd;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.release_trains-tone-22 {
+  --tone: #93c5fd;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.release_trains-tone-23 {
+  --tone: #93c5fd;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.release_trains-tone-24 {
+  --tone: #93c5fd;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.release_trains-tone-25 {
+  --tone: #93c5fd;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.release_trains-tone-26 {
+  --tone: #93c5fd;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.release_trains-tone-27 {
+  --tone: #93c5fd;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.release_trains-canvas {
+  background:
+    radial-gradient(circle at 24% 34%, #93c5fd40, transparent 42%),
+    radial-gradient(circle at 84% 66%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.release_trains-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #93c5fd, transparent);
+}
+.release_trains-pill {
+  border: 1px solid #93c5fd66;
+  color: #93c5fd;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.release_trains-stat {
+  font-variant-numeric: tabular-nums;
+  color: #93c5fd;
+}
+.release_trains-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.release_trains-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.release_trains-empty strong {
+  display: block;
+  color: #93c5fd;
+  margin-bottom: 0.35rem;
+}
+.release_trains-timeline li {
+  border-left: 2px solid #93c5fd55;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.release_trains-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #93c5fd;
+}
+.release_trains-form .field input,
+.release_trains-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.release_trains-hero.is-ready {
+  animation: release_trains-rise 640ms ease both;
+}
+@keyframes release_trains-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.release_trains-table.is-hot,
+.release_trains-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #93c5fd;
+}
+.release_trains-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #93c5fd55;
+}

@@ -1,0 +1,350 @@
+/* Module skin for Retention Policies */
+.retention_policies-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #5eead455, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #5eead433;
+  box-shadow: 0 24px 80px #5eead422;
+}
+.retention_policies-table tbody tr:hover {
+  background: #5eead414;
+}
+.retention_policies-form .field span {
+  color: #5eead4;
+}
+.retention_policies-hero h1 {
+  text-shadow: 0 0 24px #5eead466;
+}
+.module-hero.retention_policies-hero .lede {
+  max-width: 46rem;
+}
+.retention_policies-badge {
+  color: #5eead4;
+  border-color: #5eead466;
+}
+.retention_policies-panel {
+  outline: 1px solid #5eead422;
+}
+.retention_policies-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5eead4, transparent);
+}
+.retention_policies-form input:focus,
+.retention_policies-form select:focus {
+  border-color: #5eead4;
+  box-shadow: 0 0 0 3px #5eead433;
+}
+.retention_policies-table th {
+  color: #5eead4;
+}
+.retention_policies-cta {
+  background: #5eead4;
+  color: #061018;
+}
+.retention_policies-ghost {
+  border-color: #5eead455;
+}
+.retention_policies-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #5eead422,
+    #5eead422 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.retention_policies-footnote {
+  color: #5eead4cc;
+  font-size: 0.82rem;
+}
+.retention_policies-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #5eead455;
+}
+.retention_policies-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #5eead4, transparent);
+  margin: 1.25rem 0;
+}
+.retention_policies-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5eead4;
+}
+.retention_policies-grid-overlay {
+  background-image: linear-gradient(#5eead411 1px, transparent 1px),
+    linear-gradient(90deg, #5eead411 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.retention_policies-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #5eead4;
+  box-shadow: 0 0 12px #5eead4;
+}
+.retention_policies-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.retention_policies-danger-hint {
+  color: #fecaca;
+}
+.retention_policies-ok-hint {
+  color: #5eead4;
+}
+.retention_policies-sidebar-mark {
+  border-left: 3px solid #5eead4;
+  padding-left: 0.75rem;
+}
+.retention_policies-hero {
+  position: relative;
+  overflow: hidden;
+}
+.retention_policies-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #5eead422;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Retention Policies — retention_policies */
+.retention_policies-tone-1 {
+  --tone: #5eead4;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.retention_policies-tone-2 {
+  --tone: #5eead4;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.retention_policies-tone-3 {
+  --tone: #5eead4;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.retention_policies-tone-4 {
+  --tone: #5eead4;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.retention_policies-tone-5 {
+  --tone: #5eead4;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.retention_policies-tone-6 {
+  --tone: #5eead4;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.retention_policies-tone-7 {
+  --tone: #5eead4;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.retention_policies-tone-8 {
+  --tone: #5eead4;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.retention_policies-tone-9 {
+  --tone: #5eead4;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.retention_policies-tone-10 {
+  --tone: #5eead4;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.retention_policies-tone-11 {
+  --tone: #5eead4;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.retention_policies-tone-12 {
+  --tone: #5eead4;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.retention_policies-tone-13 {
+  --tone: #5eead4;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.retention_policies-tone-14 {
+  --tone: #5eead4;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.retention_policies-tone-15 {
+  --tone: #5eead4;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.retention_policies-tone-16 {
+  --tone: #5eead4;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.retention_policies-tone-17 {
+  --tone: #5eead4;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.retention_policies-tone-18 {
+  --tone: #5eead4;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.retention_policies-tone-19 {
+  --tone: #5eead4;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.retention_policies-tone-20 {
+  --tone: #5eead4;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.retention_policies-tone-21 {
+  --tone: #5eead4;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.retention_policies-tone-22 {
+  --tone: #5eead4;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.retention_policies-tone-23 {
+  --tone: #5eead4;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.retention_policies-tone-24 {
+  --tone: #5eead4;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.retention_policies-tone-25 {
+  --tone: #5eead4;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.retention_policies-tone-26 {
+  --tone: #5eead4;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.retention_policies-tone-27 {
+  --tone: #5eead4;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.retention_policies-canvas {
+  background:
+    radial-gradient(circle at 28% 38%, #5eead440, transparent 42%),
+    radial-gradient(circle at 88% 62%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.retention_policies-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #5eead4, transparent);
+}
+.retention_policies-pill {
+  border: 1px solid #5eead466;
+  color: #5eead4;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.retention_policies-stat {
+  font-variant-numeric: tabular-nums;
+  color: #5eead4;
+}
+.retention_policies-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.retention_policies-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.retention_policies-empty strong {
+  display: block;
+  color: #5eead4;
+  margin-bottom: 0.35rem;
+}
+.retention_policies-timeline li {
+  border-left: 2px solid #5eead455;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.retention_policies-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #5eead4;
+}
+.retention_policies-form .field input,
+.retention_policies-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.retention_policies-hero.is-ready {
+  animation: retention_policies-rise 640ms ease both;
+}
+@keyframes retention_policies-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.retention_policies-table.is-hot,
+.retention_policies-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #5eead4;
+}
+.retention_policies-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #5eead455;
+}

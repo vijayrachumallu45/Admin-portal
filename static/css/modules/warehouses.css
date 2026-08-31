@@ -1,0 +1,350 @@
+/* Module skin for Warehouse Map */
+.warehouses-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #a3e63555, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #a3e63533;
+  box-shadow: 0 24px 80px #a3e63522;
+}
+.warehouses-table tbody tr:hover {
+  background: #a3e63514;
+}
+.warehouses-form .field span {
+  color: #a3e635;
+}
+.warehouses-hero h1 {
+  text-shadow: 0 0 24px #a3e63566;
+}
+.module-hero.warehouses-hero .lede {
+  max-width: 46rem;
+}
+.warehouses-badge {
+  color: #a3e635;
+  border-color: #a3e63566;
+}
+.warehouses-panel {
+  outline: 1px solid #a3e63522;
+}
+.warehouses-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #a3e635, transparent);
+}
+.warehouses-form input:focus,
+.warehouses-form select:focus {
+  border-color: #a3e635;
+  box-shadow: 0 0 0 3px #a3e63533;
+}
+.warehouses-table th {
+  color: #a3e635;
+}
+.warehouses-cta {
+  background: #a3e635;
+  color: #061018;
+}
+.warehouses-ghost {
+  border-color: #a3e63555;
+}
+.warehouses-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #a3e63522,
+    #a3e63522 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.warehouses-footnote {
+  color: #a3e635cc;
+  font-size: 0.82rem;
+}
+.warehouses-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #a3e63555;
+}
+.warehouses-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #a3e635, transparent);
+  margin: 1.25rem 0;
+}
+.warehouses-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #a3e635;
+}
+.warehouses-grid-overlay {
+  background-image: linear-gradient(#a3e63511 1px, transparent 1px),
+    linear-gradient(90deg, #a3e63511 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.warehouses-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #a3e635;
+  box-shadow: 0 0 12px #a3e635;
+}
+.warehouses-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.warehouses-danger-hint {
+  color: #fecaca;
+}
+.warehouses-ok-hint {
+  color: #a3e635;
+}
+.warehouses-sidebar-mark {
+  border-left: 3px solid #a3e635;
+  padding-left: 0.75rem;
+}
+.warehouses-hero {
+  position: relative;
+  overflow: hidden;
+}
+.warehouses-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #a3e63522;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Warehouse Map — warehouses */
+.warehouses-tone-1 {
+  --tone: #a3e635;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.warehouses-tone-2 {
+  --tone: #a3e635;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.warehouses-tone-3 {
+  --tone: #a3e635;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.warehouses-tone-4 {
+  --tone: #a3e635;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.warehouses-tone-5 {
+  --tone: #a3e635;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.warehouses-tone-6 {
+  --tone: #a3e635;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.warehouses-tone-7 {
+  --tone: #a3e635;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.warehouses-tone-8 {
+  --tone: #a3e635;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.warehouses-tone-9 {
+  --tone: #a3e635;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.warehouses-tone-10 {
+  --tone: #a3e635;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.warehouses-tone-11 {
+  --tone: #a3e635;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.warehouses-tone-12 {
+  --tone: #a3e635;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.warehouses-tone-13 {
+  --tone: #a3e635;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.warehouses-tone-14 {
+  --tone: #a3e635;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.warehouses-tone-15 {
+  --tone: #a3e635;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.warehouses-tone-16 {
+  --tone: #a3e635;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.warehouses-tone-17 {
+  --tone: #a3e635;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.warehouses-tone-18 {
+  --tone: #a3e635;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.warehouses-tone-19 {
+  --tone: #a3e635;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.warehouses-tone-20 {
+  --tone: #a3e635;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.warehouses-tone-21 {
+  --tone: #a3e635;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.warehouses-tone-22 {
+  --tone: #a3e635;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.warehouses-tone-23 {
+  --tone: #a3e635;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.warehouses-tone-24 {
+  --tone: #a3e635;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.warehouses-tone-25 {
+  --tone: #a3e635;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.warehouses-tone-26 {
+  --tone: #a3e635;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.warehouses-tone-27 {
+  --tone: #a3e635;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.warehouses-canvas {
+  background:
+    radial-gradient(circle at 20% 33%, #a3e63540, transparent 42%),
+    radial-gradient(circle at 80% 67%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.warehouses-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #a3e635, transparent);
+}
+.warehouses-pill {
+  border: 1px solid #a3e63566;
+  color: #a3e635;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.warehouses-stat {
+  font-variant-numeric: tabular-nums;
+  color: #a3e635;
+}
+.warehouses-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.warehouses-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.warehouses-empty strong {
+  display: block;
+  color: #a3e635;
+  margin-bottom: 0.35rem;
+}
+.warehouses-timeline li {
+  border-left: 2px solid #a3e63555;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.warehouses-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #a3e635;
+}
+.warehouses-form .field input,
+.warehouses-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.warehouses-hero.is-ready {
+  animation: warehouses-rise 640ms ease both;
+}
+@keyframes warehouses-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.warehouses-table.is-hot,
+.warehouses-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #a3e635;
+}
+.warehouses-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a3e63555;
+}

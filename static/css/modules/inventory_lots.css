@@ -1,0 +1,350 @@
+/* Module skin for Inventory Lots */
+.inventory_lots-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #22d3ee55, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #22d3ee33;
+  box-shadow: 0 24px 80px #22d3ee22;
+}
+.inventory_lots-table tbody tr:hover {
+  background: #22d3ee14;
+}
+.inventory_lots-form .field span {
+  color: #22d3ee;
+}
+.inventory_lots-hero h1 {
+  text-shadow: 0 0 24px #22d3ee66;
+}
+.module-hero.inventory_lots-hero .lede {
+  max-width: 46rem;
+}
+.inventory_lots-badge {
+  color: #22d3ee;
+  border-color: #22d3ee66;
+}
+.inventory_lots-panel {
+  outline: 1px solid #22d3ee22;
+}
+.inventory_lots-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #22d3ee, transparent);
+}
+.inventory_lots-form input:focus,
+.inventory_lots-form select:focus {
+  border-color: #22d3ee;
+  box-shadow: 0 0 0 3px #22d3ee33;
+}
+.inventory_lots-table th {
+  color: #22d3ee;
+}
+.inventory_lots-cta {
+  background: #22d3ee;
+  color: #061018;
+}
+.inventory_lots-ghost {
+  border-color: #22d3ee55;
+}
+.inventory_lots-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #22d3ee22,
+    #22d3ee22 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.inventory_lots-footnote {
+  color: #22d3eecc;
+  font-size: 0.82rem;
+}
+.inventory_lots-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #22d3ee55;
+}
+.inventory_lots-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #22d3ee, transparent);
+  margin: 1.25rem 0;
+}
+.inventory_lots-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #22d3ee;
+}
+.inventory_lots-grid-overlay {
+  background-image: linear-gradient(#22d3ee11 1px, transparent 1px),
+    linear-gradient(90deg, #22d3ee11 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.inventory_lots-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 12px #22d3ee;
+}
+.inventory_lots-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.inventory_lots-danger-hint {
+  color: #fecaca;
+}
+.inventory_lots-ok-hint {
+  color: #22d3ee;
+}
+.inventory_lots-sidebar-mark {
+  border-left: 3px solid #22d3ee;
+  padding-left: 0.75rem;
+}
+.inventory_lots-hero {
+  position: relative;
+  overflow: hidden;
+}
+.inventory_lots-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #22d3ee22;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Inventory Lots — inventory_lots */
+.inventory_lots-tone-1 {
+  --tone: #22d3ee;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.inventory_lots-tone-2 {
+  --tone: #22d3ee;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.inventory_lots-tone-3 {
+  --tone: #22d3ee;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.inventory_lots-tone-4 {
+  --tone: #22d3ee;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.inventory_lots-tone-5 {
+  --tone: #22d3ee;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.inventory_lots-tone-6 {
+  --tone: #22d3ee;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.inventory_lots-tone-7 {
+  --tone: #22d3ee;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.inventory_lots-tone-8 {
+  --tone: #22d3ee;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.inventory_lots-tone-9 {
+  --tone: #22d3ee;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.inventory_lots-tone-10 {
+  --tone: #22d3ee;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.inventory_lots-tone-11 {
+  --tone: #22d3ee;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.inventory_lots-tone-12 {
+  --tone: #22d3ee;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.inventory_lots-tone-13 {
+  --tone: #22d3ee;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.inventory_lots-tone-14 {
+  --tone: #22d3ee;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.inventory_lots-tone-15 {
+  --tone: #22d3ee;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.inventory_lots-tone-16 {
+  --tone: #22d3ee;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.inventory_lots-tone-17 {
+  --tone: #22d3ee;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.inventory_lots-tone-18 {
+  --tone: #22d3ee;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.inventory_lots-tone-19 {
+  --tone: #22d3ee;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.inventory_lots-tone-20 {
+  --tone: #22d3ee;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.inventory_lots-tone-21 {
+  --tone: #22d3ee;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.inventory_lots-tone-22 {
+  --tone: #22d3ee;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.inventory_lots-tone-23 {
+  --tone: #22d3ee;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.inventory_lots-tone-24 {
+  --tone: #22d3ee;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.inventory_lots-tone-25 {
+  --tone: #22d3ee;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.inventory_lots-tone-26 {
+  --tone: #22d3ee;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.inventory_lots-tone-27 {
+  --tone: #22d3ee;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.inventory_lots-canvas {
+  background:
+    radial-gradient(circle at 24% 34%, #22d3ee40, transparent 42%),
+    radial-gradient(circle at 84% 66%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.inventory_lots-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+}
+.inventory_lots-pill {
+  border: 1px solid #22d3ee66;
+  color: #22d3ee;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.inventory_lots-stat {
+  font-variant-numeric: tabular-nums;
+  color: #22d3ee;
+}
+.inventory_lots-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.inventory_lots-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.inventory_lots-empty strong {
+  display: block;
+  color: #22d3ee;
+  margin-bottom: 0.35rem;
+}
+.inventory_lots-timeline li {
+  border-left: 2px solid #22d3ee55;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.inventory_lots-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #22d3ee;
+}
+.inventory_lots-form .field input,
+.inventory_lots-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.inventory_lots-hero.is-ready {
+  animation: inventory_lots-rise 640ms ease both;
+}
+@keyframes inventory_lots-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.inventory_lots-table.is-hot,
+.inventory_lots-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #22d3ee;
+}
+.inventory_lots-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #22d3ee55;
+}

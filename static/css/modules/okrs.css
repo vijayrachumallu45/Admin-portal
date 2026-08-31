@@ -1,0 +1,350 @@
+/* Module skin for OKR Board */
+.okrs-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #818cf855, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #818cf833;
+  box-shadow: 0 24px 80px #818cf822;
+}
+.okrs-table tbody tr:hover {
+  background: #818cf814;
+}
+.okrs-form .field span {
+  color: #818cf8;
+}
+.okrs-hero h1 {
+  text-shadow: 0 0 24px #818cf866;
+}
+.module-hero.okrs-hero .lede {
+  max-width: 46rem;
+}
+.okrs-badge {
+  color: #818cf8;
+  border-color: #818cf866;
+}
+.okrs-panel {
+  outline: 1px solid #818cf822;
+}
+.okrs-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #818cf8, transparent);
+}
+.okrs-form input:focus,
+.okrs-form select:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px #818cf833;
+}
+.okrs-table th {
+  color: #818cf8;
+}
+.okrs-cta {
+  background: #818cf8;
+  color: #061018;
+}
+.okrs-ghost {
+  border-color: #818cf855;
+}
+.okrs-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #818cf822,
+    #818cf822 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.okrs-footnote {
+  color: #818cf8cc;
+  font-size: 0.82rem;
+}
+.okrs-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #818cf855;
+}
+.okrs-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #818cf8, transparent);
+  margin: 1.25rem 0;
+}
+.okrs-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #818cf8;
+}
+.okrs-grid-overlay {
+  background-image: linear-gradient(#818cf811 1px, transparent 1px),
+    linear-gradient(90deg, #818cf811 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.okrs-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #818cf8;
+  box-shadow: 0 0 12px #818cf8;
+}
+.okrs-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.okrs-danger-hint {
+  color: #fecaca;
+}
+.okrs-ok-hint {
+  color: #818cf8;
+}
+.okrs-sidebar-mark {
+  border-left: 3px solid #818cf8;
+  padding-left: 0.75rem;
+}
+.okrs-hero {
+  position: relative;
+  overflow: hidden;
+}
+.okrs-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #818cf822;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for OKR Board — okrs */
+.okrs-tone-1 {
+  --tone: #818cf8;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.okrs-tone-2 {
+  --tone: #818cf8;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.okrs-tone-3 {
+  --tone: #818cf8;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.okrs-tone-4 {
+  --tone: #818cf8;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.okrs-tone-5 {
+  --tone: #818cf8;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.okrs-tone-6 {
+  --tone: #818cf8;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.okrs-tone-7 {
+  --tone: #818cf8;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.okrs-tone-8 {
+  --tone: #818cf8;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.okrs-tone-9 {
+  --tone: #818cf8;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.okrs-tone-10 {
+  --tone: #818cf8;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.okrs-tone-11 {
+  --tone: #818cf8;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.okrs-tone-12 {
+  --tone: #818cf8;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.okrs-tone-13 {
+  --tone: #818cf8;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.okrs-tone-14 {
+  --tone: #818cf8;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.okrs-tone-15 {
+  --tone: #818cf8;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.okrs-tone-16 {
+  --tone: #818cf8;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.okrs-tone-17 {
+  --tone: #818cf8;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.okrs-tone-18 {
+  --tone: #818cf8;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.okrs-tone-19 {
+  --tone: #818cf8;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.okrs-tone-20 {
+  --tone: #818cf8;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.okrs-tone-21 {
+  --tone: #818cf8;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.okrs-tone-22 {
+  --tone: #818cf8;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.okrs-tone-23 {
+  --tone: #818cf8;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.okrs-tone-24 {
+  --tone: #818cf8;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.okrs-tone-25 {
+  --tone: #818cf8;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.okrs-tone-26 {
+  --tone: #818cf8;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.okrs-tone-27 {
+  --tone: #818cf8;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.okrs-canvas {
+  background:
+    radial-gradient(circle at 14% 29%, #818cf840, transparent 42%),
+    radial-gradient(circle at 74% 71%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.okrs-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #818cf8, transparent);
+}
+.okrs-pill {
+  border: 1px solid #818cf866;
+  color: #818cf8;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.okrs-stat {
+  font-variant-numeric: tabular-nums;
+  color: #818cf8;
+}
+.okrs-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.okrs-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.okrs-empty strong {
+  display: block;
+  color: #818cf8;
+  margin-bottom: 0.35rem;
+}
+.okrs-timeline li {
+  border-left: 2px solid #818cf855;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.okrs-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #818cf8;
+}
+.okrs-form .field input,
+.okrs-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.okrs-hero.is-ready {
+  animation: okrs-rise 640ms ease both;
+}
+@keyframes okrs-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.okrs-table.is-hot,
+.okrs-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #818cf8;
+}
+.okrs-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #818cf855;
+}

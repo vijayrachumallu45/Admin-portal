@@ -1,0 +1,350 @@
+/* Module skin for Vendor Register */
+.vendors-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #fbbf2455, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #fbbf2433;
+  box-shadow: 0 24px 80px #fbbf2422;
+}
+.vendors-table tbody tr:hover {
+  background: #fbbf2414;
+}
+.vendors-form .field span {
+  color: #fbbf24;
+}
+.vendors-hero h1 {
+  text-shadow: 0 0 24px #fbbf2466;
+}
+.module-hero.vendors-hero .lede {
+  max-width: 46rem;
+}
+.vendors-badge {
+  color: #fbbf24;
+  border-color: #fbbf2466;
+}
+.vendors-panel {
+  outline: 1px solid #fbbf2422;
+}
+.vendors-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #fbbf24, transparent);
+}
+.vendors-form input:focus,
+.vendors-form select:focus {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px #fbbf2433;
+}
+.vendors-table th {
+  color: #fbbf24;
+}
+.vendors-cta {
+  background: #fbbf24;
+  color: #061018;
+}
+.vendors-ghost {
+  border-color: #fbbf2455;
+}
+.vendors-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #fbbf2422,
+    #fbbf2422 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.vendors-footnote {
+  color: #fbbf24cc;
+  font-size: 0.82rem;
+}
+.vendors-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #fbbf2455;
+}
+.vendors-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #fbbf24, transparent);
+  margin: 1.25rem 0;
+}
+.vendors-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fbbf24;
+}
+.vendors-grid-overlay {
+  background-image: linear-gradient(#fbbf2411 1px, transparent 1px),
+    linear-gradient(90deg, #fbbf2411 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.vendors-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fbbf24;
+  box-shadow: 0 0 12px #fbbf24;
+}
+.vendors-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.vendors-danger-hint {
+  color: #fecaca;
+}
+.vendors-ok-hint {
+  color: #fbbf24;
+}
+.vendors-sidebar-mark {
+  border-left: 3px solid #fbbf24;
+  padding-left: 0.75rem;
+}
+.vendors-hero {
+  position: relative;
+  overflow: hidden;
+}
+.vendors-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #fbbf2422;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Vendor Register — vendors */
+.vendors-tone-1 {
+  --tone: #fbbf24;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.vendors-tone-2 {
+  --tone: #fbbf24;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.vendors-tone-3 {
+  --tone: #fbbf24;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.vendors-tone-4 {
+  --tone: #fbbf24;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.vendors-tone-5 {
+  --tone: #fbbf24;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.vendors-tone-6 {
+  --tone: #fbbf24;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.vendors-tone-7 {
+  --tone: #fbbf24;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.vendors-tone-8 {
+  --tone: #fbbf24;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.vendors-tone-9 {
+  --tone: #fbbf24;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.vendors-tone-10 {
+  --tone: #fbbf24;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.vendors-tone-11 {
+  --tone: #fbbf24;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.vendors-tone-12 {
+  --tone: #fbbf24;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.vendors-tone-13 {
+  --tone: #fbbf24;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.vendors-tone-14 {
+  --tone: #fbbf24;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.vendors-tone-15 {
+  --tone: #fbbf24;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.vendors-tone-16 {
+  --tone: #fbbf24;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.vendors-tone-17 {
+  --tone: #fbbf24;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.vendors-tone-18 {
+  --tone: #fbbf24;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.vendors-tone-19 {
+  --tone: #fbbf24;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.vendors-tone-20 {
+  --tone: #fbbf24;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.vendors-tone-21 {
+  --tone: #fbbf24;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.vendors-tone-22 {
+  --tone: #fbbf24;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.vendors-tone-23 {
+  --tone: #fbbf24;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.vendors-tone-24 {
+  --tone: #fbbf24;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.vendors-tone-25 {
+  --tone: #fbbf24;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.vendors-tone-26 {
+  --tone: #fbbf24;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.vendors-tone-27 {
+  --tone: #fbbf24;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.vendors-canvas {
+  background:
+    radial-gradient(circle at 17% 35%, #fbbf2440, transparent 42%),
+    radial-gradient(circle at 77% 65%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.vendors-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #fbbf24, transparent);
+}
+.vendors-pill {
+  border: 1px solid #fbbf2466;
+  color: #fbbf24;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.vendors-stat {
+  font-variant-numeric: tabular-nums;
+  color: #fbbf24;
+}
+.vendors-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.vendors-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.vendors-empty strong {
+  display: block;
+  color: #fbbf24;
+  margin-bottom: 0.35rem;
+}
+.vendors-timeline li {
+  border-left: 2px solid #fbbf2455;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.vendors-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #fbbf24;
+}
+.vendors-form .field input,
+.vendors-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.vendors-hero.is-ready {
+  animation: vendors-rise 640ms ease both;
+}
+@keyframes vendors-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.vendors-table.is-hot,
+.vendors-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #fbbf24;
+}
+.vendors-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fbbf2455;
+}

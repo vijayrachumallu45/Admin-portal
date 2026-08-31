@@ -1,0 +1,350 @@
+/* Module skin for Board Packs */
+.board_packs-hero {
+  background:
+    radial-gradient(circle at 12% 20%, #e2e8f055, transparent 36%),
+    radial-gradient(circle at 88% 10%, #0b1224cc, transparent 42%),
+    linear-gradient(135deg, rgba(8, 12, 28, 0.92), rgba(12, 24, 48, 0.75));
+  border: 1px solid #e2e8f033;
+  box-shadow: 0 24px 80px #e2e8f022;
+}
+.board_packs-table tbody tr:hover {
+  background: #e2e8f014;
+}
+.board_packs-form .field span {
+  color: #e2e8f0;
+}
+.board_packs-hero h1 {
+  text-shadow: 0 0 24px #e2e8f066;
+}
+.module-hero.board_packs-hero .lede {
+  max-width: 46rem;
+}
+.board_packs-badge {
+  color: #e2e8f0;
+  border-color: #e2e8f066;
+}
+.board_packs-panel {
+  outline: 1px solid #e2e8f022;
+}
+.board_packs-spark {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #e2e8f0, transparent);
+}
+.board_packs-form input:focus,
+.board_packs-form select:focus {
+  border-color: #e2e8f0;
+  box-shadow: 0 0 0 3px #e2e8f033;
+}
+.board_packs-table th {
+  color: #e2e8f0;
+}
+.board_packs-cta {
+  background: #e2e8f0;
+  color: #061018;
+}
+.board_packs-ghost {
+  border-color: #e2e8f055;
+}
+.board_packs-meter {
+  background: repeating-linear-gradient(
+    -45deg,
+    #e2e8f022,
+    #e2e8f022 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.board_packs-footnote {
+  color: #e2e8f0cc;
+  font-size: 0.82rem;
+}
+.board_packs-chip {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #e2e8f055;
+}
+.board_packs-split-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #e2e8f0, transparent);
+  margin: 1.25rem 0;
+}
+.board_packs-hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #e2e8f0;
+}
+.board_packs-grid-overlay {
+  background-image: linear-gradient(#e2e8f011 1px, transparent 1px),
+    linear-gradient(90deg, #e2e8f011 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.board_packs-glow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  box-shadow: 0 0 12px #e2e8f0;
+}
+.board_packs-table td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+.board_packs-danger-hint {
+  color: #fecaca;
+}
+.board_packs-ok-hint {
+  color: #e2e8f0;
+}
+.board_packs-sidebar-mark {
+  border-left: 3px solid #e2e8f0;
+  padding-left: 0.75rem;
+}
+.board_packs-hero {
+  position: relative;
+  overflow: hidden;
+}
+.board_packs-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -40% auto;
+  width: 280px;
+  height: 280px;
+  background: #e2e8f022;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Extended skin for Board Packs — board_packs */
+.board_packs-tone-1 {
+  --tone: #e2e8f0;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.01em;
+}
+.board_packs-tone-2 {
+  --tone: #e2e8f0;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.board_packs-tone-3 {
+  --tone: #e2e8f0;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.03em;
+}
+.board_packs-tone-4 {
+  --tone: #e2e8f0;
+  opacity: 0.75;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.board_packs-tone-5 {
+  --tone: #e2e8f0;
+  opacity: 0.85;
+  border-radius: 9px;
+  letter-spacing: 0.0em;
+}
+.board_packs-tone-6 {
+  --tone: #e2e8f0;
+  opacity: 0.35;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+}
+.board_packs-tone-7 {
+  --tone: #e2e8f0;
+  opacity: 0.45;
+  border-radius: 11px;
+  letter-spacing: 0.02em;
+}
+.board_packs-tone-8 {
+  --tone: #e2e8f0;
+  opacity: 0.55;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+.board_packs-tone-9 {
+  --tone: #e2e8f0;
+  opacity: 0.65;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+}
+.board_packs-tone-10 {
+  --tone: #e2e8f0;
+  opacity: 0.75;
+  border-radius: 6px;
+  letter-spacing: 0.0em;
+}
+.board_packs-tone-11 {
+  --tone: #e2e8f0;
+  opacity: 0.85;
+  border-radius: 7px;
+  letter-spacing: 0.01em;
+}
+.board_packs-tone-12 {
+  --tone: #e2e8f0;
+  opacity: 0.35;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+.board_packs-tone-13 {
+  --tone: #e2e8f0;
+  opacity: 0.45;
+  border-radius: 9px;
+  letter-spacing: 0.03em;
+}
+.board_packs-tone-14 {
+  --tone: #e2e8f0;
+  opacity: 0.55;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.board_packs-tone-15 {
+  --tone: #e2e8f0;
+  opacity: 0.65;
+  border-radius: 11px;
+  letter-spacing: 0.0em;
+}
+.board_packs-tone-16 {
+  --tone: #e2e8f0;
+  opacity: 0.75;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+}
+.board_packs-tone-17 {
+  --tone: #e2e8f0;
+  opacity: 0.85;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+.board_packs-tone-18 {
+  --tone: #e2e8f0;
+  opacity: 0.35;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+.board_packs-tone-19 {
+  --tone: #e2e8f0;
+  opacity: 0.45;
+  border-radius: 7px;
+  letter-spacing: 0.04em;
+}
+.board_packs-tone-20 {
+  --tone: #e2e8f0;
+  opacity: 0.55;
+  border-radius: 8px;
+  letter-spacing: 0.0em;
+}
+.board_packs-tone-21 {
+  --tone: #e2e8f0;
+  opacity: 0.65;
+  border-radius: 9px;
+  letter-spacing: 0.01em;
+}
+.board_packs-tone-22 {
+  --tone: #e2e8f0;
+  opacity: 0.75;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+.board_packs-tone-23 {
+  --tone: #e2e8f0;
+  opacity: 0.85;
+  border-radius: 11px;
+  letter-spacing: 0.03em;
+}
+.board_packs-tone-24 {
+  --tone: #e2e8f0;
+  opacity: 0.35;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.board_packs-tone-25 {
+  --tone: #e2e8f0;
+  opacity: 0.45;
+  border-radius: 5px;
+  letter-spacing: 0.0em;
+}
+.board_packs-tone-26 {
+  --tone: #e2e8f0;
+  opacity: 0.55;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+.board_packs-tone-27 {
+  --tone: #e2e8f0;
+  opacity: 0.65;
+  border-radius: 7px;
+  letter-spacing: 0.02em;
+}
+.board_packs-canvas {
+  background:
+    radial-gradient(circle at 21% 31%, #e2e8f040, transparent 42%),
+    radial-gradient(circle at 81% 69%, #09111fcc, transparent 45%),
+    linear-gradient(160deg, #070b16, #101a33 55%, #0b1528);
+}
+.board_packs-ribbon {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}
+.board_packs-pill {
+  border: 1px solid #e2e8f066;
+  color: #e2e8f0;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.board_packs-stat {
+  font-variant-numeric: tabular-nums;
+  color: #e2e8f0;
+}
+.board_packs-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.board_packs-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #9fb0d0;
+}
+.board_packs-empty strong {
+  display: block;
+  color: #e2e8f0;
+  margin-bottom: 0.35rem;
+}
+.board_packs-timeline li {
+  border-left: 2px solid #e2e8f055;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+}
+.board_packs-kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: #e2e8f0;
+}
+.board_packs-form .field input,
+.board_packs-form .field select {
+  background: rgba(6, 12, 24, 0.72);
+}
+.board_packs-hero.is-ready {
+  animation: board_packs-rise 640ms ease both;
+}
+@keyframes board_packs-rise {
+  from { transform: translateY(8px); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.board_packs-table.is-hot,
+.board_packs-table tr.is-hot {
+  box-shadow: inset 3px 0 0 #e2e8f0;
+}
+.board_packs-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e2e8f055;
+}
