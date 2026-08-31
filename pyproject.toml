@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "nexusops-admin-portal"
+version = "1.0.0"
+description = "Private enterprise SaaS admin portal for a local operator control plane"
+authors = ["NexusOps Operator <operator@nexusops.local>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "3.1.2"
+Werkzeug = "3.1.3"
+Jinja2 = "3.1.6"
+MarkupSafe = "3.0.2"
+itsdangerous = "2.2.0"
+click = "8.1.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "8.3.5"
+pytest-cov = "6.0.0"
+coverage = "7.6.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

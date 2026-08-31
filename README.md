@@ -64,7 +64,8 @@ python -m pytest
 Lockfile
 --------
 
-`requirements.lock` pins the install set used to run this tree.
+- `requirements.lock` pins the install set used to run this tree (pip).
+- `poetry.lock` + `pyproject.toml` provide the Poetry lockfile for reproducible dependency resolution.
 
 Layout
 ------
