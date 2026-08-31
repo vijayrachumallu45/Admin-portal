@@ -1,0 +1,47 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/churn_signals.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero churn_signals-hero">
+  <div>
+    <p class="eyebrow">Churn Signals</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid churn_signals-form" method="post">
+    <label class="field">
+      <span>Account Name</span>
+      <input type="text" name="account_name" value="{{ record.get('account_name', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Signal</span>
+      <input type="text" name="signal" value="{{ record.get('signal', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Severity</span>
+      <input type="text" name="severity" value="{{ record.get('severity', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Owner</span>
+      <input type="text" name="owner" value="{{ record.get('owner', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('churn_signals.list_churn_signals') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

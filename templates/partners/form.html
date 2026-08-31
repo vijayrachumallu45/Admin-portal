@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/partners.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero partners-hero">
+  <div>
+    <p class="eyebrow">Partner Desk</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid partners-form" method="post">
+    <label class="field">
+      <span>Partner Code</span>
+      <input type="text" name="partner_code" value="{{ record.get('partner_code', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Name</span>
+      <input type="text" name="name" value="{{ record.get('name', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Tier</span>
+      <input type="text" name="tier" value="{{ record.get('tier', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Region</span>
+      <input type="text" name="region" value="{{ record.get('region', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Certified</span>
+      <input type="text" name="certified" value="{{ record.get('certified', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('partners.list_partners') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

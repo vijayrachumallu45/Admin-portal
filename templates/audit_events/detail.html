@@ -1,0 +1,46 @@
+{% extends "shell.html" %}
+{% block title %}Audit Ledger detail{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/audit_events.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero audit_events-hero">
+  <div>
+    <p class="eyebrow">Audit Ledger</p>
+    <h1>Record {{ record.get('id') }}</h1>
+    <p class="lede">Health {{ record.get('health_score') }} · {{ record.get('integrity_hash') }}</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('audit_events.edit_audit_events', record_id=record.id) }}">Edit</a>
+  </div>
+</section>
+<section class="split">
+  <dl class="glass-card detail-grid">
+    <div><dt>Actor</dt><dd>{{ record.get('actor', '') }}</dd></div>
+    <div><dt>Action</dt><dd>{{ record.get('action', '') }}</dd></div>
+    <div><dt>Resource</dt><dd>{{ record.get('resource', '') }}</dd></div>
+    <div><dt>Ip Hint</dt><dd>{{ record.get('ip_hint', '') }}</dd></div>
+    <div><dt>Occurred At</dt><dd>{{ record.get('occurred_at', '') }}</dd></div>
+    <div><dt>Severity</dt><dd>{{ record.get('severity', '') }}</dd></div>
+    <div><dt>Status</dt><dd>{{ record.get('status', '') }}</dd></div>
+  </dl>
+  <aside class="glass-card">
+    <h2>Operator notes</h2>
+    <ul>{% for note in notes %}<li>{{ note }}</li>{% endfor %}</ul>
+    <form method="post" action="{{ url_for('audit_events.transition_audit_events', record_id=record.id) }}">
+      <label class="field">
+        <span>Move status</span>
+        <select name="status">
+          {% for status in statuses %}
+          <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <button class="btn primary" type="submit">Apply</button>
+    </form>
+    <form method="post" action="{{ url_for('audit_events.delete_audit_events', record_id=record.id) }}" onsubmit="return confirm('Remove this record?');">
+      <button class="btn danger" type="submit">Delete</button>
+    </form>
+  </aside>
+</section>
+{% endblock %}

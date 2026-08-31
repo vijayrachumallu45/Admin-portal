@@ -1,0 +1,47 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/sla_policies.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero sla_policies-hero">
+  <div>
+    <p class="eyebrow">SLA Policies</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid sla_policies-form" method="post">
+    <label class="field">
+      <span>Policy Code</span>
+      <input type="text" name="policy_code" value="{{ record.get('policy_code', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Severity</span>
+      <input type="text" name="severity" value="{{ record.get('severity', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Respond Minutes</span>
+      <input type="number" name="respond_minutes" value="{{ record.get('respond_minutes', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Restore Minutes</span>
+      <input type="number" name="restore_minutes" value="{{ record.get('restore_minutes', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('sla_policies.list_sla_policies') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

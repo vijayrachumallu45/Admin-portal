@@ -1,0 +1,47 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/budget_lines.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero budget_lines-hero">
+  <div>
+    <p class="eyebrow">Budget Lines</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid budget_lines-form" method="post">
+    <label class="field">
+      <span>Line Code</span>
+      <input type="text" name="line_code" value="{{ record.get('line_code', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Owner</span>
+      <input type="text" name="owner" value="{{ record.get('owner', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Annual Cents</span>
+      <input type="number" name="annual_cents" value="{{ record.get('annual_cents', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Spent Cents</span>
+      <input type="number" name="spent_cents" value="{{ record.get('spent_cents', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('budget_lines.list_budget_lines') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

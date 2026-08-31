@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in · NexusOps Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/portal.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body class="login-body">
+  <div class="aurora dense"></div>
+  <div class="mesh"></div>
+  <div class="orbit orbit-a"></div>
+  <div class="orbit orbit-b"></div>
+  <main class="login-stage">
+    <section class="login-copy">
+      <p class="eyebrow">Enterprise SaaS control plane</p>
+      <h1>NexusOps<br>Admin Portal</h1>
+      <p class="lede">Operate tenants, revenue, people, inventory, and compliance from one local command surface. No cloud keys. No third-party APIs.</p>
+      <ul class="login-points">
+        <li>Session login with hashed local credentials</li>
+        <li>Domain ledgers with validation and aging reports</li>
+        <li>CSV export and operator audit crumbs</li>
+      </ul>
+    </section>
+    <section class="login-card glass-card">
+      <p class="mark-lg">NO</p>
+      <h2>Operator sign in</h2>
+      <p class="muted">Use the local demo operator from the README. Nothing leaves this machine.</p>
+      {% if error %}
+      <p class="banner error">{{ error }}</p>
+      {% endif %}
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+        <p class="banner {{ category }}">{{ message }}</p>
+        {% endfor %}
+      {% endwith %}
+      <form method="post" action="{{ url_for('login') }}" class="login-form">
+        <label class="field">
+          <span>Work email</span>
+          <input type="email" name="email" autocomplete="username" required placeholder="admin@nexusops.local">
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <input type="password" name="password" autocomplete="current-password" required>
+        </label>
+        <button class="btn primary full" type="submit">Enter command center</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

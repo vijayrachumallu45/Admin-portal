@@ -1,0 +1,59 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/directory_users.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero directory_users-hero">
+  <div>
+    <p class="eyebrow">People Directory</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid directory_users-form" method="post">
+    <label class="field">
+      <span>Email</span>
+      <input type="text" name="email" value="{{ record.get('email', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Full Name</span>
+      <input type="text" name="full_name" value="{{ record.get('full_name', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Job Title</span>
+      <input type="text" name="job_title" value="{{ record.get('job_title', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Department</span>
+      <input type="text" name="department" value="{{ record.get('department', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Manager Email</span>
+      <input type="text" name="manager_email" value="{{ record.get('manager_email', '') }}" >
+    </label>
+    <label class="field">
+      <span>Location</span>
+      <input type="text" name="location" value="{{ record.get('location', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Band</span>
+      <input type="text" name="band" value="{{ record.get('band', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('directory_users.list_directory_users') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

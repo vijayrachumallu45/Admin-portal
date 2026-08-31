@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}NexusOps{% endblock %} · Admin Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/portal.css') }}">
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+  <div class="aurora"></div>
+  <div class="grid-mask"></div>
+  <div class="app-shell">
+    <aside class="sidenav">
+      <a class="brand" href="{{ url_for('dashboard') }}">
+        <span class="mark">NO</span>
+        <span>
+          <strong>NexusOps</strong>
+          <small>Enterprise admin</small>
+        </span>
+      </a>
+      <nav>
+        <a href="{{ url_for('dashboard') }}">Command center</a>
+        <a href="{{ url_for('profile') }}">Operator profile</a>
+        <a href="{{ url_for('settings') }}">Workspace settings</a>
+        <p class="nav-label">Control planes</p>
+        {% for item in catalog %}
+        <a href="{{ url_for(item.key + '.list_' + item.key) }}">{{ item.nav }}</a>
+        {% endfor %}
+      </nav>
+      {% if operator %}
+      <form class="logout-form" method="post" action="{{ url_for('logout') }}">
+        <button type="submit">Sign out {{ operator.name.split(' ')[0] }}</button>
+      </form>
+      {% endif %}
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="pulse">Live local control plane</p>
+          <p class="who">{% if operator %}{{ operator.email }} · {{ operator.role }}{% endif %}</p>
+        </div>
+        <div class="top-links">
+          <a href="{{ url_for('dashboard') }}">Dashboard</a>
+          <a href="{{ url_for('profile') }}">Profile</a>
+        </div>
+      </header>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <ul class="toasts">
+            {% for category, message in messages %}
+            <li class="toast {{ category }}">{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      <main>
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/portal.js') }}"></script>
+</body>
+</html>

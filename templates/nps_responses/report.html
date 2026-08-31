@@ -1,0 +1,33 @@
+{% extends "shell.html" %}
+{% block title %}NPS Responses report{% endblock %}
+{% block content %}
+<section class="page-hero nps_responses-hero">
+  <div>
+    <p class="eyebrow">Operations report</p>
+    <h1>NPS Responses aging</h1>
+    <p class="lede">Buckets help the duty manager decide what to work first.</p>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Rows</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Health</span><strong>{{ kpis.average_health }}</strong></article>
+</section>
+<div class="table-wrap glass-card">
+  <table class="data-table">
+    <thead><tr><th>Title</th><th>Status</th><th>Days</th><th>Bucket</th><th>Health</th></tr></thead>
+    <tbody>
+      {% for row in aging %}
+      <tr>
+        <td>{{ row.title }}</td>
+        <td>{{ row.status }}</td>
+        <td>{{ row.days }}</td>
+        <td>{{ row.bucket }}</td>
+        <td>{{ row.health_score }}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="5">Nothing to report.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

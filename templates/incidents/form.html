@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/incidents.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero incidents-hero">
+  <div>
+    <p class="eyebrow">Incident Room</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid incidents-form" method="post">
+    <label class="field">
+      <span>Incident No</span>
+      <input type="text" name="incident_no" value="{{ record.get('incident_no', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Title</span>
+      <input type="text" name="title" value="{{ record.get('title', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Severity</span>
+      <input type="text" name="severity" value="{{ record.get('severity', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Commander</span>
+      <input type="text" name="commander" value="{{ record.get('commander', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Started At</span>
+      <input type="text" name="started_at" value="{{ record.get('started_at', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('incidents.list_incidents') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

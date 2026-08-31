@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/timesheets.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero timesheets-hero">
+  <div>
+    <p class="eyebrow">Timesheets</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid timesheets-form" method="post">
+    <label class="field">
+      <span>Employee No</span>
+      <input type="text" name="employee_no" value="{{ record.get('employee_no', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Week Start</span>
+      <input type="date" name="week_start" value="{{ record.get('week_start', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Project Code</span>
+      <input type="text" name="project_code" value="{{ record.get('project_code', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Minutes</span>
+      <input type="number" name="minutes" value="{{ record.get('minutes', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Billable</span>
+      <input type="text" name="billable" value="{{ record.get('billable', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('timesheets.list_timesheets') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

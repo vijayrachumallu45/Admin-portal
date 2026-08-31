@@ -1,0 +1,44 @@
+{% extends "shell.html" %}
+{% block title %}Contractor Bench detail{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/contractors.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero contractors-hero">
+  <div>
+    <p class="eyebrow">Contractor Bench</p>
+    <h1>Record {{ record.get('id') }}</h1>
+    <p class="lede">Health {{ record.get('health_score') }} · {{ record.get('integrity_hash') }}</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('contractors.edit_contractors', record_id=record.id) }}">Edit</a>
+  </div>
+</section>
+<section class="split">
+  <dl class="glass-card detail-grid">
+    <div><dt>Contractor No</dt><dd>{{ record.get('contractor_no', '') }}</dd></div>
+    <div><dt>Full Name</dt><dd>{{ record.get('full_name', '') }}</dd></div>
+    <div><dt>Sponsor</dt><dd>{{ record.get('sponsor', '') }}</dd></div>
+    <div><dt>Ends On</dt><dd>{{ record.get('ends_on', '') }}</dd></div>
+    <div><dt>Status</dt><dd>{{ record.get('status', '') }}</dd></div>
+  </dl>
+  <aside class="glass-card">
+    <h2>Operator notes</h2>
+    <ul>{% for note in notes %}<li>{{ note }}</li>{% endfor %}</ul>
+    <form method="post" action="{{ url_for('contractors.transition_contractors', record_id=record.id) }}">
+      <label class="field">
+        <span>Move status</span>
+        <select name="status">
+          {% for status in statuses %}
+          <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <button class="btn primary" type="submit">Apply</button>
+    </form>
+    <form method="post" action="{{ url_for('contractors.delete_contractors', record_id=record.id) }}" onsubmit="return confirm('Remove this record?');">
+      <button class="btn danger" type="submit">Delete</button>
+    </form>
+  </aside>
+</section>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "shell.html" %}
+{% block title %}Warehouse Map detail{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/warehouses.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero warehouses-hero">
+  <div>
+    <p class="eyebrow">Warehouse Map</p>
+    <h1>Record {{ record.get('id') }}</h1>
+    <p class="lede">Health {{ record.get('health_score') }} · {{ record.get('integrity_hash') }}</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('warehouses.edit_warehouses', record_id=record.id) }}">Edit</a>
+  </div>
+</section>
+<section class="split">
+  <dl class="glass-card detail-grid">
+    <div><dt>Site Code</dt><dd>{{ record.get('site_code', '') }}</dd></div>
+    <div><dt>City</dt><dd>{{ record.get('city', '') }}</dd></div>
+    <div><dt>Capacity Pallets</dt><dd>{{ record.get('capacity_pallets', '') }}</dd></div>
+    <div><dt>Timezone</dt><dd>{{ record.get('timezone', '') }}</dd></div>
+    <div><dt>Manager</dt><dd>{{ record.get('manager', '') }}</dd></div>
+    <div><dt>Status</dt><dd>{{ record.get('status', '') }}</dd></div>
+  </dl>
+  <aside class="glass-card">
+    <h2>Operator notes</h2>
+    <ul>{% for note in notes %}<li>{{ note }}</li>{% endfor %}</ul>
+    <form method="post" action="{{ url_for('warehouses.transition_warehouses', record_id=record.id) }}">
+      <label class="field">
+        <span>Move status</span>
+        <select name="status">
+          {% for status in statuses %}
+          <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <button class="btn primary" type="submit">Apply</button>
+    </form>
+    <form method="post" action="{{ url_for('warehouses.delete_warehouses', record_id=record.id) }}" onsubmit="return confirm('Remove this record?');">
+      <button class="btn danger" type="submit">Delete</button>
+    </form>
+  </aside>
+</section>
+{% endblock %}

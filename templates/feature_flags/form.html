@@ -1,0 +1,47 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/feature_flags.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero feature_flags-hero">
+  <div>
+    <p class="eyebrow">Feature Flags</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid feature_flags-form" method="post">
+    <label class="field">
+      <span>Flag Key</span>
+      <input type="text" name="flag_key" value="{{ record.get('flag_key', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Description</span>
+      <input type="text" name="description" value="{{ record.get('description', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Percent</span>
+      <input type="number" name="percent" value="{{ record.get('percent', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Owner</span>
+      <input type="text" name="owner" value="{{ record.get('owner', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('feature_flags.list_feature_flags') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

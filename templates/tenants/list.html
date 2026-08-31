@@ -1,0 +1,66 @@
+{% extends "shell.html" %}
+{% block title %}Tenant Directory{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/tenants.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero tenants-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Tenant Directory</h1>
+    <p class="lede">Control plane for customer organizations, regions, and contract envelopes.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('tenants.new_tenants') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('tenants.export_tenants') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('tenants.report_tenants') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Tenant Directory">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table tenants-table">
+    <thead>
+      <tr>
+              <th>Code</th>
+              <th>Legal Name</th>
+              <th>Region</th>
+              <th>Tier</th>
+              <th>Seat Limit</th>
+              <th>Mrr Cents</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('code', '') }}</td>
+              <td>{{ row.get('legal_name', '') }}</td>
+              <td>{{ row.get('region', '') }}</td>
+              <td>{{ row.get('tier', '') }}</td>
+              <td>{{ row.get('seat_limit', '') }}</td>
+              <td>{{ row.get('mrr_cents', '') }}</td>
+              <td><a href="{{ url_for('tenants.detail_tenants', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Tenant Directory rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/tenants.js') }}"></script>
+{% endblock %}

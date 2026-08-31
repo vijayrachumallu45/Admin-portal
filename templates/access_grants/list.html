@@ -1,0 +1,66 @@
+{% extends "shell.html" %}
+{% block title %}Access Grants{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/access_grants.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero access_grants-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Access Grants</h1>
+    <p class="lede">Time-boxed entitlements with justification and recertification windows.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('access_grants.new_access_grants') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('access_grants.export_access_grants') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('access_grants.report_access_grants') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Access Grants">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table access_grants-table">
+    <thead>
+      <tr>
+              <th>Principal</th>
+              <th>Role Key</th>
+              <th>Scope</th>
+              <th>Justification</th>
+              <th>Starts On</th>
+              <th>Ends On</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('principal', '') }}</td>
+              <td>{{ row.get('role_key', '') }}</td>
+              <td>{{ row.get('scope', '') }}</td>
+              <td>{{ row.get('justification', '') }}</td>
+              <td>{{ row.get('starts_on', '') }}</td>
+              <td>{{ row.get('ends_on', '') }}</td>
+              <td><a href="{{ url_for('access_grants.detail_access_grants', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Access Grants rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/access_grants.js') }}"></script>
+{% endblock %}

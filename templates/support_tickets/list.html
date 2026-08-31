@@ -1,0 +1,66 @@
+{% extends "shell.html" %}
+{% block title %}Support Queue{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/support_tickets.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero support_tickets-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Support Queue</h1>
+    <p class="lede">Customer issues with severity, SLA clocks, and owners.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('support_tickets.new_support_tickets') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('support_tickets.export_support_tickets') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('support_tickets.report_support_tickets') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Support Queue">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table support_tickets-table">
+    <thead>
+      <tr>
+              <th>Ticket No</th>
+              <th>Subject</th>
+              <th>Severity</th>
+              <th>Requester</th>
+              <th>Assignee</th>
+              <th>Status</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('ticket_no', '') }}</td>
+              <td>{{ row.get('subject', '') }}</td>
+              <td>{{ row.get('severity', '') }}</td>
+              <td>{{ row.get('requester', '') }}</td>
+              <td>{{ row.get('assignee', '') }}</td>
+              <td>{{ row.get('status', '') }}</td>
+              <td><a href="{{ url_for('support_tickets.detail_support_tickets', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Support Queue rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/support_tickets.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/forecasts.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero forecasts-hero">
+  <div>
+    <p class="eyebrow">Revenue Forecast</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid forecasts-form" method="post">
+    <label class="field">
+      <span>Period</span>
+      <input type="text" name="period" value="{{ record.get('period', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Commit Cents</span>
+      <input type="number" name="commit_cents" value="{{ record.get('commit_cents', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Best Cents</span>
+      <input type="number" name="best_cents" value="{{ record.get('best_cents', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Pipeline Cents</span>
+      <input type="number" name="pipeline_cents" value="{{ record.get('pipeline_cents', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Owner</span>
+      <input type="text" name="owner" value="{{ record.get('owner', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('forecasts.list_forecasts') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

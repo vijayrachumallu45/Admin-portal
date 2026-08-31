@@ -1,0 +1,46 @@
+{% extends "shell.html" %}
+{% block title %}Subscription Book detail{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/subscriptions.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero subscriptions-hero">
+  <div>
+    <p class="eyebrow">Subscription Book</p>
+    <h1>Record {{ record.get('id') }}</h1>
+    <p class="lede">Health {{ record.get('health_score') }} · {{ record.get('integrity_hash') }}</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('subscriptions.edit_subscriptions', record_id=record.id) }}">Edit</a>
+  </div>
+</section>
+<section class="split">
+  <dl class="glass-card detail-grid">
+    <div><dt>Account</dt><dd>{{ record.get('account', '') }}</dd></div>
+    <div><dt>Plan Code</dt><dd>{{ record.get('plan_code', '') }}</dd></div>
+    <div><dt>Seats</dt><dd>{{ record.get('seats', '') }}</dd></div>
+    <div><dt>Renew On</dt><dd>{{ record.get('renew_on', '') }}</dd></div>
+    <div><dt>Term Months</dt><dd>{{ record.get('term_months', '') }}</dd></div>
+    <div><dt>Arr Cents</dt><dd>{{ record.get('arr_cents', '') }}</dd></div>
+    <div><dt>Status</dt><dd>{{ record.get('status', '') }}</dd></div>
+  </dl>
+  <aside class="glass-card">
+    <h2>Operator notes</h2>
+    <ul>{% for note in notes %}<li>{{ note }}</li>{% endfor %}</ul>
+    <form method="post" action="{{ url_for('subscriptions.transition_subscriptions', record_id=record.id) }}">
+      <label class="field">
+        <span>Move status</span>
+        <select name="status">
+          {% for status in statuses %}
+          <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <button class="btn primary" type="submit">Apply</button>
+    </form>
+    <form method="post" action="{{ url_for('subscriptions.delete_subscriptions', record_id=record.id) }}" onsubmit="return confirm('Remove this record?');">
+      <button class="btn danger" type="submit">Delete</button>
+    </form>
+  </aside>
+</section>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/software_licenses.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero software_licenses-hero">
+  <div>
+    <p class="eyebrow">Software Licenses</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid software_licenses-form" method="post">
+    <label class="field">
+      <span>Product Name</span>
+      <input type="text" name="product_name" value="{{ record.get('product_name', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Publisher</span>
+      <input type="text" name="publisher" value="{{ record.get('publisher', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Seats</span>
+      <input type="number" name="seats" value="{{ record.get('seats', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Renew On</span>
+      <input type="date" name="renew_on" value="{{ record.get('renew_on', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('software_licenses.list_software_licenses') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

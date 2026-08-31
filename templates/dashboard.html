@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}Command center{% endblock %}
+{% block content %}
+<section class="page-hero dashboard-hero">
+  <div>
+    <p class="eyebrow">Live local control plane</p>
+    <h1>Good shift, {{ operator.name.split(' ')[0] }}.</h1>
+    <p class="lede">{{ cards|length }} operational surfaces are online. Demo rows seed on first boot so every list, filter, and report has something to work.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('profile') }}">Operator profile</a>
+    <a class="btn ghost" href="{{ url_for('settings') }}">Workspace</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Surfaces</span><strong>{{ cards|length }}</strong></article>
+  <article class="glass-card"><span>Ledger rows</span><strong>{{ total_rows }}</strong></article>
+  <article class="glass-card"><span>Session</span><strong>{{ session_email }}</strong></article>
+  <article class="glass-card"><span>Role</span><strong>{{ operator.role }}</strong></article>
+</section>
+<section class="card-grid">
+  {% for card in cards %}
+  <a class="glass-card domain-card" href="{{ card.href }}">
+    <span class="chip">{{ card.nav }}</span>
+    <h2>{{ card.title }}</h2>
+    <p>{{ card.desc }}</p>
+    <strong>{{ card.count }} records</strong>
+  </a>
+  {% endfor %}
+</section>
+<section class="glass-card audit-panel">
+  <h2>Recent operator actions</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>When</th><th>Action</th><th>Domain</th><th>Record</th></tr>
+    </thead>
+    <tbody>
+      {% for item in audit %}
+      <tr>
+        <td>{{ item.at }}</td>
+        <td>{{ item.action }}</td>
+        <td>{{ item.domain }}</td>
+        <td>{{ item.record_id }}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="4">No audit crumbs yet. Create or edit a record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

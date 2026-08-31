@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/opportunities.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero opportunities-hero">
+  <div>
+    <p class="eyebrow">Opportunity Board</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid opportunities-form" method="post">
+    <label class="field">
+      <span>Deal Name</span>
+      <input type="text" name="deal_name" value="{{ record.get('deal_name', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Account Name</span>
+      <input type="text" name="account_name" value="{{ record.get('account_name', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Amount Cents</span>
+      <input type="number" name="amount_cents" value="{{ record.get('amount_cents', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Stage</span>
+      <input type="text" name="stage" value="{{ record.get('stage', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Close On</span>
+      <input type="date" name="close_on" value="{{ record.get('close_on', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('opportunities.list_opportunities') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

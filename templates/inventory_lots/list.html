@@ -1,0 +1,66 @@
+{% extends "shell.html" %}
+{% block title %}Inventory Lots{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/inventory_lots.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero inventory_lots-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Inventory Lots</h1>
+    <p class="lede">Warehouse lots, reorder points, and quarantine holds.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('inventory_lots.new_inventory_lots') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('inventory_lots.export_inventory_lots') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('inventory_lots.report_inventory_lots') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Inventory Lots">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table inventory_lots-table">
+    <thead>
+      <tr>
+              <th>Sku</th>
+              <th>Warehouse</th>
+              <th>On Hand</th>
+              <th>Reserved</th>
+              <th>Reorder At</th>
+              <th>Status</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('sku', '') }}</td>
+              <td>{{ row.get('warehouse', '') }}</td>
+              <td>{{ row.get('on_hand', '') }}</td>
+              <td>{{ row.get('reserved', '') }}</td>
+              <td>{{ row.get('reorder_at', '') }}</td>
+              <td>{{ row.get('status', '') }}</td>
+              <td><a href="{{ url_for('inventory_lots.detail_inventory_lots', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Inventory Lots rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/inventory_lots.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "shell.html" %}
+{% block title %}Quote Workshop{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/quotes.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero quotes-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Quote Workshop</h1>
+    <p class="lede">Commercial offers with discount governance.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('quotes.new_quotes') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('quotes.export_quotes') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('quotes.report_quotes') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Quote Workshop">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table quotes-table">
+    <thead>
+      <tr>
+              <th>Quote No</th>
+              <th>Account Name</th>
+              <th>List Cents</th>
+              <th>Discount Bps</th>
+              <th>Owner</th>
+              <th>Status</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('quote_no', '') }}</td>
+              <td>{{ row.get('account_name', '') }}</td>
+              <td>{{ row.get('list_cents', '') }}</td>
+              <td>{{ row.get('discount_bps', '') }}</td>
+              <td>{{ row.get('owner', '') }}</td>
+              <td>{{ row.get('status', '') }}</td>
+              <td><a href="{{ url_for('quotes.detail_quotes', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Quote Workshop rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/quotes.js') }}"></script>
+{% endblock %}

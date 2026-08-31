@@ -1,0 +1,66 @@
+{% extends "shell.html" %}
+{% block title %}Purchase Orders{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/purchase_orders.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero purchase_orders-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Purchase Orders</h1>
+    <p class="lede">Committed spend with receiving status and budget codes.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('purchase_orders.new_purchase_orders') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('purchase_orders.export_purchase_orders') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('purchase_orders.report_purchase_orders') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Purchase Orders">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table purchase_orders-table">
+    <thead>
+      <tr>
+              <th>Po Number</th>
+              <th>Vendor Code</th>
+              <th>Budget Code</th>
+              <th>Amount Cents</th>
+              <th>Needed By</th>
+              <th>Status</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('po_number', '') }}</td>
+              <td>{{ row.get('vendor_code', '') }}</td>
+              <td>{{ row.get('budget_code', '') }}</td>
+              <td>{{ row.get('amount_cents', '') }}</td>
+              <td>{{ row.get('needed_by', '') }}</td>
+              <td>{{ row.get('status', '') }}</td>
+              <td><a href="{{ url_for('purchase_orders.detail_purchase_orders', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Purchase Orders rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/purchase_orders.js') }}"></script>
+{% endblock %}

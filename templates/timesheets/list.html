@@ -1,0 +1,66 @@
+{% extends "shell.html" %}
+{% block title %}Timesheets{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/timesheets.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero timesheets-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Timesheets</h1>
+    <p class="lede">Billable and internal hours against projects and cost codes.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('timesheets.new_timesheets') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('timesheets.export_timesheets') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('timesheets.report_timesheets') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Timesheets">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table timesheets-table">
+    <thead>
+      <tr>
+              <th>Employee No</th>
+              <th>Week Start</th>
+              <th>Project Code</th>
+              <th>Minutes</th>
+              <th>Billable</th>
+              <th>Status</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('employee_no', '') }}</td>
+              <td>{{ row.get('week_start', '') }}</td>
+              <td>{{ row.get('project_code', '') }}</td>
+              <td>{{ row.get('minutes', '') }}</td>
+              <td>{{ row.get('billable', '') }}</td>
+              <td>{{ row.get('status', '') }}</td>
+              <td><a href="{{ url_for('timesheets.detail_timesheets', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Timesheets rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/timesheets.js') }}"></script>
+{% endblock %}

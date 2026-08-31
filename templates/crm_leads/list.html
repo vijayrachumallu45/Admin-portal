@@ -1,0 +1,66 @@
+{% extends "shell.html" %}
+{% block title %}Lead Inbox{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/crm_leads.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero crm_leads-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Lead Inbox</h1>
+    <p class="lede">Inbound interest with scoring, source, and routing.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('crm_leads.new_crm_leads') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('crm_leads.export_crm_leads') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('crm_leads.report_crm_leads') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Lead Inbox">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table crm_leads-table">
+    <thead>
+      <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Source</th>
+              <th>Score</th>
+              <th>Owner</th>
+              <th>Status</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('company', '') }}</td>
+              <td>{{ row.get('contact', '') }}</td>
+              <td>{{ row.get('source', '') }}</td>
+              <td>{{ row.get('score', '') }}</td>
+              <td>{{ row.get('owner', '') }}</td>
+              <td>{{ row.get('status', '') }}</td>
+              <td><a href="{{ url_for('crm_leads.detail_crm_leads', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Lead Inbox rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/crm_leads.js') }}"></script>
+{% endblock %}

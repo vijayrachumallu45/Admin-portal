@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/travel_bookings.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero travel_bookings-hero">
+  <div>
+    <p class="eyebrow">Travel Bookings</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid travel_bookings-form" method="post">
+    <label class="field">
+      <span>Booking No</span>
+      <input type="text" name="booking_no" value="{{ record.get('booking_no', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Traveler</span>
+      <input type="text" name="traveler" value="{{ record.get('traveler', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Origin</span>
+      <input type="text" name="origin" value="{{ record.get('origin', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Destination</span>
+      <input type="text" name="destination" value="{{ record.get('destination', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Departs On</span>
+      <input type="date" name="departs_on" value="{{ record.get('departs_on', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('travel_bookings.list_travel_bookings') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

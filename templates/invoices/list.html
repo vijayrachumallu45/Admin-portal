@@ -1,0 +1,66 @@
+{% extends "shell.html" %}
+{% block title %}Invoice Desk{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/invoices.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero invoices-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Invoice Desk</h1>
+    <p class="lede">Accounts receivable documents, collections stages, and aging buckets.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('invoices.new_invoices') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('invoices.export_invoices') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('invoices.report_invoices') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Invoice Desk">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table invoices-table">
+    <thead>
+      <tr>
+              <th>Invoice No</th>
+              <th>Customer</th>
+              <th>Amount Cents</th>
+              <th>Currency</th>
+              <th>Issued On</th>
+              <th>Due On</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('invoice_no', '') }}</td>
+              <td>{{ row.get('customer', '') }}</td>
+              <td>{{ row.get('amount_cents', '') }}</td>
+              <td>{{ row.get('currency', '') }}</td>
+              <td>{{ row.get('issued_on', '') }}</td>
+              <td>{{ row.get('due_on', '') }}</td>
+              <td><a href="{{ url_for('invoices.detail_invoices', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Invoice Desk rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/invoices.js') }}"></script>
+{% endblock %}

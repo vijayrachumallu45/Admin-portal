@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/employees.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero employees-hero">
+  <div>
+    <p class="eyebrow">HR Employees</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid employees-form" method="post">
+    <label class="field">
+      <span>Employee No</span>
+      <input type="text" name="employee_no" value="{{ record.get('employee_no', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Full Name</span>
+      <input type="text" name="full_name" value="{{ record.get('full_name', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Cost Center</span>
+      <input type="text" name="cost_center" value="{{ record.get('cost_center', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Hire On</span>
+      <input type="date" name="hire_on" value="{{ record.get('hire_on', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Fte Bps</span>
+      <input type="number" name="fte_bps" value="{{ record.get('fte_bps', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('employees.list_employees') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

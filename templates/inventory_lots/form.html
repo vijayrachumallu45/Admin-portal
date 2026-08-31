@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/inventory_lots.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero inventory_lots-hero">
+  <div>
+    <p class="eyebrow">Inventory Lots</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid inventory_lots-form" method="post">
+    <label class="field">
+      <span>Sku</span>
+      <input type="text" name="sku" value="{{ record.get('sku', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Warehouse</span>
+      <input type="text" name="warehouse" value="{{ record.get('warehouse', '') }}" required>
+    </label>
+    <label class="field">
+      <span>On Hand</span>
+      <input type="number" name="on_hand" value="{{ record.get('on_hand', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Reserved</span>
+      <input type="number" name="reserved" value="{{ record.get('reserved', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Reorder At</span>
+      <input type="number" name="reorder_at" value="{{ record.get('reorder_at', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('inventory_lots.list_inventory_lots') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

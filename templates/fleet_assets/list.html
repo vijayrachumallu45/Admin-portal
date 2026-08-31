@@ -1,0 +1,64 @@
+{% extends "shell.html" %}
+{% block title %}Fleet Assets{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/fleet_assets.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero fleet_assets-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Fleet Assets</h1>
+    <p class="lede">Vehicles and equipment with service intervals.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('fleet_assets.new_fleet_assets') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('fleet_assets.export_fleet_assets') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('fleet_assets.report_fleet_assets') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Fleet Assets">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table fleet_assets-table">
+    <thead>
+      <tr>
+              <th>Asset Tag</th>
+              <th>Kind</th>
+              <th>Odometer</th>
+              <th>Next Service</th>
+              <th>Status</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('asset_tag', '') }}</td>
+              <td>{{ row.get('kind', '') }}</td>
+              <td>{{ row.get('odometer', '') }}</td>
+              <td>{{ row.get('next_service', '') }}</td>
+              <td>{{ row.get('status', '') }}</td>
+              <td><a href="{{ url_for('fleet_assets.detail_fleet_assets', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Fleet Assets rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/fleet_assets.js') }}"></script>
+{% endblock %}

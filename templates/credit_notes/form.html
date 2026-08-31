@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/credit_notes.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero credit_notes-hero">
+  <div>
+    <p class="eyebrow">Credit Notes</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid credit_notes-form" method="post">
+    <label class="field">
+      <span>Credit No</span>
+      <input type="text" name="credit_no" value="{{ record.get('credit_no', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Invoice No</span>
+      <input type="text" name="invoice_no" value="{{ record.get('invoice_no', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Reason</span>
+      <input type="text" name="reason" value="{{ record.get('reason', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Amount Cents</span>
+      <input type="number" name="amount_cents" value="{{ record.get('amount_cents', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Approved By</span>
+      <input type="text" name="approved_by" value="{{ record.get('approved_by', '') }}" >
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('credit_notes.list_credit_notes') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

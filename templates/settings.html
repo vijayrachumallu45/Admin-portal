@@ -1,0 +1,31 @@
+{% extends "shell.html" %}
+{% block title %}Workspace settings{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div>
+    <p class="eyebrow">Workspace</p>
+    <h1>Local operating rules</h1>
+    <p class="lede">This portal never reads a committed <code>.env</code> file and never stores cloud API keys.</p>
+  </div>
+</section>
+<section class="split">
+  <article class="glass-card">
+    <h2>Runtime</h2>
+    <ul class="plain-list">
+      <li>Flask application factory in <code>app/__init__.py</code></li>
+      <li>SQLite ledger under <code>var/data/</code></li>
+      <li>Session cookie is HTTP-only</li>
+      <li>Health probe at <code>/healthz</code></li>
+    </ul>
+  </article>
+  <article class="glass-card">
+    <h2>What this is not</h2>
+    <ul class="plain-list">
+      <li>Not an Apache deployment</li>
+      <li>Not GPL licensed</li>
+      <li>Not a public open-source dump</li>
+      <li>Not wired to paid third-party APIs</li>
+    </ul>
+  </article>
+</section>
+{% endblock %}

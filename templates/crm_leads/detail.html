@@ -1,0 +1,45 @@
+{% extends "shell.html" %}
+{% block title %}Lead Inbox detail{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/crm_leads.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero crm_leads-hero">
+  <div>
+    <p class="eyebrow">Lead Inbox</p>
+    <h1>Record {{ record.get('id') }}</h1>
+    <p class="lede">Health {{ record.get('health_score') }} · {{ record.get('integrity_hash') }}</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('crm_leads.edit_crm_leads', record_id=record.id) }}">Edit</a>
+  </div>
+</section>
+<section class="split">
+  <dl class="glass-card detail-grid">
+    <div><dt>Company</dt><dd>{{ record.get('company', '') }}</dd></div>
+    <div><dt>Contact</dt><dd>{{ record.get('contact', '') }}</dd></div>
+    <div><dt>Source</dt><dd>{{ record.get('source', '') }}</dd></div>
+    <div><dt>Score</dt><dd>{{ record.get('score', '') }}</dd></div>
+    <div><dt>Owner</dt><dd>{{ record.get('owner', '') }}</dd></div>
+    <div><dt>Status</dt><dd>{{ record.get('status', '') }}</dd></div>
+  </dl>
+  <aside class="glass-card">
+    <h2>Operator notes</h2>
+    <ul>{% for note in notes %}<li>{{ note }}</li>{% endfor %}</ul>
+    <form method="post" action="{{ url_for('crm_leads.transition_crm_leads', record_id=record.id) }}">
+      <label class="field">
+        <span>Move status</span>
+        <select name="status">
+          {% for status in statuses %}
+          <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <button class="btn primary" type="submit">Apply</button>
+    </form>
+    <form method="post" action="{{ url_for('crm_leads.delete_crm_leads', record_id=record.id) }}" onsubmit="return confirm('Remove this record?');">
+      <button class="btn danger" type="submit">Delete</button>
+    </form>
+  </aside>
+</section>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/compliance_controls.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero compliance_controls-hero">
+  <div>
+    <p class="eyebrow">Compliance Controls</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid compliance_controls-form" method="post">
+    <label class="field">
+      <span>Control Id</span>
+      <input type="text" name="control_id" value="{{ record.get('control_id', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Statement</span>
+      <input type="text" name="statement" value="{{ record.get('statement', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Framework</span>
+      <input type="text" name="framework" value="{{ record.get('framework', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Owner</span>
+      <input type="text" name="owner" value="{{ record.get('owner', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Test Days</span>
+      <input type="number" name="test_days" value="{{ record.get('test_days', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('compliance_controls.list_compliance_controls') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

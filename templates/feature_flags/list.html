@@ -1,0 +1,64 @@
+{% extends "shell.html" %}
+{% block title %}Feature Flags{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/feature_flags.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero feature_flags-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Feature Flags</h1>
+    <p class="lede">Release toggles with audience percentage and owners.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('feature_flags.new_feature_flags') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('feature_flags.export_feature_flags') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('feature_flags.report_feature_flags') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Feature Flags">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table feature_flags-table">
+    <thead>
+      <tr>
+              <th>Flag Key</th>
+              <th>Description</th>
+              <th>Percent</th>
+              <th>Owner</th>
+              <th>Status</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('flag_key', '') }}</td>
+              <td>{{ row.get('description', '') }}</td>
+              <td>{{ row.get('percent', '') }}</td>
+              <td>{{ row.get('owner', '') }}</td>
+              <td>{{ row.get('status', '') }}</td>
+              <td><a href="{{ url_for('feature_flags.detail_feature_flags', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Feature Flags rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/feature_flags.js') }}"></script>
+{% endblock %}

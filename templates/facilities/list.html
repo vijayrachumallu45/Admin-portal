@@ -1,0 +1,64 @@
+{% extends "shell.html" %}
+{% block title %}Facilities{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/facilities.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero facilities-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Facilities</h1>
+    <p class="lede">Offices and plants with occupancy and safety owners.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('facilities.new_facilities') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('facilities.export_facilities') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('facilities.report_facilities') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Facilities">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table facilities-table">
+    <thead>
+      <tr>
+              <th>Site Code</th>
+              <th>Address</th>
+              <th>Capacity</th>
+              <th>Safety Owner</th>
+              <th>Status</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('site_code', '') }}</td>
+              <td>{{ row.get('address', '') }}</td>
+              <td>{{ row.get('capacity', '') }}</td>
+              <td>{{ row.get('safety_owner', '') }}</td>
+              <td>{{ row.get('status', '') }}</td>
+              <td><a href="{{ url_for('facilities.detail_facilities', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Facilities rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/facilities.js') }}"></script>
+{% endblock %}

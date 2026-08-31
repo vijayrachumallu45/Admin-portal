@@ -1,0 +1,55 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/subscriptions.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero subscriptions-hero">
+  <div>
+    <p class="eyebrow">Subscription Book</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid subscriptions-form" method="post">
+    <label class="field">
+      <span>Account</span>
+      <input type="text" name="account" value="{{ record.get('account', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Plan Code</span>
+      <input type="text" name="plan_code" value="{{ record.get('plan_code', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Seats</span>
+      <input type="number" name="seats" value="{{ record.get('seats', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Renew On</span>
+      <input type="date" name="renew_on" value="{{ record.get('renew_on', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Term Months</span>
+      <input type="number" name="term_months" value="{{ record.get('term_months', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Arr Cents</span>
+      <input type="number" name="arr_cents" value="{{ record.get('arr_cents', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('subscriptions.list_subscriptions') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

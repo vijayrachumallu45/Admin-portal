@@ -1,0 +1,51 @@
+{% extends "shell.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/purchase_orders.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero purchase_orders-hero">
+  <div>
+    <p class="eyebrow">Purchase Orders</p>
+    <h1>{{ title }}</h1>
+    <p class="lede">Complete the operational fields. Validation runs before the ledger write.</p>
+  </div>
+</section>
+{% if errors %}
+<ul class="error-list">{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}
+<form class="glass-card form-grid purchase_orders-form" method="post">
+    <label class="field">
+      <span>Po Number</span>
+      <input type="text" name="po_number" value="{{ record.get('po_number', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Vendor Code</span>
+      <input type="text" name="vendor_code" value="{{ record.get('vendor_code', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Budget Code</span>
+      <input type="text" name="budget_code" value="{{ record.get('budget_code', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Amount Cents</span>
+      <input type="number" name="amount_cents" value="{{ record.get('amount_cents', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Needed By</span>
+      <input type="date" name="needed_by" value="{{ record.get('needed_by', '') }}" required>
+    </label>
+    <label class="field">
+      <span>Status</span>
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  <div class="form-actions">
+    <button class="btn primary" type="submit">Save</button>
+    <a class="btn ghost" href="{{ url_for('purchase_orders.list_purchase_orders') }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}

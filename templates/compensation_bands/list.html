@@ -1,0 +1,64 @@
+{% extends "shell.html" %}
+{% block title %}Compensation Bands{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/compensation_bands.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero module-hero compensation_bands-hero">
+  <div>
+    <p class="eyebrow">Control surface</p>
+    <h1>Compensation Bands</h1>
+    <p class="lede">Pay ranges by level and geography for offer governance.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('compensation_bands.new_compensation_bands') }}">New record</a>
+    <a class="btn ghost" href="{{ url_for('compensation_bands.export_compensation_bands') }}">Export CSV</a>
+    <a class="btn ghost" href="{{ url_for('compensation_bands.report_compensation_bands') }}">Aging report</a>
+  </div>
+</section>
+<section class="kpi-grid">
+  <article class="glass-card"><span>Total</span><strong>{{ kpis.count }}</strong></article>
+  <article class="glass-card"><span>Avg health</span><strong>{{ kpis.average_health }}</strong></article>
+  <article class="glass-card"><span>Needs attention</span><strong>{{ kpis.attention|length }}</strong></article>
+  <article class="glass-card"><span>Statuses</span><strong>{{ kpis.by_status|length }}</strong></article>
+</section>
+<form class="filter-bar" method="get">
+  <input type="search" name="q" value="{{ filters.q }}" placeholder="Search Compensation Bands">
+  <select name="status">
+    <option value="">Any status</option>
+    {% for status in statuses %}
+    <option value="{{ status }}" {% if filters.status == status %}selected{% endif %}>{{ status }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="table-wrap glass-card">
+  <table class="data-table compensation_bands-table">
+    <thead>
+      <tr>
+              <th>Band Code</th>
+              <th>Level Name</th>
+              <th>Min Cents</th>
+              <th>Max Cents</th>
+              <th>Status</th>
+              <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+              <td>{{ row.get('band_code', '') }}</td>
+              <td>{{ row.get('level_name', '') }}</td>
+              <td>{{ row.get('min_cents', '') }}</td>
+              <td>{{ row.get('max_cents', '') }}</td>
+              <td>{{ row.get('status', '') }}</td>
+              <td><a href="{{ url_for('compensation_bands.detail_compensation_bands', record_id=row.id) }}">Open</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No Compensation Bands rows yet. Create the first record.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<script src="{{ url_for('static', filename='js/modules/compensation_bands.js') }}"></script>
+{% endblock %}

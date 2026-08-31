@@ -1,0 +1,47 @@
+{% extends "shell.html" %}
+{% block title %}Tenant Directory detail{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modules/tenants.css') }}">
+{% endblock %}
+{% block content %}
+<section class="page-hero tenants-hero">
+  <div>
+    <p class="eyebrow">Tenant Directory</p>
+    <h1>Record {{ record.get('id') }}</h1>
+    <p class="lede">Health {{ record.get('health_score') }} · {{ record.get('integrity_hash') }}</p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn primary" href="{{ url_for('tenants.edit_tenants', record_id=record.id) }}">Edit</a>
+  </div>
+</section>
+<section class="split">
+  <dl class="glass-card detail-grid">
+    <div><dt>Code</dt><dd>{{ record.get('code', '') }}</dd></div>
+    <div><dt>Legal Name</dt><dd>{{ record.get('legal_name', '') }}</dd></div>
+    <div><dt>Region</dt><dd>{{ record.get('region', '') }}</dd></div>
+    <div><dt>Tier</dt><dd>{{ record.get('tier', '') }}</dd></div>
+    <div><dt>Seat Limit</dt><dd>{{ record.get('seat_limit', '') }}</dd></div>
+    <div><dt>Mrr Cents</dt><dd>{{ record.get('mrr_cents', '') }}</dd></div>
+    <div><dt>Go Live</dt><dd>{{ record.get('go_live', '') }}</dd></div>
+    <div><dt>Status</dt><dd>{{ record.get('status', '') }}</dd></div>
+  </dl>
+  <aside class="glass-card">
+    <h2>Operator notes</h2>
+    <ul>{% for note in notes %}<li>{{ note }}</li>{% endfor %}</ul>
+    <form method="post" action="{{ url_for('tenants.transition_tenants', record_id=record.id) }}">
+      <label class="field">
+        <span>Move status</span>
+        <select name="status">
+          {% for status in statuses %}
+          <option value="{{ status }}" {% if record.get('status') == status %}selected{% endif %}>{{ status }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <button class="btn primary" type="submit">Apply</button>
+    </form>
+    <form method="post" action="{{ url_for('tenants.delete_tenants', record_id=record.id) }}" onsubmit="return confirm('Remove this record?');">
+      <button class="btn danger" type="submit">Delete</button>
+    </form>
+  </aside>
+</section>
+{% endblock %}
