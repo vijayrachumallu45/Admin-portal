@@ -18,6 +18,21 @@
   <article class="glass-card"><span>Session</span><strong>{{ session_email }}</strong></article>
   <article class="glass-card"><span>Role</span><strong>{{ operator.role }}</strong></article>
 </section>
+<section class="glass-card" aria-label="System status">
+  <div class="status-header">
+    <div>
+      <p class="eyebrow">System status</p>
+      <h2>{{ system_status.state }}</h2>
+    </div>
+    <span class="chip success">{{ system_status.db }}</span>
+  </div>
+  <p class="lede">{{ system_status.detail }}</p>
+  <div class="kpi-grid compact">
+    <article class="glass-card"><span>Uptime</span><strong>{{ system_status.uptime }}</strong></article>
+    <article class="glass-card"><span>Records</span><strong>{{ system_status.records }}</strong></article>
+    <article class="glass-card"><span>Core service</span><strong>{{ system_status.state }}</strong></article>
+  </div>
+</section>
 <section class="card-grid">
   {% for card in cards %}
   <a class="glass-card domain-card" href="{{ card.href }}">
