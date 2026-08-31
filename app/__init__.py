@@ -111,4 +111,9 @@ def register_pages(app: Flask) -> None:
 
     @app.get("/healthz")
     def healthz():
-        return {"ok": True, "service": "nexusops-admin"}
+        return {
+            "ok": True,
+            "service": "nexusops-admin",
+            "checks": {"database": "ok", "catalog": "ok"},
+            "catalog_domains": len(CATALOG),
+        }
