@@ -7,3 +7,6 @@ All notable changes to the NexusOps Admin Portal are documented in this file.
 
 ## Command-center dashboard
 - Operator overview widgets and status transitions
+
+## Operational ledgers
+- Tenants, billing, inventory, HR, ITSM, CRM domains
